@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {"name": "dashboard", "runtimeExecutable": "C:/ProgramData/anaconda3/python.exe", "runtimeArgs": ["run_local.py"], "port": 8050}
+  ]
+}
