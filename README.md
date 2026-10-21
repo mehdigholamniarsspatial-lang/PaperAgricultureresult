@@ -7,7 +7,7 @@ An interactive Python (Plotly Dash) platform presenting the study
 |---|---|---|
 | 1 | The problem | The puzzle, competing explanations, literature gap, contribution |
 | 2 | Research questions | RQ1–RQ4 with hypotheses and decision rules, conceptual framework, interactive policy timeline |
-| 3 | Dataset | Sources, coverage map, searchable data dictionary, series explorer, emissions composition, regional panel, policy-codebook calculator, data table + CSV download, verification and provenance |
+| 3 | Dataset | Sources, interactive source catalogue (50 datasets / parameters with download and documentation links, coverage timeline, source → analysis flow), coverage map, searchable data dictionary, series explorer, emissions composition, regional panel, policy-codebook calculator, data table + CSV download, verification and provenance |
 | 4 | Implementation & methods | Pipeline, then 10 steps with plain-language purpose, LaTeX maths, algorithms and settings; live LMDI waterfall, index builder, bootstrap null distributions and counterfactual calculator |
 | 5 | Results | Hypothesis scorecard and 10 result tabs, each with "what this shows / how to read it / finding"; 2030 ceiling calculator |
 | 6 | Conclusions | Discussion, policy implications, limitations, next steps, references |
@@ -22,8 +22,10 @@ dashboard/app.py             Dash app, navigation and routing
 dashboard/pages/*.py         One module per research step
 dashboard/data/results.json  All analysis outputs used by the site (exported from the notebook)
 dashboard/data/*.csv         Annual panel offered for download
+dashboard/data/data_sources.* Source catalogue shown in Dataset → "Data sources & resources"
 dashboard/assets/style.css   Styling
 tools/export_results.py      Re-creates results.json from a notebook run
+tools/import_sources.py      Re-creates data_sources.json (+ .xlsx copy) from the data-sources workbook
 requirements.txt             dash + plotly only (no pandas needed at runtime)
 ```
 

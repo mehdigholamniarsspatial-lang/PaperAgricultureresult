@@ -9,6 +9,7 @@ from ..data_store import (DATA, YEARS, COLS, VARIABLES, GROUPS, EVENTS, series, 
                           COVERAGE_LABEL, VERIFICATION, PANEL_CSV)
 from ..theme import (base_layout, add_events, empty_fig, PAL, C_M, C_P, C_S, INK, INK2, MUTED, GRID, BLUE, ORANGE, AQUA,
                      YELLOW, MAGENTA, VIOLET, GREEN, RED, REGION_COL, GRAPH_CONFIG)
+from . import dataset_sources
 
 VAR_OPTIONS = [{"label": f"{VARIABLES[k][0]} · {VARIABLES[k][1]}", "value": k} for g in GROUPS for k in VARIABLES if VARIABLES[k][0] == g]
 DEFAULT_VARS = ["crf3_kt", "dairy_cows", "milk_per_cow_l", "n_fert_kt"]
@@ -353,7 +354,9 @@ def tab_overview():
                 html.Div(className="source-grid", children=[
                     html.Div(className="source-card", children=[html.Div(a, className="src-agency"), html.Div(b, className="src-name"),
                                                                 html.Div(c, className="src-files"), html.Div(d, className="src-what"),
-                                                                html.Div(e, className="src-years")]) for a, b, c, d, e in SOURCES])),
+                                                                html.Div(e, className="src-years")]) for a, b, c, d, e in SOURCES]),
+                html.P(f"All {len(dataset_sources.ITEMS)} parameters, tables and download links are catalogued in the "
+                       "“Data sources & resources” tab.", className="fig-note")),
         section("Coverage map: which years exist for which variable",
                 card(dcc.Graph(figure=coverage_fig(), config=GRAPH_CONFIG, className="graph"),
                      html.P("Blue = observed; pale = missing. Gaps are left as they are: no year is interpolated, back-cast or set to zero. "
@@ -554,6 +557,8 @@ def layout():
                     "how it was built, and how the policy indices are scored."),
         dcc.Tabs(id="ds-tabs", value="overview", className="tabs", children=[
             dcc.Tab(label="Overview & sources", value="overview", children=tab_overview(), className="tab", selected_className="tab--sel"),
+            dcc.Tab(label="Data sources & resources", value="sources", children=dataset_sources.tab_sources(), className="tab",
+                    selected_className="tab--sel"),
             dcc.Tab(label="Series explorer", value="explorer", children=tab_explorer(), className="tab", selected_className="tab--sel"),
             dcc.Tab(label="Emissions composition", value="comp", children=tab_composition(), className="tab", selected_className="tab--sel"),
             dcc.Tab(label="Regional panel", value="regional", children=tab_regional(), className="tab", selected_className="tab--sel"),
@@ -565,6 +570,8 @@ def layout():
 
 
 def register_callbacks(app):
+    dataset_sources.register_callbacks(app)
+
     @app.callback(Output("ex-fig", "figure"), Output("ex-stats", "data"),
                   Input("ex-vars", "value"), Input("ex-mode", "value"), Input("ex-years", "value"), Input("ex-events", "value"))
     def _ex(vars_, mode, yr, ev):
