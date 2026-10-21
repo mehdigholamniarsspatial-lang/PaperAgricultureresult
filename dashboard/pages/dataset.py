@@ -22,19 +22,6 @@ SOURCES = [
     ("Authors", "Policy codebooks", "pressure_codebook.csv · mitigation_codebook_PROVISIONAL.csv", "20 instruments scored I × C × B", "1990–2024"),
 ]
 
-STATUS_ROWS = [
-    {"input": "EPA CRF3 total, categories, gases", "status": "Real", "note": "EPA provisional workbook; the only release covering 2024"},
-    {"input": "Dairy / non-dairy CH₄ split", "status": "Real (to 2023)", "note": "CRT 2025; 2024 missing, not imputed — LMDI ends 2023"},
-    {"input": "Mineral N 1990–1999 / 2000–2024", "status": "Real", "note": "CRT Table 3.D / Eurostat aei_fm_usefert"},
-    {"input": "N excretion; livestock units", "status": "Real", "note": "CRT Table 3.B(b); Eurostat LSU on CSO categories (since 20 Oct 2026)"},
-    {"input": "Livestock, milk, prices, CPI, GNI*", "status": "Real", "note": "CSO"},
-    {"input": "Pressure index P (coder 1)", "status": "Author coding", "note": "Estimated by judgement from legal/programme sources"},
-    {"input": "Mitigation index M", "status": "Provisional", "note": "Author coding following the INPACT rule; replace with INPACT export"},
-    {"input": "Derogation e = 0.30, TAMS e = 0.15", "status": "Provisional", "note": "To be replaced with DAFM statistics"},
-    {"input": "Coder 2 for P", "status": "Simulated", "note": "Used for the kappa placeholder only — never in a model"},
-    {"input": "Weather (rainfall anomaly)", "status": "Not used", "note": "Removed from the methodology on 19 Oct 2026"},
-]
-
 HARMONISATION = [
     ("Emissions boundary (CRF sector 3)",
      "The EPA 'Agriculture' row follows the Climate Action Plan definition, which includes agricultural/forestry fuel (1.A.4.c.ii) and "
@@ -538,11 +525,6 @@ def tab_quality():
                 card(table([{"stage": a, "check": b, "detail": c, "result": "PASS"} for a, b, c in VERIFICATION],
                            [("stage", "Stage"), ("check", "Check"), ("result", "Result"), ("detail", "Detail")], page_size=30,
                            style_cond=[{"if": {"column_id": "result"}, "color": "#006300", "fontWeight": 700}]))),
-        section("Status of every input",
-                card(table(STATUS_ROWS, [("input", "Input"), ("status", "Status"), ("note", "Note")], page_size=12,
-                           style_cond=[{"if": {"filter_query": '{status} = "Simulated"', "column_id": "status"}, "color": "#b42318", "fontWeight": 700},
-                                       {"if": {"filter_query": '{status} = "Provisional"', "column_id": "status"}, "color": "#a35a00", "fontWeight": 700},
-                                       {"if": {"filter_query": '{status} contains "Real"', "column_id": "status"}, "color": "#006300", "fontWeight": 700}]))),
         section("File provenance (registry and SHA-256)",
                 card(table([{k: r.get(k) for k in ("stem", "folder", "role", "status", "duplicates", "sha256_short")} for r in DATA["manifest"]],
                            [("stem", "File stem"), ("folder", "Folder"), ("role", "Role"), ("status", "Status"), ("duplicates", "Duplicates"),
