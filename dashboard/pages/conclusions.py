@@ -53,35 +53,6 @@ def layout():
                         "Of the five barriers in Augustenborg et al. (2026), policy incoherence is supported (P and M rose together 2005–2020 and P has a "
                         "detectable effect) and competing political priorities are consistent with the break near Food Harvest 2020. Capacity, financial "
                         "and planning constraints cannot be separated with these data.")),
-        section("Implications for policy",
-                html.Div(className="impl-grid", children=[
-                    html.Div(className="impl", children=[html.Div("1", className="impl-n"), html.H3("Screen expansion instruments"),
-                                                         html.P("Assess derogations, growth strategies and capital grants for their emission effect at design and "
-                                                                "renewal. The next derogation renewal is an immediate opportunity.")]),
-                    html.Div(className="impl", children=[html.Div("2", className="impl-n"), html.H3("Add activity-level instruments"),
-                                                         html.P("At recent intensity trends the 2030 ceiling requires about a fifth fewer livestock units. Voluntary "
-                                                                "reduction or diversification schemes, and conditions on expansion supports, belong in the mix.")]),
-                    html.Div(className="impl", children=[html.Div("3", className="impl-n"), html.H3("Track the net policy signal"),
-                                                         html.P("Update the production-pressure index annually alongside INPACT and report it with Climate Action "
-                                                                "Plan progress, to show whether the policy mix pulls in one direction.")]),
-                    html.Div(className="impl", children=[html.Div("4", className="impl-n"), html.H3("Build in evaluability"),
-                                                         html.P("With 28 annual observations only effects of about 4% per 0.1 index units are reliably detectable. "
-                                                                "Farm-level administrative data and staggered roll-outs would allow far more precise evaluation.")]),
-                ])),
-        section("Limitations",
-                html.Div(className="grid-2", children=[
-                    card(html.Ul([
-                        html.Li([html.B("Short series. "), "Twenty-eight observations limit precision; effects below the MDE cannot be ruled out."]),
-                        html.Li([html.B("Observational identification. "), "ARDL estimates are conditional associations. Adding GNI* leaves θ_P positive (0.49) "
-                                 "but not significant (p = 0.13) because GNI* grows fastest after quota abolition."]),
-                        html.Li([html.B("Regional design. "), "Five regions give little power and pre-trends rule out a causal reading."]),
-                    ])),
-                    card(html.Ul([
-                        html.Li([html.B("Policy measurement. "), "Index scores rest on coding judgements; M and the second coding of P are provisional."]),
-                        html.Li([html.B("Inventory detail. "), "One implied N₂O intensity for mineral and manure N; the dairy split ends in 2023; "
-                                 "inventory method changes appear as intensity change."]),
-                    ])),
-                ])),
         section("Next steps",
                 html.Div(className="grid-2", children=[
                     card(html.H3("Data"), html.Ul([html.Li("INPACT export for the mitigation index M"), html.Li("An independent, blind second coder for P"),
