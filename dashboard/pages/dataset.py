@@ -488,12 +488,7 @@ def tab_codebooks():
                            [("policy_id", "ID"), ("policy_set", "Set"), ("name", "Policy"), ("instrument_type", "Type"), ("start", "Start"),
                             ("end", "End"), ("implementation", "Implementation I"), ("coverage_key", "Coverage key"),
                             ("coverage_share", "s", num(3)), ("eligibility", "e", num(2)), ("bindingness", "B", num(2)),
-                            ("climate_relevance", "Climate relevance", num(1))], page_size=22, filter=True)),
-                callout("caution", "Provisional elements",
-                        "M is author coding following the INPACT rule (INPACT export pending). Eligibility shares for the derogation (0.30) "
-                        "and TAMS II (0.15) are author estimates. The second coding of P is a provisional placeholder until independent blind coding "
-                        f"is complete; it is used only to test the kappa calculation (weighted κ = {DATA['kappa'][0]['kappa_w']:.2f} implementation, "
-                        f"{DATA['kappa'][1]['kappa_w']:.2f} bindingness — not reported as evidence).")),
+                            ("climate_relevance", "Climate relevance", num(1))], page_size=22, filter=True))),
     ])
 
 
