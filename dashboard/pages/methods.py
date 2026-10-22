@@ -135,7 +135,13 @@ def step_indices():
                 "weights before treatment is standard in shift-share designs (Goldsmith-Pinkham, Sorkin & Swift, 2020)."),
         block("Inter-coder reliability",
               maths(r"\kappa_w=1-\frac{\sum_{ij}w_{ij}O_{ij}}{\sum_{ij}w_{ij}E_{ij}},\qquad w_{ij}=\frac{|i-j|}{k-1}"),
-              md("Linearly weighted Cohen's kappa on the 5-point grid (Cohen, 1968). The second coder is currently **simulated**, so the kappa is a placeholder.")),
+              md("Linearly weighted Cohen's kappa on the 5-point grid (Cohen, 1968). Two coders score every policy-year independently, and "
+                 "$\\kappa_w$ measures how far their agreement exceeds what chance alone would produce. $O_{ij}$ is the observed share of "
+                 "policy-years that coder 1 placed in category $i$ and coder 2 in category $j$, and $E_{ij}$ is the share expected if the two "
+                 "coders scored independently. The weights $w_{ij}$ grow with the distance between categories, so a one-step disagreement "
+                 "(0.5 vs 0.75) counts less than a large one (0 vs 1). $\\kappa_w = 1$ is perfect agreement and $0$ is chance level. It is "
+                 "computed separately for implementation and bindingness. The second coding is currently a provisional placeholder, pending "
+                 "independent blind coding.", math=True)),
     ])
 
 

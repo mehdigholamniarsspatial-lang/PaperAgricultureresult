@@ -708,14 +708,14 @@
    "id": 35,
    "group": "Policy codebooks",
    "parameter": "P, coder 2",
-   "description": "Second, independent coding of the pressure codebook",
+   "description": "Provisional placeholder for the second coding of the pressure codebook, pending independent blind coding",
    "unit": "score",
    "years": "1990–2024",
-   "dataset": "pressure_codebook_coder2.csv",
-   "provider": "Second coder",
+   "dataset": "pressure_codebook_coder2_PROVISIONAL.csv",
+   "provider": "Provisional placeholder (second coder pending)",
    "download": "",
    "docs": "",
-   "role": "Inter-coder agreement (weighted kappa) only",
+   "role": "Inter-coder agreement (weighted kappa) only; not reported as evidence",
    "tags": [
     "Policy indices"
    ],

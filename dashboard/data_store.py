@@ -130,7 +130,7 @@ COVERAGE_LABEL = {"dairy": "dairy CH₄", "beef_sheep": "non-dairy cattle + shee
 # Verification checks documented in DATA_DOCUMENTATION.md, section 3
 VERIFICATION = [
     ("1 Load", "SHA-256 of every loaded file matches the provenance sheet", "53 files re-hashed; no mismatch"),
-    ("1 Load", "Only documented simulated inputs are loaded", "only pressure_codebook_coder2_SIMULATED"),
+    ("1 Load", "Only documented provisional inputs are loaded", "only pressure_codebook_coder2_PROVISIONAL"),
     ("1 Load", "Duplicate monthly downloads are byte-identical", "AHM05, AJM01, AJM08, AJM09, AJM10"),
     ("2 Livestock", "CSO tables cover disjoint years", "1991–2004 / 2005–2014 / 2015–2026"),
     ("2 Livestock", "Panel dairy cows equal CSO State totals", "max difference 0"),
@@ -158,5 +158,5 @@ VERIFICATION = [
     ("9 ARDL", "key_results.json = results.xlsx", "pass"),
     ("10 Ceiling", "2030 target = 0.75 × CRF3₂₀₁₈", "15,546.2 kt CO₂e"),
     ("11 Outputs", "34 sheets; 7 figures in PNG and PDF", "pass"),
-    ("11 Outputs", "Simulated inputs listed honestly in the JSON", "coder-2 scores (kappa only)"),
+    ("11 Outputs", "Provisional inputs listed in the JSON", "coder-2 placeholder scores (kappa only)"),
 ]

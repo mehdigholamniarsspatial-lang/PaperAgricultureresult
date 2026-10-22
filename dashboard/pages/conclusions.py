@@ -77,14 +77,14 @@ def layout():
                         html.Li([html.B("Regional design. "), "Five regions give little power and pre-trends rule out a causal reading."]),
                     ])),
                     card(html.Ul([
-                        html.Li([html.B("Policy measurement. "), "Index scores rest on coding judgements; M is provisional and coder 2 is simulated."]),
+                        html.Li([html.B("Policy measurement. "), "Index scores rest on coding judgements; M and the second coding of P are provisional."]),
                         html.Li([html.B("Inventory detail. "), "One implied N₂O intensity for mineral and manure N; the dairy split ends in 2023; "
                                  "inventory method changes appear as intensity change."]),
                     ])),
                 ])),
         section("Next steps",
                 html.Div(className="grid-2", children=[
-                    card(html.H3("Data"), html.Ul([html.Li("INPACT export for the mitigation index M"), html.Li("A real, blind second coder for P"),
+                    card(html.H3("Data"), html.Ul([html.Li("INPACT export for the mitigation index M"), html.Li("An independent, blind second coder for P"),
                                                    html.Li("DAFM statistics for derogation and TAMS II eligibility shares"),
                                                    html.Li("CRT 2026 submission to extend the LMDI and regional emissions to 2024")])),
                     card(html.H3("Design"), html.Ul([html.Li("County-level panel from the Census of Agriculture and DAFM derogation statistics for a "
