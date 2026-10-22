@@ -12,7 +12,7 @@ from ..theme import base_layout, empty_fig, BLUE, ORANGE, AQUA, YELLOW, MAGENTA,
 
 HERE = Path(__file__).resolve().parents[1] / "data"
 CATALOGUE = json.loads((HERE / "data_sources.json").read_text(encoding="utf-8"))
-ITEMS = CATALOGUE["items"]
+ITEMS = [d for d in CATALOGUE["items"] if d["used"]]   # screened-but-unused tables are not shown
 BY_ID = {d["id"]: d for d in ITEMS}
 SOURCES_XLSX = HERE / "data_sources.xlsx"
 
@@ -21,7 +21,7 @@ GROUP_COL = dict(zip(GROUPS, [BLUE, VIOLET, YELLOW, AQUA, ORANGE, MAGENTA, GREEN
 GROUP_SHORT = {"EPA GHG inventory": "EPA", "Ireland CRT 2025 (UNFCCC)": "UNFCCC CRT", "Eurostat": "Eurostat", "CSO": "CSO",
                "Policy codebooks": "Codebooks", "Reference parameters": "Reference", "Derived in notebook": "Derived"}
 TAGS = ["Outcome", "Decomposition (LMDI)", "ARDL controls & prices", "Regional DiD", "Policy indices",
-        "Checks & harmonisation", "Robustness & supplements", "Not used"]
+        "Checks & harmonisation", "Robustness & supplements"]
 KINDS = ["Raw dataset", "Codebook", "Reference parameter", "Derived variable"]
 VIEWS = [("cards", "Resource cards"), ("timeline", "Coverage timeline"), ("lineage", "Source → analysis"), ("table", "Full table")]
 
@@ -42,8 +42,6 @@ def filtered(groups, query, tags, kinds, opts):
         if kinds and d["kind"] not in kinds:
             continue
         if "link" in (opts or []) and not d["download"]:
-            continue
-        if "hide" in (opts or []) and not d["used"]:
             continue
         if q and q not in " ".join(str(d[k]) for k in ("id", "group", "parameter", "description", "unit", "years", "dataset",
                                                        "provider", "role")).lower():
@@ -70,7 +68,7 @@ def link_buttons(d, small=True):
 
 
 def resource_card(d, selected=None):
-    return html.Div(className="res-card" + (" is-unused" if not d["used"] else "") + (" is-sel" if d["id"] == selected else ""),
+    return html.Div(className="res-card" + (" is-sel" if d["id"] == selected else ""),
                     style={"--g": GROUP_COL[d["group"]]}, children=[
         html.Div(className="res-top", children=[html.Span(f"#{d['id']}", className="res-id"), gbadge(d["group"]),
                                                 html.Span(d["years"] or "–", className="res-years")]),
@@ -78,7 +76,7 @@ def resource_card(d, selected=None):
         html.Div(d["description"], className="res-desc"),
         html.Div(className="res-meta", children=[html.Span([html.B("Unit "), d["unit"] or "–"]),
                                                  html.Span([html.B("Table "), d["dataset"] or "–"])]),
-        html.Div([html.Span(t, className="tag" + (" tag-off" if t == "Not used" else "")) for t in d["tags"]], className="tag-row"),
+        html.Div([html.Span(t, className="tag") for t in d["tags"]], className="tag-row"),
         html.Div(className="res-foot", children=[link_buttons(d),
                                                  html.Button("Details →", id={"type": "src-pick", "index": d["id"]}, className="btn btn-sm")]),
     ])
@@ -140,7 +138,7 @@ def sankey_fig(rows):
     fig = go.Figure(go.Sankey(
         arrangement="snap",
         node=dict(label=[f"{n}" for n in nodes], pad=14, thickness=16, line=dict(width=0),
-                  color=[GROUP_COL[g] for g in gs] + ["#7d7c76" if t == "Not used" else INK2 for t in ts],
+                  color=[GROUP_COL[g] for g in gs] + [INK2 for t in ts],
                   hovertemplate="%{label}: %{value} entries<extra></extra>"),
         link=dict(source=[nodes.index(a) for a, _ in link], target=[nodes.index(b) for _, b in link], value=list(link.values()),
                   color=[hexa(GROUP_COL[a], 0.35) for a, _ in link],
@@ -225,8 +223,7 @@ def tab_sources():
     return html.Div([
         callout("plain", "The full source catalogue", CATALOGUE["note"]),
         kpi_row(kpi(str(len(ITEMS)), "parameters & datasets catalogued"), kpi(str(len(GROUPS)), "source groups"),
-                kpi(str(len(tables)), "distinct published tables"), kpi(str(len(urls)), "direct download links", "open data, no login"),
-                kpi(str(sum(not d["used"] for d in ITEMS)), "screened but not used", "kept for transparency")),
+                kpi(str(len(tables)), "distinct published tables"), kpi(str(len(urls)), "direct download links", "open data, no login")),
         section("Source groups",
                 html.Div(className="grp-grid", children=[
                     html.Button(id={"type": "src-grp", "index": g}, className="grp-tile", style={"--g": GROUP_COL[g]}, children=[
@@ -251,8 +248,7 @@ def tab_sources():
                                         options=[{"label": f" {k}", "value": k} for k in KINDS])], className="span-2"),
                 html.Div([html.Label("Options", className="ctl-label"),
                           dcc.Checklist(id="src-opts", value=[], className="chk", inline=True,
-                                        options=[{"label": " Only with a direct download", "value": "link"},
-                                                 {"label": " Hide not-used tables", "value": "hide"}])], className="span-2"),
+                                        options=[{"label": " Only with a direct download", "value": "link"}])], className="span-2"),
             ]),
             html.Div(className="control-row src-bar", children=[
                 html.Span(id="src-count", className="src-count"),

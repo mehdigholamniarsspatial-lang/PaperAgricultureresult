@@ -131,7 +131,6 @@ COVERAGE_LABEL = {"dairy": "dairy CH₄", "beef_sheep": "non-dairy cattle + shee
 VERIFICATION = [
     ("1 Load", "SHA-256 of every loaded file matches the provenance sheet", "53 files re-hashed; no mismatch"),
     ("1 Load", "Only documented provisional inputs are loaded", "only pressure_codebook_coder2_PROVISIONAL"),
-    ("1 Load", "Duplicate monthly downloads are byte-identical", "AHM05, AJM01, AJM08, AJM09, AJM10"),
     ("2 Livestock", "CSO tables cover disjoint years", "1991–2004 / 2005–2014 / 2015–2026"),
     ("2 Livestock", "Panel dairy cows equal CSO State totals", "max difference 0"),
     ("2 Livestock", "Five constant-boundary units sum to the State", "dairy 0.014%, cattle 0.004%, sheep 0.003%"),

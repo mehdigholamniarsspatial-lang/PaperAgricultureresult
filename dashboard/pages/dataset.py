@@ -11,6 +11,7 @@ from ..theme import (base_layout, add_events, empty_fig, PAL, C_M, C_P, C_S, INK
                      YELLOW, MAGENTA, VIOLET, GREEN, RED, REGION_COL, GRAPH_CONFIG)
 from . import dataset_sources, dataset_map
 
+MANIFEST = [r for r in DATA["manifest"] if r["used"]]   # files actually loaded into the analysis
 VAR_OPTIONS = [{"label": f"{VARIABLES[k][0]} · {VARIABLES[k][1]}", "value": k} for g in GROUPS for k in VARIABLES if VARIABLES[k][0] == g]
 DEFAULT_VARS = ["crf3_kt", "dairy_cows", "milk_per_cow_l", "n_fert_kt"]
 
@@ -334,9 +335,9 @@ def policy_detail(pid, year):
 # ------------------------------------------------------------------ layout
 def tab_overview():
     return html.Div([
-        kpi_row(kpi("35", "annual observations", "1990–2024"), kpi("58", "files hashed & loaded", "SHA-256 provenance"),
+        kpi_row(kpi("35", "annual observations", "1990–2024"), kpi(str(len(MANIFEST)), "files hashed & loaded", "SHA-256 provenance"),
                 kpi(str(len(VARIABLES)), "core variables in the panel", "of 90+ derived columns"),
-                kpi("5", "constant-boundary regions", "regional panel 1991–2024"), kpi("30/30", "verification checks pass", tone="tone-green")),
+                kpi("5", "constant-boundary regions", "regional panel 1991–2024"), kpi(f"{len(VERIFICATION)}/{len(VERIFICATION)}", "verification checks pass", tone="tone-green")),
         section("Where the data come from",
                 html.Div(className="source-grid", children=[
                     html.Div(className="source-card", children=[html.Div(a, className="src-agency"), html.Div(b, className="src-name"),
@@ -522,7 +523,7 @@ def tab_quality():
                            [("stage", "Stage"), ("check", "Check"), ("result", "Result"), ("detail", "Detail")], page_size=30,
                            style_cond=[{"if": {"column_id": "result"}, "color": "#006300", "fontWeight": 700}]))),
         section("File provenance (registry and SHA-256)",
-                card(table([{k: r.get(k) for k in ("stem", "folder", "role", "status", "duplicates", "sha256_short")} for r in DATA["manifest"]],
+                card(table([{k: r.get(k) for k in ("stem", "folder", "role", "status", "duplicates", "sha256_short")} for r in MANIFEST],
                            [("stem", "File stem"), ("folder", "Folder"), ("role", "Role"), ("status", "Status"), ("duplicates", "Duplicates"),
                             ("sha256_short", "SHA-256 (first 12)")], page_size=12, filter=True))),
     ])
