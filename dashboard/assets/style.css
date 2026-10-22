@@ -315,3 +315,12 @@ h3 { font-size: 16.5px; margin: 0 0 8px; font-weight: 650; }
 .grid-2 > *, .grid-3 > *, .readings > *, .rq-grid > *, .kpi-row > *, .control-grid > * { min-width: 0; }
 .card { overflow-x: auto; }
 .tabs { overflow-x: auto; }
+
+/* Map tiles (Plotly choroplethmap): the MapLibre control stylesheet is not bundled, so pin the attribution here. */
+.maplibregl-ctrl-bottom-right { position: absolute; right: 0; bottom: 0; z-index: 2; pointer-events: none; }
+.maplibregl-ctrl-attrib { pointer-events: auto; font-size: 10.5px; background: rgba(255,255,255,.75); padding: 1px 6px; border-radius: 6px 0 0 0; }
+.maplibregl-ctrl-attrib-button { display: none; }
+.maplibregl-ctrl-attrib a { color: var(--ink2); }
+.map-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 16px; }
+.map-grid > * { min-width: 0; }
+@media (max-width: 1280px) { .map-grid { grid-template-columns: 1fr; } }

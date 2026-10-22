@@ -9,7 +9,7 @@ from ..data_store import (DATA, YEARS, COLS, VARIABLES, GROUPS, EVENTS, series, 
                           COVERAGE_LABEL, VERIFICATION, PANEL_CSV)
 from ..theme import (base_layout, add_events, empty_fig, PAL, C_M, C_P, C_S, INK, INK2, MUTED, GRID, BLUE, ORANGE, AQUA,
                      YELLOW, MAGENTA, VIOLET, GREEN, RED, REGION_COL, GRAPH_CONFIG)
-from . import dataset_sources
+from . import dataset_sources, dataset_map
 
 VAR_OPTIONS = [{"label": f"{VARIABLES[k][0]} · {VARIABLES[k][1]}", "value": k} for g in GROUPS for k in VARIABLES if VARIABLES[k][0] == g]
 DEFAULT_VARS = ["crf3_kt", "dairy_cows", "milk_per_cow_l", "n_fert_kt"]
@@ -544,6 +544,7 @@ def layout():
             dcc.Tab(label="Series explorer", value="explorer", children=tab_explorer(), className="tab", selected_className="tab--sel"),
             dcc.Tab(label="Emissions composition", value="comp", children=tab_composition(), className="tab", selected_className="tab--sel"),
             dcc.Tab(label="Regional panel", value="regional", children=tab_regional(), className="tab", selected_className="tab--sel"),
+            dcc.Tab(label="Regional map", value="map", children=dataset_map.tab_map(), className="tab", selected_className="tab--sel"),
             dcc.Tab(label="Policy codebooks", value="codebooks", children=tab_codebooks(), className="tab", selected_className="tab--sel"),
             dcc.Tab(label="Data table & download", value="table", children=tab_table(), className="tab", selected_className="tab--sel"),
             dcc.Tab(label="Quality & provenance", value="quality", children=tab_quality(), className="tab", selected_className="tab--sel"),
@@ -553,6 +554,7 @@ def layout():
 
 def register_callbacks(app):
     dataset_sources.register_callbacks(app)
+    dataset_map.register_callbacks(app)
 
     @app.callback(Output("ex-fig", "figure"), Output("ex-stats", "data"),
                   Input("ex-vars", "value"), Input("ex-mode", "value"), Input("ex-years", "value"), Input("ex-events", "value"))
