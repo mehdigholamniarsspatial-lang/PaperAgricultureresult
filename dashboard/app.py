@@ -7,7 +7,7 @@ from pathlib import Path
 import dash
 from dash import Dash, html, dcc, Input, Output, State
 
-from .pages import overview, questions, dataset, methods, results, conclusions
+from .pages import overview, questions, dataset, methods, results, conclusions, appendix
 
 HERE = Path(__file__).parent
 
@@ -18,6 +18,7 @@ PAGES = [
     ("/methods", "4", "Implementation & methods", methods),
     ("/results", "5", "Results", results),
     ("/conclusions", "6", "Conclusions", conclusions),
+    ("/appendix", "A", "Appendix", appendix),
 ]
 
 app = Dash(

@@ -324,3 +324,12 @@ h3 { font-size: 16.5px; margin: 0 0 8px; font-weight: 650; }
 .map-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 16px; }
 .map-grid > * { min-width: 0; }
 @media (max-width: 1280px) { .map-grid { grid-template-columns: 1fr; } }
+
+/* Appendix – acronym table */
+.badge-green { background: #e3f3e3; color: #1d6b1d; }
+.badge-violet { background: #ecebfb; color: #4a3db0; }
+.badge-aqua { background: #e2f5ee; color: #12795a; }
+.text-input { width: 100%; padding: 8px 11px; border: 1px solid #d6d5ce; border-radius: 8px; font-size: 14px; font-family: var(--sans); background: #fff; }
+.text-input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.acr-head { display: flex; align-items: center; gap: 12px; margin-bottom: 2px; }
+.acr-big { font-size: 28px; font-weight: 700; color: var(--ink); font-family: var(--serif, inherit); }
