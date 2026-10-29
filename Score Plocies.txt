@@ -1,0 +1,23 @@
+policy_id,policy_set,name,instrument_type,start,end,coverage_key,eligibility,bindingness,implementation,direction,climate_relevance,legal_or_programme_source,coding_note
+P01,P,"Coupled livestock premia (suckler cow, special beef, ewe premia)",incentive,1990,2004,beef_sheep,1.0,0.5,1990-2004:1,1,1.0,Reg. (EEC) 805/68; Reg. (EC) 1254/1999; Reg. (EC) 2529/2001,Headage payments reward animal numbers; ended by 2005 decoupling (Reg. (EC) 1782/2003)
+P02,P,Milk quota increases (Agenda 2000 increments; Health Check soft landing),conditional,2006,2014,dairy,1.0,0.75,2006-2007:0.25;2008:0.75;2009-2014:1,1,1.0,Reg. (EC) 1256/1999; Reg. (EC) 248/2008; Reg. (EC) 72/2009,Relaxes a binding legal output cap step by step
+P03,P,Nitrates derogation (stocking above 170 kg organic N/ha),conditional,2007,2024,dairy,0.3,0.75,2007-2023:1;2024:0.75,1,1.0,"Commission Decisions 2007/697/EC, 2011/127/EU, 2014/350/EU, (EU) 2018/209; Implementing Decision (EU) 2022/696",Eligibility 0.30 is provisional; replace with DAFM derogation statistics. Tightened from 2024 (220 kg N/ha in some areas)
+P04,P,Food Harvest 2020 (+50% milk volume target),strategy,2010,2014,cattle_sheep,1.0,0.25,2010-2014:1,1,1.0,DAFF (2010) Food Harvest 2020,Quantified national growth target; non-binding
+P05,P,EU milk quota abolition,mandatory_removal,2015,2024,dairy,1.0,1.0,2015-2024:1,1,1.0,"Reg. (EU) No 1308/2013, Art. 230 (quota expiry 31 March 2015)",Removal of a binding legal cap
+P06,P,Food Wise 2025 (+65% primary output value),strategy,2015,2020,cattle_sheep,1.0,0.25,2015-2020:1,1,1.0,DAFM (2015) Food Wise 2025,Value growth targets; non-binding
+P07,P,Food Vision 2030,strategy,2021,2024,cattle_sheep,1.0,0.25,2021-2024:0.5,1,1.0,DAFM (2021) Food Vision 2030,Mixed growth and sustainability goals: implementation weight 0.5; robustness variant sets to 0
+P08,P,TAMS II Dairy Equipment Scheme (capital grants for expansion),incentive,2015,2022,dairy,0.15,0.5,2015-2022:1,1,1.0,"RDP 2014-2020, Measure 4",Subsidised capacity expansion; eligibility = share of dairy farms participating (provisional)
+M01,M,Rural Environment Protection Scheme (REPS 1-4),incentive,1994,2014,n_soils_manure,0.4,0.5,1994:0.25;1995:0.5;1996-2009:1;2010-2013:0.5;2014:0.25,1,1.0,Reg. (EEC) 2078/92; S.I. 419/1994,Closed to new entrants 2009; run-off to 2014
+M02,M,Nitrates Action Programme (Good Agricultural Practice Regulations),mandatory,2006,2024,n_soils_manure,1.0,1.0,2006:0.5;2007-2024:1,1,0.5,S.I. 788/2005; S.I. 378/2006; S.I. 610/2010; S.I. 31/2014; S.I. 605/2017; S.I. 113/2022,Designed for water quality; climate_relevance 0.5 used in a robustness variant
+M03,M,Farm Waste Management Scheme,incentive,2006,2009,manure,0.4,0.5,2006-2009:1,1,1.0,DAFF grant scheme 2006,Slurry storage investment
+M04,M,Agri-Environment Options Scheme (AEOS),incentive,2010,2014,n_soils_manure,0.1,0.5,2010-2014:1,1,1.0,RDP 2007-2013,
+M05,M,Carbon Navigator and advisory programmes,voluntary,2013,2024,cattle_sheep,0.2,0.25,2013-2024:1,1,1.0,Teagasc/Bord Bia Carbon Navigator; Signpost (2021),Information instrument
+M06,M,Sustainable Dairy Assurance Scheme (Origin Green),voluntary,2014,2024,dairy,0.9,0.25,2014-2024:1,1,1.0,Bord Bia SDAS 2014,Farm carbon audits; certification
+M07,M,Green Low-Carbon Agri-Environment Scheme (GLAS),incentive,2015,2023,n_soils_manure,0.35,0.5,2015:0.5;2016-2022:1;2023:0.5,1,1.0,"RDP 2014-2020, Measure 10",
+M08,M,Beef Data and Genomics Programme (BDGP),incentive,2015,2020,beef_sheep,0.5,0.5,2015-2020:1,1,1.0,RDP 2014-2020,
+M09,M,Beef Environmental Efficiency Programme - Sucklers (BEEP-S),incentive,2020,2022,beef_sheep,0.3,0.5,2020-2022:1,1,1.0,DAFM 2020,
+M10,M,Chemical N reduction measures (5th NAP limits; protected urea; LESS),mandatory,2022,2024,fertiliser,1.0,1.0,2022:0.5;2023-2024:1,1,1.0,S.I. 113/2022; Climate Action Plan 2021-2023,Fertiliser N2O targeted directly
+M11,M,Agri-Climate Rural Environment Scheme (ACRES),incentive,2023,2024,n_soils_manure,0.35,0.5,2023-2024:1,1,1.0,CAP Strategic Plan 2023-2027,
+M12,M,Suckler Carbon Efficiency Programme (SCEP),incentive,2023,2024,beef_sheep,0.3,0.5,2023-2024:1,1,1.0,CAP Strategic Plan 2023-2027,
+E01,event,Climate Action and Low Carbon Development (Amendment) Act 2021,framework,2021,2024,all,1.0,1.0,2021-2024:1,0,1.0,Act No. 32 of 2021,Event marker only (not in index)
+E02,event,Agriculture sectoral emissions ceiling (-25% by 2030 vs 2018),framework,2022,2024,all,1.0,1.0,2022-2024:1,0,1.0,Government decision July 2022,Event marker only (not in index)
