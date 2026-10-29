@@ -31,15 +31,16 @@ def layout():
         page_header("Step 6 · Conclusions", "Expansion left a footprint; mitigation too little to offset",
                     "Production-oriented policy measurably raised Irish agricultural emissions. The mitigation portfolio, mostly voluntary and "
                     "intensity-oriented, shows no detectable effect on total emissions — so expansion had little mitigation to offset."),
-        kpi_row(kpi(f"+{k['offset']['pressure_effect_pct']:.1f}%", "2024 emissions due to production pressure since 2000", "90% CI 6.7–15.7%", tone="tone-orange"),
-                kpi(f"{k['offset']['cum_P_kt'] / 1e3:.1f} Mt", "CO₂e added by pressure, 2000–2024"),
+        kpi_row(kpi(f"+{k['offset']['pressure_effect_pct']:.1f}%", "2024 emissions due to production pressure since 2000",
+                    f"90% CI {k['offset']['pressure_lo']:.1f}–{k['offset']['pressure_hi']:.1f}%", tone="tone-orange"),
+                kpi(f"θ_P = {k['ardl']['theta_P']:.2f}", "long-run pressure association", f"+{k['ardl']['pct_per_0p1_P']:.1f}% per +0.1 in P; p = {k['ardl']['p_boot_P']:.3f}"),
                 kpi(f"{k['lmdi']['P4_intensity_offset']:.2f}", "share of post-quota growth cancelled by intensity gains"),
                 kpi("16–23%", "fewer livestock units needed by 2030", "unless intensity falls far faster", tone="tone-red")),
         section("Discussion",
                 html.Div(className="grid-3", children=[
                     card(html.H3("Expansion with little to offset"),
                          html.P("Three pieces of evidence point the same way: scale and yield growth after 2014 outran intensity gains more than three to "
-                                "one; the policy-mix model attributes an 11.2% rise in 2024 emissions to production pressure; and the same model finds no "
+                                f"one; the policy-mix model links higher pressure to higher long-run emissions (+{k['ardl']['pct_per_0p1_P']:.1f}% per 0.1); and the same model finds no "
                                 "emission-reducing effect of mitigation. A rival account would need to explain all three.")),
                     card(html.H3("Timing: 2010, not 2015"),
                          html.P("The trend changed in 2010–2012. Expansion began under the quota increases and Food Harvest 2020; abolition continued it "

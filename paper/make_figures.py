@@ -110,24 +110,28 @@ def fig_regional():
     save(fig, "fig_regional")
 
 
-SHORT = {"M01": "REPS", "M02": "Nitrates Action Programme", "M03": "Farm Waste Management Scheme", "M04": "AEOS",
-         "M05": "Carbon Navigator / advisory", "M06": "Sustainable Dairy Assurance", "M07": "GLAS", "M08": "BDGP", "M09": "BEEP-S",
-         "M10": "Chemical N reduction measures", "M11": "ACRES", "M12": "SCEP", "P08": "TAMS II Dairy Equipment"}
+SHORT = {"P01": "Coupled livestock premia", "P02": "Milk quota increases", "P03": "Nitrates derogation", "P04": "Milk quota abolition",
+         "P05": "TAMS II Dairy Equipment", "G01": "Food Harvest 2020", "G02": "Food Wise 2025", "G03": "Food Vision 2030 (w = 0.5)",
+         "M01": "REPS", "M02": "Nitrates Action Programme", "M03": "Farm Waste Management Scheme", "M04": "AEOS",
+         "M05": "Carbon Navigator / advisory", "M06": "Sustainable Dairy Assurance", "M07": "GLAS", "M08": "Suckler programmes (BDGP/BEEP-S/SCEP)",
+         "M09": "Chemical N maxima (5th NAP)", "M10": "ACRES", "M11": "Sustainable Beef & Lamb Assurance"}
 
 
 def fig_scores():
-    fig, axs = plt.subplots(2, 1, figsize=(W, 4.6), gridspec_kw={"height_ratios": [8, 12]})
+    fig, axs = plt.subplots(3, 1, figsize=(W, 5.4), gridspec_kw={"height_ratios": [5, 3, 11]})
     names = {r["policy_id"]: r["name"] for r in D["codebook"]}
-    for ax, key, title in [(axs[0], "scoreP", "(a) Production-pressure instruments (P)"), (axs[1], "scoreM", "(b) Mitigation instruments (M)")]:
+    for ax, key, title, cmap in [(axs[0], "scoreP", "(a) Production-pressure instruments (P)", "Oranges"),
+                                 (axs[1], "scoreG", "(b) Strategy signal (G; not part of P)", "Greens"),
+                                 (axs[2], "scoreM", "(c) Mitigation instruments (M)", "Blues")]:
         sc = D[key]; ids = list(sc["cols"].keys()); yrs = sc["years"]
         mat = np.array([[v or 0 for v in sc["cols"][i]] for i in ids])
-        im = ax.imshow(mat, aspect="auto", cmap="Oranges" if key == "scoreP" else "Blues",
+        im = ax.imshow(mat, aspect="auto", cmap=cmap,
                        extent=[yrs[0] - 0.5, yrs[-1] + 0.5, len(ids) - 0.5, -0.5], vmin=0)
         short = [f"{i} {SHORT.get(i, names[i].split('(')[0].strip())}" for i in ids]
         ax.set_yticks(range(len(ids))); ax.set_yticklabels(short, fontsize=6.5)
         ax.grid(False); ax.set_title(title, loc="left", fontsize=8.5, color=INK)
         ax.tick_params(axis="x", labelsize=7)
-        cb = fig.colorbar(im, ax=ax, pad=0.01, fraction=0.03); cb.ax.tick_params(labelsize=6.5); cb.set_label("score x = I·C·B", fontsize=7)
+        cb = fig.colorbar(im, ax=ax, pad=0.01, fraction=0.03); cb.ax.tick_params(labelsize=6.5); cb.set_label("score x", fontsize=7)
     fig.tight_layout(h_pad=1.2)
     save(fig, "fig_scores")
 
@@ -139,7 +143,7 @@ def fig_framework():
     def box(x, y, w, h, txt, fc, ec):
         ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.04,rounding_size=0.12", fc=fc, ec=ec, lw=1.2))
         ax.text(x + w / 2, y + h / 2, txt, ha="center", va="center", fontsize=7.5, color=INK)
-    box(0.1, 2.0, 2.6, 0.95, "Production pressure P\n(derogation, quota increases\nand abolition, growth targets)", "#fde3d8", ORANGE)
+    box(0.1, 2.0, 2.6, 0.95, "Production pressure P\n(derogation, quota increases\nand abolition, TAMS II)", "#fde3d8", ORANGE)
     box(0.1, 0.2, 2.6, 0.95, "Mitigation M\n(nitrates rules, agri-env.\nschemes, genetics, advice)", "#dbe8f8", BLUE)
     box(4.2, 2.0, 2.4, 0.95, "Activity\n(herd size, N use,\nmilk volume)", "#f4f3ef", INK2)
     box(4.2, 0.2, 2.4, 0.95, "Intensity\n(emissions per litre,\nper head, per kg N)", "#f4f3ef", INK2)
@@ -156,12 +160,13 @@ def fig_framework():
 # ---------------------------------------------------------------- results figures
 def fig_indices():
     fig, ax = plt.subplots(figsize=(W, 2.9))
-    for col, lab, c, ls in [("M", "Mitigation index M", BLUE, "-"), ("P", "Production-pressure index P", ORANGE, "-"), ("S", "Net signal S = M − P", AQUA, "--")]:
+    for col, lab, c, ls in [("M", "Mitigation index M", BLUE, "-"), ("P", "Production-pressure index P", ORANGE, "-"), ("S", "Net signal S = M − P", AQUA, "--"),
+                            ("G", "Strategy signal G", INK2, ":")]:
         y, v = ser(col); ax.plot(y, v, color=c, lw=1.8, ls=ls, label=lab)
     ax.axhline(0, color=MUTED, lw=0.7)
     ax.set_ylabel("index value"); ax.set_ylim(-0.48, 0.8)
     events(ax, at=-0.46)
-    ax.legend(ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.1))
+    ax.legend(ncol=4, loc="upper center", bbox_to_anchor=(0.5, -0.1))
     save(fig, "fig_indices")
 
 
@@ -292,7 +297,7 @@ def fig_robust():
         if v.startswith("leave out"):
             v = "Leave out " + v.split(":")[0].replace("leave out ", "")
         labs.append(v[:1].upper() + v[1:])
-    fig, axs = plt.subplots(1, 2, figsize=(W, 4.6), sharey=True)
+    fig, axs = plt.subplots(1, 2, figsize=(W, 4.8), sharey=True)
     yy = np.arange(len(rows))[::-1]
     for ax, par, c in [(axs[0], "P", ORANGE), (axs[1], "M", BLUE)]:
         for yv, r in zip(yy, rows):
@@ -314,7 +319,8 @@ def fig_power():
         rr = sorted([r for r in D["power"] if r["index"] == ix], key=lambda r: r["theta_abs"])
         ax.plot([r["theta_abs"] for r in rr], [r["power_size_adjusted"] for r in rr], color=c, lw=1.8, marker="o", ms=3.5, label=f"θ$_{ix}$")
     ax.axhline(0.8, color=MUTED, ls="--", lw=0.8); ax.text(1.5, 0.82, "80% power", fontsize=7, ha="right", color=MUTED)
-    ax.axvline(K["power"]["MDE_P"], color=INK2, ls=":", lw=0.8)
+    ax.axvline(K["power"]["MDE_P"], color=ORANGE, ls=":", lw=0.8)
+    ax.axvline(K["power"]["MDE_M"], color=BLUE, ls=":", lw=0.8)
     ax.set_xlabel("true |θ| (log points per index unit)"); ax.set_ylabel("size-adjusted power"); ax.set_ylim(0, 1.05)
     ax.legend(loc="lower right")
     save(fig, "fig_power")

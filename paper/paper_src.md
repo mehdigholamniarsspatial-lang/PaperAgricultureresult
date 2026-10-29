@@ -19,7 +19,7 @@ Mehdi Gholamnia^1^ [AUTHOR INPUT REQUIRED: names and affiliations of any co-auth
 :::
 
 ::: {custom-style="Paper Meta"}
-**Manuscript status:** Working paper prepared from the study's interactive results platform. All results come from the analysis run of 21 October 2026 (random seed 20261019).
+**Manuscript status:** Working paper prepared from the study's interactive results platform. All results come from the analysis run of 29 October 2026 (random seed 20261019), which uses the revised policy codebook of 29 October 2026.
 :::
 
 ::: {custom-style="Paper Meta"}
@@ -35,7 +35,7 @@ PAGEBREAK
 # Abstract {.unnumbered}
 
 ::: {custom-style="Abstract Text"}
-Agriculture produced 37.9% of Ireland's greenhouse-gas (GHG) emissions in 2024. Emissions from IPCC/CRF sector 3 that year (19.63 Mt CO₂e) were within 0.7% of their 1990 level (19.76 Mt CO₂e), after three decades of agri-environment schemes and nitrates regulation and, since 2021, legally binding carbon budgets. This paper asks whether the flat emission path reflects *failed mitigation* or *mitigation offset by policies that expanded output*. We construct a new annual production-pressure index (P) and score it on the same implementation × coverage × bindingness scale used for a mitigation index (M). This places the two policy sets on one scale for the first time. We then combine three designs whose identifying assumptions fail in different ways: (i) trend, structural-break and exact Logarithmic Mean Divisia Index (LMDI) decomposition analysis; (ii) an autoregressive distributed-lag (ARDL) policy-mix model with restricted moving-block bootstrap inference, dynamic counterfactuals and explicit power analysis; and (iii) a within-Ireland regional difference-in-differences (DiD) design based on pre-2015 dairy exposure. Emissions follow four regimes, with breaks in 2000, 2012 and 2020 (bootstrap UDmax *p* = 0.013), but no break falls within a year of Food Harvest 2020 (2010) or milk-quota abolition (2015). After quota abolition (2014–2021), growth in scale and yield added 2,988 kt CO₂e, whereas declining emission intensity removed only 963 kt. This gives an intensity offset of 0.32 (0.21–0.33 across emission-factor assumptions). In the ARDL model, a sustained 0.1-unit rise in production pressure raises long-run emissions by 7.2% (θ~P~ = 0.69, bootstrap *p* = 0.032). Production pressure above its 2000 level raised 2024 emissions by 11.2% (90% CI 6.7–15.7%) and added 12.5 Mt CO₂e over 2000–2024. The mitigation index shows no emission-reducing effect (θ~M~ = +0.47, *p* = 0.985). This positive coefficient is best read as reverse timing, because schemes expanded in the same years as output, and not as a causal effect. The positive pressure effect holds in all 14 estimable robustness variants and in all eight leave-one-policy-out runs. The regional design does not support a quota-abolition effect, because regions were already diverging before 2015, and interrupted time-series estimates place the turning point in 2010 rather than 2015. Meeting the 2030 sectoral ceiling (15.5 Mt CO₂e, 25% below 2018) would require roughly 23% fewer livestock units than in 2024 if the recent intensity trend continues, and 5–16% fewer even if intensity fell by 1–3% a year. Expansion left a measurable emissions footprint. The largely voluntary, intensity-oriented mitigation portfolio had too small a detectable effect for anything to be offset.
+Agriculture produced 37.9% of Ireland's greenhouse-gas (GHG) emissions in 2024. Emissions from IPCC/CRF sector 3 that year (19.63 Mt CO₂e) were within 0.7% of their 1990 level (19.76 Mt CO₂e), after three decades of agri-environment schemes and nitrates regulation and, since 2021, legally binding carbon budgets. This paper asks whether the flat emission path reflects *failed mitigation* or *mitigation offset by policies that expanded output*. We construct a new annual production-pressure index (P) and score it on the same implementation × coverage × eligibility × bindingness scale used for a mitigation index (M); non-binding national growth strategies are tracked separately as a strategy signal (G). This places the two policy sets on one scale for the first time. We then combine three designs whose identifying assumptions fail in different ways: (i) trend, structural-break and exact Logarithmic Mean Divisia Index (LMDI) decomposition analysis; (ii) an autoregressive distributed-lag (ARDL) policy-mix model with restricted moving-block bootstrap inference, dynamic counterfactuals and explicit power analysis; and (iii) a within-Ireland regional difference-in-differences (DiD) design based on pre-2015 dairy exposure. Emissions follow four regimes, with breaks in 2000, 2012 and 2020 (bootstrap UDmax *p* = 0.013), but no break falls within a year of Food Harvest 2020 (2010) or milk-quota abolition (2015). After quota abolition (2014–2021), growth in scale and yield added 2,988 kt CO₂e, whereas declining emission intensity removed only 963 kt. This gives an intensity offset of 0.32 (0.21–0.33 across emission-factor assumptions). In the ARDL model, a sustained 0.1-unit rise in production pressure is associated with 4.7% higher long-run emissions (θ~P~ = 0.46, bootstrap *p* = 0.043), and year-to-year changes in P line up with the activity (scale) component of the decomposition (+748 kt CO₂e per 0.1, *p* = 0.008). Because P in 2024 was close to its 2000 level, its net effect on 2024 emissions is small (+2.2%, 90% CI 1.1–3.2%). The mitigation index shows no emission-reducing effect (θ~M~ = +0.22, *p* = 0.88). The positive pressure coefficient holds in all 17 estimable robustness variants (significant in 14) and in all five leave-one-policy-out runs (significant in four), but the bounds test does not confirm a level relationship, so the long-run multipliers are indicative. The regional design does not support a quota-abolition effect, because regions were already diverging before 2015, and interrupted time-series estimates place the turning point in 2010 rather than 2015. Meeting the 2030 sectoral ceiling (15.5 Mt CO₂e, 25% below 2018) would require roughly 23% fewer livestock units than in 2024 if the recent intensity trend continues, and 5–16% fewer even if intensity fell by 1–3% a year. Production pressure acts on emissions through scale, as hypothesised. The largely voluntary, intensity-oriented mitigation portfolio shows no detectable reduction in total emissions, so there was little mitigation for expansion to offset.
 
 **Keywords:** agricultural emissions; policy coherence; policy mix; production pressure; milk quota abolition; LMDI decomposition; ARDL; block bootstrap; difference-in-differences; Ireland
 
@@ -44,10 +44,10 @@ Agriculture produced 37.9% of Ireland's greenhouse-gas (GHG) emissions in 2024. 
 
 ## Highlights {.unnumbered}
 
-- A new production-pressure index (P) is scored on the same implementation × coverage × bindingness scale as a mitigation index (M), so expansion and mitigation policy can be compared directly.
+- A new production-pressure index (P) is scored on the same implementation × coverage × eligibility × bindingness scale as a mitigation index (M), so expansion and mitigation policy can be compared directly.
 - Irish CRF3 emissions were flat over 1990–2024 (−0.65%) but passed through four distinct regimes, with a sustained upturn from 2012.
 - After milk-quota abolition, falling emission intensity cancelled only about one third of the emission growth caused by scale and yield (intensity offset = 0.32).
-- Production pressure raised 2024 emissions by 11.2% (6.7–15.7%) and added 12.5 Mt CO₂e over 2000–2024. No emission-reducing effect of the mitigation portfolio can be detected.
+- A sustained 0.1-unit rise in production pressure is associated with 4.7% higher long-run emissions, acting through herd and nitrogen growth. No emission-reducing effect of the mitigation portfolio can be detected.
 - On recent intensity trends, the 2030 sectoral ceiling implies about 23% fewer livestock units than in 2024.
 
 PAGEBREAK
@@ -82,13 +82,13 @@ TAB context | Policy context by period, 1990–2024
 
 | Period | Production pressure (expansion) | Mitigation |
 |:---|:---|:---|
-| 1990–2004 | Coupled suckler-cow, special-beef and ewe premia | REPS agri-environment scheme (from 1994) |
-| 2005–2009 | CAP decoupling (2005) ends coupled premia; nitrates derogation from 2007; quota increments from 2006 and +2% in 2008 | Nitrates Action Programme (S.I. 378/2006); Farm Waste Management Scheme |
-| 2010–2014 | Food Harvest 2020 (+50% milk volume target); quota increases of 1% a year | REPS run-off; AEOS; Carbon Navigator; Sustainable Dairy Assurance Scheme (2014) |
-| 2015–2021 | EU milk-quota abolition (31 March 2015); Food Wise 2025; TAMS II dairy equipment grants | GLAS; Beef Data and Genomics Programme; BEEP-S |
-| 2021–2024 | Food Vision 2030 (mixed goals); derogation renewed and tightened from 2024 | Fifth NAP chemical-N limits and protected urea (S.I. 113/2022); ACRES; SCEP. Climate Act 2021 and the 2022 ceiling are event markers |
+| 1990–2004 | Coupled suckler-cow, special-beef and ewe premia; Agenda 2000 quota increases (2000–2001) | REPS agri-environment scheme (from 1994) |
+| 2005–2009 | CAP decoupling (2005) ends coupled premia; nitrates derogation from 2007; +2% quota increase in 2008 | Nitrates Action Programme (S.I. 378/2006); Farm Waste Management Scheme |
+| 2010–2014 | Quota increases of 1% a year; Food Harvest 2020 (+50% milk volume target; strategy signal G) | REPS run-off; AEOS; Carbon Navigator; Sustainable Dairy Assurance Scheme (2014) |
+| 2015–2021 | EU milk-quota abolition (31 March 2015); TAMS II dairy equipment grants; Food Wise 2025 (G) | GLAS; suckler genetics and data programmes (BDGP, BEEP-S); Sustainable Beef and Lamb Assurance Scheme (2017) |
+| 2021–2024 | Derogation renewed and tightened from 2024; Food Vision 2030 (mixed goals; G) | Fifth NAP chemical-N maxima (S.I. 113/2022); ACRES; SCEP. Climate Act 2021 and the 2022 ceiling are event markers |
 
-NOTE: CAP = Common Agricultural Policy; NAP = Nitrates Action Programme; S.I. = Statutory Instrument. Acronyms are defined in full in {{tab:acronyms}}.
+NOTE: CAP = Common Agricultural Policy; NAP = Nitrates Action Programme; S.I. = Statutory Instrument. Non-binding national growth strategies form the separate strategy signal G and are not part of P. Acronyms are defined in full in {{tab:acronyms}}.
 
 Five dates are treated as policy events throughout the analysis: decoupling (2005), the first nitrates derogation (2007), Food Harvest 2020 (2010), quota abolition (2015) and the sectoral emissions ceiling (2022).
 
@@ -123,7 +123,7 @@ The study addresses four research questions, formalised as pre-specified hypothe
 
 The paper makes three contributions:
 
-1. **Measurement.** We construct an annual production-pressure index P, scored on the same implementation × coverage × bindingness (I × C × B) scale that the INPACT approach applies to mitigation (M). The two policy sets become commensurable, and policy incoherence becomes a measurable quantity, the net signal *S* = *M* − *P*.
+1. **Measurement.** We construct an annual production-pressure index P, scored on the same implementation × coverage × eligibility × bindingness (I × *s* × *e* × B) scale that the INPACT approach applies to mitigation (M). The two policy sets become commensurable, and policy incoherence becomes a measurable quantity, the net signal *S* = *M* − *P*. Non-binding growth strategies are kept apart as a strategy signal G.
 2. **Attribution with a short series.** We combine three designs whose assumptions fail in different ways: structural breaks with exact decomposition, an ARDL policy-mix model with block-bootstrap inference, and a within-Ireland regional DiD. Explicit power analysis allows null results to be interpreted.
 3. **Linking decomposition to policy.** We regress the annual LMDI activity and intensity effects on changes in P and M. This tests directly whether expansion operates through scale and mitigation through intensity.
 
@@ -147,7 +147,7 @@ TAB sources | Data sources
 | UNFCCC | Ireland Common Reporting Tables (CRT), 2025 submission | 34 workbooks, one per inventory year | Dairy/non-dairy CH₄ split, N excretion rates, mineral N 1990–1999 | 1990–2023 |
 | Eurostat | `env_air_gge`, `aei_fm_usefert`, livestock-unit (LSU) coefficients | CSV extracts | Species-level CH₄ detail, mineral N 2000–2024, LSU coefficients | 1990–2024 |
 | Central Statistics Office (CSO) | AAA01/07/09, AKA01, AHA01–05, CPA01, NA002 | PxStat CSV | Livestock (national and regional), milk, agricultural prices, CPI, GNI* | 1991–2024 |
-| Authors | Policy codebooks (`pressure_codebook.csv`, `mitigation_codebook_PROVISIONAL.csv`) | CSV | 20 instruments scored I × C × B | 1990–2024 |
+| Authors | Policy codebooks (`pressure_codebook.csv`, `mitigation_codebook_PROVISIONAL.csv`) | CSV | 19 instruments (5 P, 3 G, 11 M) scored I × *s* × *e* × B (× *w*) | 1990–2024 |
 
 NOTE: UNFCCC = United Nations Framework Convention on Climate Change. The mitigation codebook is provisional (see Section 5.6).
 
@@ -246,44 +246,43 @@ FIGNOTE: (a) Dairy share of all cows in 2010–2014 for the five constant-bounda
 
 ## 2.8 Policy codebooks
 
-Twenty instruments are coded: eight production-pressure instruments (P01–P08; {{tab:codebookP}}) and twelve mitigation instruments (M01–M12; {{tab:codebookM}}). Two framework laws (E01 and E02) are recorded as event markers but are not entered in either index, to avoid double counting. {{fig:scores}} shows the resulting annual score of each instrument.
+Nineteen instruments are coded: five production-pressure instruments (P01–P05) and three national growth strategies (G01–G03; {{tab:codebookP}}), and eleven mitigation instruments (M01–M11; {{tab:codebookM}}). The strategies set non-binding sectoral targets and are reported as a separate strategy signal G rather than summed into P; a robustness variant adds them to P. Three overlapping suckler programmes (BDGP, BEEP-S and SCEP) are coded as one lineage (M08). Eligibility *e* may vary over time (P03, M05 and M08) and is coded with the same year-range syntax as implementation. Plausible ranges for *e* and *B* and a confidence grade for each component are recorded with the codebook. Two framework laws (E01 and E02) are recorded as event markers but are not entered in any index, to avoid double counting. {{fig:scores}} shows the resulting annual score of each instrument.
 
-TAB codebookP | Production-pressure codebook (P)
+TAB codebookP | Production-pressure (P) and strategy-signal (G) codebook
 
 | ID | Instrument | Type | Years | Coverage key (share *s*) | Eligible *e* | Bindingness *B* | Implementation *I* |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| P01 | Coupled livestock premia (suckler cow, special beef, ewe premia) | Incentive | 1990–2004 | beef_sheep (0.482) | 1.00 | 0.50 | 1 |
-| P02 | Milk quota increases (Agenda 2000 increments; Health Check "soft landing") | Conditional | 2006–2014 | dairy (0.185) | 1.00 | 0.75 | 0.25 (2006–07); 0.75 (2008); 1 (2009–14) |
-| P03 | Nitrates derogation (stocking above 170 kg organic N/ha) | Conditional | 2007–2024 | dairy (0.194) | 0.30^a^ | 0.75 | 1 (2007–23); 0.75 (2024) |
-| P04 | Food Harvest 2020 (+50% milk volume target) | Strategy | 2010–2014 | cattle_sheep (0.701) | 1.00 | 0.25 | 1 |
-| P05 | EU milk quota abolition | Mandatory removal | 2015–2024 | dairy (0.216) | 1.00 | 1.00 | 1 |
-| P06 | Food Wise 2025 (+65% primary output value) | Strategy | 2015–2020 | cattle_sheep (0.698) | 1.00 | 0.25 | 1 |
-| P07 | Food Vision 2030 | Strategy | 2021–2024 | cattle_sheep (0.702) | 1.00 | 0.25 | 0.5 (mixed goals) |
-| P08 | TAMS II Dairy Equipment Scheme | Incentive | 2015–2022 | dairy (0.216) | 0.15^a^ | 0.50 | 1 |
+| P01 | Coupled livestock premia (special beef, suckler cow, slaughter and ewe premia) | Incentive | 1990–2004 | beef_sheep (0.482) | 1 [0.85–1.00] | 0.50 | 1 |
+| P02 | Milk quota increases (Agenda 2000 allocation; 2% in 2008; 1% p.a. 2009–2013) | Conditional | 2000–2014 | dairy (0.185) | 1 | 0.75 | 0.18 (2000); 0.28 (2001–07); 0.48, 0.58, 0.68, 0.79, 0.89 (2008–12); 1 (2013–14) |
+| P03 | Nitrates derogation (stocking above 170 kg organic N/ha) | Conditional | 2007–2024 | dairy (0.194) | 0.35 (2007–13); 0.45 (2014–17); 0.55 (2018–21); 0.6 (2022–24) | 0.75 | 0.25 (2007); 1 (2008–23); 0.75 (2024) |
+| P04 | EU milk quota abolition | Mandatory removal | 2015–2024 | dairy (0.216) | 1 | 1.00 [0.75–1.00] | 0.75 (2015); 1 (2016–24) |
+| P05 | TAMS II Dairy Equipment Scheme (capital grants) | Incentive | 2015–2023 | dairy (0.216) | 0.45 [0.35–0.60] | 0.50 | 0.5 (2015); 1 (2016–22); 0.25 (2023) |
+| G01 | Food Harvest 2020 (+50% milk volume target) | Strategy | 2010–2014 | cattle_sheep (0.701) | 1 | 0.25 | 0.5 (2010); 1 (2011–14) |
+| G02 | Food Wise 2025 (+65% primary production value) | Strategy | 2015–2020 | cattle_sheep (0.698) | 1 | 0.25 | 0.5 (2015); 1 (2016–20) |
+| G03 | Food Vision 2030 | Strategy | 2021–2024 | cattle_sheep (0.702) | 1 | 0.25 | 1 |
 
-NOTE: ^a^ Provisional eligibility shares, to be replaced with statistics from the Department of Agriculture, Food and the Marine (DAFM). Coverage keys are defined below {{tab:codebookM}}.
+NOTE: Values in square brackets are the plausible ranges for *e* and *B*; a confidence grade for each component is recorded in the codebook file. All instruments have content weight *w* = 1 except G03, which carries a content weight *w* = 0.50, the expansionary share of a strategy that pairs an export-value target with a methane-reduction target. P02 implementation is the normalised cumulative quota increase. Coverage keys are defined below {{tab:codebookM}}.
 
 TAB codebookM | Mitigation codebook (M; provisional coding)
 
 | ID | Instrument | Type | Years | Coverage key (share *s*) | Eligible *e* | *B* | Implementation *I* |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| M01 | Rural Environment Protection Scheme (REPS 1–4) | Incentive | 1994–2014 | n_soils_manure (0.342) | 0.40 | 0.50 | 0.25 (1994); 0.5 (1995); 1 (1996–2009); 0.5 (2010–13); 0.25 (2014) |
-| M02 | Nitrates Action Programme (GAP Regulations) | Mandatory | 2006–2024 | n_soils_manure (0.354) | 1.00 | 1.00 | 0.5 (2006); 1 (2007–24) |
-| M03 | Farm Waste Management Scheme | Incentive | 2006–2009 | manure (0.125) | 0.40 | 0.50 | 1 |
-| M04 | Agri-Environment Options Scheme (AEOS) | Incentive | 2010–2014 | n_soils_manure (0.343) | 0.10 | 0.50 | 1 |
-| M05 | Carbon Navigator and advisory programmes | Voluntary | 2013–2024 | cattle_sheep (0.706) | 0.20 | 0.25 | 1 |
-| M06 | Sustainable Dairy Assurance Scheme (Origin Green) | Voluntary | 2014–2024 | dairy (0.207) | 0.90 | 0.25 | 1 |
-| M07 | Green Low-Carbon Agri-Environment Scheme (GLAS) | Incentive | 2015–2023 | n_soils_manure (0.348) | 0.35 | 0.50 | 0.5 (2015); 1 (2016–22); 0.5 (2023) |
-| M08 | Beef Data and Genomics Programme (BDGP) | Incentive | 2015–2020 | beef_sheep (0.482) | 0.50 | 0.50 | 1 |
-| M09 | Beef Environmental Efficiency Programme – Sucklers (BEEP-S) | Incentive | 2020–2022 | beef_sheep (0.439) | 0.30 | 0.50 | 1 |
-| M10 | Chemical N reduction measures (fifth NAP limits; protected urea; LESS) | Mandatory | 2022–2024 | fertiliser (0.083) | 1.00 | 1.00 | 0.5 (2022); 1 (2023–24) |
-| M11 | Agri-Climate Rural Environment Scheme (ACRES) | Incentive | 2023–2024 | n_soils_manure (0.323) | 0.35 | 0.50 | 1 |
-| M12 | Suckler Carbon Efficiency Programme (SCEP) | Incentive | 2023–2024 | beef_sheep (0.420) | 0.30 | 0.50 | 1 |
+| M01 | Rural Environment Protection Scheme (REPS 1–4) | Incentive | 1994–2014 | n_soils_manure (0.342) | 0.35 [0.25–0.45] | 0.50 | 0.25 (1994); 0.5 (1995); 1 (1996–2009); 0.5 (2010–13); 0.25 (2014) |
+| M02 | Nitrates Action Programme (Good Agricultural Practice Regulations) | Mandatory | 2006–2024 | n_soils_manure (0.354) | 1 | 1.00 | 0.5 (2006); 0.75 (2007–08); 1 (2009–24) |
+| M03 | Farm Waste Management Scheme (revised, nitrates-driven) | Incentive | 2006–2009 | manure (0.125) | 0.47 [0.40–0.55] | 0.50 | 0.25 (2006); 0.5 (2007); 0.75 (2008); 1 (2009) |
+| M04 | Agri-Environment Options Scheme (AEOS) | Incentive | 2010–2018 | n_soils_manure (0.343) | 0.07 [0.05–0.10] | 0.50 | 0.5 (2010); 1 (2011–14); 0.5 (2015–16); 0.15 (2017–18) |
+| M05 | Carbon Navigator and advisory programmes | Voluntary | 2013–2024 | cattle_sheep (0.706) | 0.1 (2013–14); 0.05 (2015–22); 0.1 (2023–24) | 0.25 | 0.25 (2013); 0.5 (2014); 1 (2015–22); 0.5 (2023–24) |
+| M06 | Sustainable Dairy Assurance Scheme (Origin Green) | Voluntary | 2014–2024 | dairy (0.207) | 0.95 [0.90–0.99] | 0.25 [0.25–0.50] | 0.25 (2014); 0.5 (2015); 0.75 (2016); 1 (2017–24) |
+| M07 | Green Low-Carbon Agri-Environment Scheme (GLAS) | Incentive | 2015–2022 | n_soils_manure (0.348) | 0.28 [0.20–0.36] | 0.50 | 0.5 (2015); 0.75 (2016); 1 (2017–22) |
+| M08 | Suckler genetics and data programmes (BDGP 2015–2022; BEEP-S 2019–2022; SCEP from 2023) | Incentive | 2015–2024 | beef_sheep (0.482) | 0.24 (2015–18); 0.33 (2019–22); 0.24 (2023–24) | 0.50 | 0.75 (2015); 1 (2016–20); 0.75 (2021–22); 1 (2023–24) |
+| M09 | Chemical nitrogen maxima (5th Nitrates Action Programme increment) | Mandatory | 2022–2024 | fertiliser (0.083) | 1 [0.70–1.00] | 1.00 [0.75–1.00] | 0.5 (2022); 1 (2023–24) |
+| M10 | Agri-Climate Rural Environment Scheme (ACRES) | Incentive | 2023–2024 | n_soils_manure (0.323) | 0.23 [0.18–0.32] | 0.50 | 0.75 (2023); 1 (2024) |
+| M11 | Sustainable Beef and Lamb Assurance Scheme (Origin Green) | Voluntary | 2017–2024 | beef_sheep (0.460) | 0.9 [0.85–0.95] | 0.25 | 0.5 (2017); 1 (2018–24) |
 
-NOTE: Event markers not entered in the indices: E01, the Climate Action and Low Carbon Development (Amendment) Act 2021 (Act No. 32 of 2021); E02, the agriculture sectoral emissions ceiling of July 2022 (−25% by 2030 against 2018). Coverage keys denote the share of CRF3 in the targeted activity: *dairy* = dairy CH₄; *beef_sheep* = non-dairy cattle and sheep CH₄; *cattle_sheep* = all cattle and sheep CH₄; *n_soils_manure* = agricultural soils and manure management; *manure* = manure management; *fertiliser* = direct N₂O from mineral N plus urea CO₂.
+NOTE: Ranges as in {{tab:codebookP}}. Event markers not entered in the indices: E01, the Climate Action and Low Carbon Development (Amendment) Act 2021 (Act No. 32 of 2021); E02, the agriculture sectoral emissions ceiling of July 2022 (−25% by 2030 against 2018). Coverage keys denote the share of CRF3 in the targeted activity: *dairy* = dairy CH₄; *beef_sheep* = non-dairy cattle and sheep CH₄; *cattle_sheep* = all cattle and sheep CH₄; *n_soils_manure* = agricultural soils and manure management; *manure* = manure management; *fertiliser* = direct N₂O from mineral N plus urea CO₂.
 
-FIG scores | Annual policy scores (x = I × C × B) by instrument, 1990–2024 | fig_scores.png | 6.3
-FIGNOTE: (a) The eight production-pressure instruments, whose sum is the index P. (b) The twelve mitigation instruments, whose sum is the index M. Darker cells indicate higher scores. Mitigation scores are based on provisional coding. Instrument names are abbreviated; see {{tab:codebookP}}, {{tab:codebookM}} and {{tab:acronyms}}.
+FIG scores | Annual policy scores (x = I × s × e × B × w) by instrument, 1990–2024 | fig_scores.png | 6.3
+FIGNOTE: (a) The five production-pressure instruments, whose sum is the index P. (b) The three growth strategies, whose sum is the strategy signal G. (c) The eleven mitigation instruments, whose sum is the index M. Darker cells indicate higher scores; each panel has its own colour scale. Mitigation scores are based on provisional coding. Instrument names are abbreviated; see {{tab:codebookP}}, {{tab:codebookM}} and {{tab:acronyms}}.
 
 ## 2.9 Pre-processing and harmonisation
 
@@ -296,7 +295,7 @@ The raw files were processed into the analysis panels in the following steps. Ea
 5. **Constant-boundary regions.** NUTS3 regions are aggregated to the five constant-boundary units described in Section 2.7.
 6. **Unit corrections.** CRT Table 3.D fertiliser values are converted from kg N to tonnes N (division by 1,000).
 7. **Price chain-linking and deflation.** The five CSO price vintages are linked by the overlap method and deflated by the CPI (Equation 4).
-8. **Derived variables.** Livestock units, milk yield, manure N and the policy indices M, P and S are computed from the harmonised series (Equations 2, 3, 5 and 6).
+8. **Derived variables.** Livestock units, milk yield, manure N and the policy indices M, P, S and G are computed from the harmonised series (Equations 2, 3, 5 and 6).
 9. **Missing data.** Missing years are **never** interpolated, back-cast or set to zero. Inventory notation keys (NO, NE and NA) are converted to missing values. Each estimator uses the largest common sample and reports it. Because the 2024 CRT had not been published, the CRT-based dairy split and N-excretion rates end in 2023 and are not imputed. The LMDI decomposition and the regional emission series therefore end in 2023, whereas CRF3 runs to 2024.
 
 ## 2.10 Descriptive statistics
@@ -318,9 +317,10 @@ TAB descriptives | Selected series, 1990–2024
 | Milk intake | million L | 5,106 (1992) | 5,012 | 5,173 | 6,395 | 7,585 | 8,428 | 8,825 (2022) | 4,785 (2009) |
 | Milk yield | L per cow | 3,996 (1992) | 4,256 | 4,831 | 4,935 | 5,122 | 5,190 | 5,459 (2021) | 3,996 (1992) |
 | Mineral N fertiliser | kt N | 379 | 408 | 338 | 331 | 408 | 310 | 443 (1999) | 281 (2023) |
-| Mitigation index M | index | 0.000 | 0.068 | 0.405 | 0.586 | 0.617 | 0.638 | 0.683 (2020) | 0.000 (1990) |
-| Pressure index P | index | 0.241 | 0.241 | 0.358 | 0.450 | 0.450 | 0.336 | 0.450 (2015–20) | 0.000 (2005) |
-| Net signal S | index | −0.241 | −0.172 | 0.047 | 0.136 | 0.167 | 0.302 | 0.369 (2007) | −0.241 (1990) |
+| Mitigation index M | index | 0.000 | 0.060 | 0.390 | 0.461 | 0.623 | 0.693 | 0.693 (2024) | 0.000 (1990) |
+| Pressure index P | index | 0.241 | 0.266 | 0.146 | 0.252 | 0.344 | 0.281 | 0.352 (2022) | 0.039 (2005–06) |
+| Net signal S | index | −0.241 | −0.206 | 0.244 | 0.209 | 0.279 | 0.412 | 0.412 (2024) | −0.241 (1990) |
+| Strategy signal G | index | 0.000 | 0.000 | 0.088 | 0.087 | 0.174 | 0.088 | 0.175 (2011–14) | 0.000 (1990) |
 
 NOTE: CRF3 and its categories are expressed in AR5 GWP100. "First" values are reported where a series starts after 1990 (year in parentheses).
 
@@ -330,7 +330,7 @@ NOTE: CRF3 and its categories are expressed in AR5 GWP100. "First" values are re
 
 ## 3.1 Conceptual framework
 
-The framework rests on an accounting identity: emissions equal activity multiplied by intensity ({{fig:framework}}). Production-pressure policy (the derogation, quota increases and abolition, growth strategies and TAMS capital grants) is expected to *raise* activity, that is, herd size, nitrogen use and milk volume. Mitigation policy (nitrates rules, agri-environment schemes, genetics programmes and advisory tools) is expected to *lower* intensity, that is, emissions per litre, per head and per kg N. Total emissions fall only if intensity falls faster than activity grows. Expansion policies act on *how much* is produced, whereas Irish mitigation policy has mostly acted on *how* it is produced.
+The framework rests on an accounting identity: emissions equal activity multiplied by intensity ({{fig:framework}}). Production-pressure policy (the derogation, quota increases and abolition, and TAMS capital grants; growth strategies are tracked separately) is expected to *raise* activity, that is, herd size, nitrogen use and milk volume. Mitigation policy (nitrates rules, agri-environment schemes, genetics programmes and advisory tools) is expected to *lower* intensity, that is, emissions per litre, per head and per kg N. Total emissions fall only if intensity falls faster than activity grows. Expansion policies act on *how much* is produced, whereas Irish mitigation policy has mostly acted on *how* it is produced.
 
 FIG framework | Conceptual framework: production pressure acts on activity, mitigation acts on intensity | fig_framework.png | 6.0
 FIGNOTE: CRF3 emissions are the product of activity and emission intensity. The framework predicts that P raises activity and M lowers intensity; the decomposition–regression link (Section 3.13) tests both predictions.
@@ -365,30 +365,36 @@ TAB hypotheses | Research questions, hypotheses, tests and decision rules
 No single method can identify a causal policy effect from one national series of about 28 usable observations. The study therefore combines three designs whose identifying assumptions fail in different ways, so that inference rests on their agreement rather than on any single estimate (Lawlor et al., 2016; Munafò & Davey Smith, 2018):
 
 - **Design A (descriptive):** trends, structural breaks and decomposition, using Mann–Kendall and Theil–Sen trend tests, Bai–Perron breaks with a bootstrap UDmax test, and exact LMDI-I decomposition. This design answers RQ1 and RQ2.
-- **Design B (policy-mix time series):** an ARDL(1,0,2) model estimated over 1997–2024 (*n* = 28), with restricted bootstrap *p*-values, dynamic counterfactuals and power and minimum-detectable-effect (MDE) analysis. This design answers RQ3 and RQ4a.
+- **Design B (policy-mix time series):** an ARDL(1,0,0) model estimated over 1997–2024 (*n* = 28), with restricted bootstrap *p*-values, dynamic counterfactuals and power and minimum-detectable-effect (MDE) analysis. This design answers RQ3 and RQ4a.
 - **Design C (within-Ireland comparison):** a regional DiD across five constant-boundary regions, with exposure defined as the pre-2015 dairy share and inference by randomisation. This design answers RQ4b.
 
-The pipeline runs in six stages: (1) loading and hashing the raw files; (2) harmonisation (CRF3 boundary, livestock stacking, regions and price chain-linking); (3) construction of the annual panel (1990–2024) and the regional panel (5 regions × 1991–2024); (4) construction of the policy indices M, P and S; (5) estimation (structural breaks, LMDI, ARDL with bootstrap, counterfactuals, power analysis, DiD and 2030 scenarios); and (6) export and verification (34 result sheets, 7 figures and 30 independent checks).
+The pipeline runs in six stages: (1) loading and hashing the raw files; (2) harmonisation (CRF3 boundary, livestock stacking, regions and price chain-linking); (3) construction of the annual panel (1990–2024) and the regional panel (5 regions × 1991–2024); (4) construction of the policy indices M, P, S and G; (5) estimation (structural breaks, LMDI, ARDL with bootstrap, counterfactuals, power analysis, DiD and 2030 scenarios); and (6) export and verification (34 result sheets, 7 figures and 30 independent checks).
 
 ## 3.4 Policy indices
 
 Each policy *p* receives an annual score
 
 $$
-x_{pt}=I_{pt}\,C_p\,B_p,\qquad C_p=s_{a(p),\,t^0_p-1}\,e_p \qquad (6)
+x_{pt}=I_{pt}\,s_p\,e_{pt}\,B_p\,w_p \qquad (6)
 $$
 
 where:
 
-- **I** is implementation, scored on a five-point grid {0, 0.25, 0.5, 0.75, 1};
-- **C** is coverage, *s* × *e*, where *s* is the share of CRF3 in the targeted activity *a*(*p*) in the year *before* the policy starts (*t*^0^~p~ − 1) and *e* is the eligible fraction;
-- **B** is bindingness: 0.25 for information, voluntary schemes or strategy targets; 0.5 for incentive payments; 0.75 for the conditional relaxation of a legal limit; and 1.0 for a mandatory rule or the removal of a legal cap.
+- **I** is implementation, scored on a five-point grid {0, 0.25, 0.5, 0.75, 1} (see below for P02);
+- **s** is coverage, the share of CRF3 in the targeted activity *a*(*p*), fixed in the year *before* the policy starts (*t*^0^~p~ − 1); where that year precedes the inventory split, the nearest available year is used and the value is graded low-confidence (P01, P02 and M11);
+- **e** is the eligible fraction of the targeted activity reached by the instrument, which may change over time (for example, as successive derogation decisions widened eligibility);
+- **B** is bindingness: 0.25 for information, voluntary schemes or strategy targets; 0.5 for incentive payments; 0.75 for the conditional relaxation of a legal limit; and 1.0 for a mandatory rule or the removal of a legal cap;
+- **w** is a content weight, equal to 1 except for Food Vision 2030 (*w* = 0.5), whose growth target is paired with a methane-reduction target.
+
+Implementation is scored on the five-point grid except where a continuous measure is available: for the quota increases (P02), I is the cumulative quota increase normalised to its 2013 end point.
 
 The product is non-compensatory: a policy counts only if it is in force, covers emissions and carries a signal (OECD et al., 2008). The indices are
 
 $$
-M_t=\sum_{p\in\mathcal M}x_{pt},\qquad P_t=\sum_{q\in\mathcal P}x_{qt},\qquad S_t=M_t-P_t \qquad (7)
+M_t=\sum_{p\in\mathcal M}x_{pt},\qquad P_t=\sum_{q\in\mathcal P}x_{qt},\qquad S_t=M_t-P_t,\qquad G_t=\sum_{g\in\mathcal G}x_{gt} \qquad (7)
 $$
+
+The strategy signal G is reported alongside P but is not part of it: strategies set targets without changing the legal or financial conditions of production, so summing them with binding instruments would mix announcements with constraints.
 
 *Why coverage is fixed before adoption.* If coverage were measured in each year, a policy that expanded dairying would raise the dairy share and thereby its own weight. Fixing exposure weights before treatment is standard practice in shift-share designs (Goldsmith-Pinkham et al., 2020).
 
@@ -398,7 +404,7 @@ $$
 \kappa_w=1-\frac{\sum_{ij}w_{ij}O_{ij}}{\sum_{ij}w_{ij}E_{ij}},\qquad w_{ij}=\frac{|i-j|}{k-1} \qquad (8)
 $$
 
-where *O*~ij~ is the observed share of policy-years that coder 1 placed in category *i* and coder 2 in category *j*, and *E*~ij~ is the share expected under independent scoring. Kappa is computed separately for implementation and bindingness. **The second coding is currently a provisional placeholder pending independent blind coding.** The reported values (implementation κ~w~ = 0.60 over 75 policy-years; bindingness κ~w~ = 1.00 over 8 policies) are therefore illustrative only. [AUTHOR INPUT REQUIRED: independent blind second coding of the P codebook, to replace the placeholder kappa values.]
+where *O*~ij~ is the observed share of policy-years that coder 1 placed in category *i* and coder 2 in category *j*, and *E*~ij~ is the share expected under independent scoring. Continuous codes (P02) are assigned to the nearest grid point. Kappa is computed separately for implementation and bindingness over the P and G instruments. **The second coding is currently a provisional placeholder pending independent blind coding**; it predates the revised codebook and was only remapped to the new identifiers. The reported values (implementation κ~w~ = 0.46 over 82 policy-years; bindingness κ~w~ = 1.00 over 8 policies) are therefore illustrative only. [AUTHOR INPUT REQUIRED: independent blind second coding of the P codebook, to replace the placeholder kappa values.]
 
 ## 3.5 Trends and structural breaks (RQ1)
 
@@ -472,10 +478,10 @@ $$
 
 where *X*~t~ contains the log real milk price and the log real fertiliser price, the main output- and input-market drivers. The linear trend prevents the two rising indices from absorbing smooth drift, and the lagged dependent variable captures the slow adjustment of herds and soil-N pools. The ARDL framework is valid whether the regressors are I(0), I(1) or cointegrated (Pesaran et al., 2001).
 
-*Lag selection.* All 18 candidate specifications, with *p* ∈ {0, 1} and *q*~M~, *q*~P~ ∈ {0, 1, 2}, are estimated on the *same* sample (1997–2024, *n* = 28), because prices start in 1995 and up to two lags are allowed. The small-sample criterion AICc = AIC + 2*k*(*k* + 1)/(*n* − *k* − 1) selects **ARDL(1, 0, 2)**:
+*Lag selection.* All 18 candidate specifications, with *p* ∈ {0, 1} and *q*~M~, *q*~P~ ∈ {0, 1, 2}, are estimated on the *same* sample (1997–2024, *n* = 28), because prices start in 1995 and up to two lags are allowed. The small-sample criterion AICc = AIC + 2*k*(*k* + 1)/(*n* − *k* − 1) selects **ARDL(1, 0, 0)**:
 
 $$
-\ln E_t=\alpha+\tau t+\phi\ln E_{t-1}+\beta_0M_t+\gamma_0P_t+\gamma_1P_{t-1}+\gamma_2P_{t-2}+\lambda'X_t+\varepsilon_t \qquad (18)
+\ln E_t=\alpha+\tau t+\phi\ln E_{t-1}+\beta_0M_t+\gamma_0P_t+\lambda'X_t+\varepsilon_t \qquad (18)
 $$
 
 *Long-run multipliers.* The long-run effects of the two indices are
@@ -496,7 +502,7 @@ An *F* statistic above the I(1) bound indicates a level relationship. Residual d
 
 ## 3.8 Restricted recursive moving-block bootstrap
 
-With 28 observations, textbook HAC *t*-tests reject too often. In Monte Carlo simulation, a nominal 10% HAC test rejects 15% of the time for θ~M~ and 32% of the time for θ~P~ when the true effect is zero (cf. Kiefer & Vogelsang, 2005). The decisive *p*-values are therefore obtained from a bootstrap that imposes the null hypothesis (Davidson & MacKinnon, 2000; Li & Maddala, 1996):
+With 28 observations, textbook HAC *t*-tests reject too often. In Monte Carlo simulation, a nominal 10% HAC test rejects 23% of the time for θ~M~ and 26% of the time for θ~P~ when the true effect is zero (cf. Kiefer & Vogelsang, 2005). The decisive *p*-values are therefore obtained from a bootstrap that imposes the null hypothesis (Davidson & MacKinnon, 2000; Li & Maddala, 1996):
 
 1. Re-estimate the model without the tested index *v* (the null model, H~0~: θ~v~ = 0).
 2. Centre the residuals of the null model and cut them into overlapping blocks of length 3, which preserves serial dependence (≈ *T*^1/3^; Hall et al., 1995).
@@ -524,7 +530,7 @@ To interpret null results, we (i) set a true long-run effect |θ| on the grid {0
 
 ## 3.11 Robustness, instrument sub-indices and interrupted time series
 
-*Robustness grid.* We estimate fourteen pre-specified variants and eight leave-one-policy-out runs ({{tab:robustgrid}}). The rule, fixed in advance, is that a sign is **robust** if it holds in at least 80% of the estimable variants.
+*Robustness grid.* We estimate seventeen pre-specified variants and five leave-one-policy-out runs ({{tab:robustgrid}}). Besides alternative lags, trends, controls, samples and outcomes, the variants change the policy coding: equal bindingness, dropping the Nitrates Action Programme or down-weighting it for climate relevance, adding the strategy signal G to P, the alternative bindingness values recorded in the codebook (quota abolition *B* = 0.75; SDAS *B* = 0.50), and scoring the two framework laws in M at *B* = 0.25. The rule, fixed in advance, is that a sign is **robust** if it holds in at least 80% of the estimable variants.
 
 *Sub-indices by instrument type (RQ4a).* Each mitigation sub-index *s* ∈ {mandatory, incentive, voluntary} is estimated in turn, with the remainder of M and the pressure index held as controls (bootstrap *B* = 499):
 
@@ -612,22 +618,22 @@ TAB scorecard | Verdicts on the pre-specified hypotheses
 |:---|:---|:---|:---|
 | H1 | Breaks at 2010 or 2015 | Not supported | Three breaks (2000, 2012, 2020); none within ±1 year of a policy date |
 | H2 | Intensity offset < 1 after 2015 | Supported | IO = 0.32 (0.21–0.33 across emission-factor ratios) |
-| H3a | Mitigation lowers emissions (θ~M~ < 0) | Not supported | θ~M~ = +0.47, bootstrap *p* = 0.985 |
-| H3b | Pressure raises emissions (θ~P~ > 0) | Supported | θ~P~ = +0.69, bootstrap *p* = 0.032 |
-| H3c | Offset ratio ≥ 0.5 | Undefined | The mitigation effect is not negative, so the offset ratio cannot be computed |
-| H4a | Mandatory instruments have the strongest effect | Not supported | All M sub-indices positive, *p* > 0.8 |
+| H3a | Mitigation lowers emissions (θ~M~ < 0) | Not supported | θ~M~ = +0.22, bootstrap *p* = 0.880 |
+| H3b | Pressure raises emissions (θ~P~ > 0) | Supported | θ~P~ = +0.46, bootstrap *p* = 0.043 |
+| H3c | Offset ratio ≥ 0.5 | Undefined | The point estimate of the mitigation effect is not negative, so the offset ratio cannot be computed |
+| H4a | Mandatory instruments have the strongest effect | Not supported | Mandatory θ = +0.25 (*p* = 0.94); only the voluntary sub-index is negative (θ = −0.59, *p* = 0.03) |
 | H4b | Exposed regions expanded more after 2015 | Not supported | Significant placebo: divergence began before 2015 |
 
-The headline result is that expansion left a measurable footprint, whereas mitigation left too little effect to be offset. A sustained 0.1-unit rise in production pressure raised long-run emissions by about 7%, adding 12.5 Mt CO₂e over 2000–2024. The largely voluntary, intensity-oriented mitigation portfolio shows no detectable effect on total emissions.
+The headline result is that production pressure is associated with higher emissions and acts through scale, whereas the mitigation portfolio shows no detectable effect on total emissions. A sustained 0.1-unit rise in production pressure is associated with about 5% higher long-run emissions. Because P in 2024 was close to its 2000 level, the net effect of the post-2000 change in P on 2024 emissions is small (+2.2%). The largely voluntary, intensity-oriented mitigation portfolio shows no detectable reduction in total emissions.
 
 ## 4.2 The policy indices
 
-{{fig:indices}} plots the annual mitigation index M, the production-pressure index P and the net signal S. The mitigation index rose from 0.07 in 2000 to 0.64 in 2024. The pressure index rose from 0.24 to 0.34, and the net signal moved from −0.17 to +0.30. P was high until 2004, while coupled headage premia were in force, collapsed to zero with decoupling in 2005, and was then rebuilt through the derogation, the quota increases and Food Harvest 2020. The largest one-year rise in P (+0.175) occurred in 2010, when Food Harvest 2020 was added to the quota increments. P peaked at 0.45 in 2015–2020. M rose in two steps: with the Nitrates Action Programme in 2006–2007 (from 0.07 to 0.45), and with GLAS and the beef schemes in 2015–2016 (from 0.47 to 0.62). M reached its maximum of 0.68 in 2020.
+{{fig:indices}} plots the annual mitigation index M, the production-pressure index P, the net signal S and the strategy signal G. The mitigation index rose from 0.06 in 2000 to 0.69 in 2024. The pressure index moved only from 0.27 to 0.28, and the net signal from −0.21 to +0.41. P was high until 2004, while coupled headage premia were in force, and fell to 0.04 with decoupling in 2005, leaving only the quota increases. It was then rebuilt step by step through the derogation (from 2007), the quota increases of 2008–2014, quota abolition (2015) and TAMS II. The largest one-year rise in P (+0.078) occurred in 2016, the first full year of quota abolition and of TAMS II. P peaked at 0.35 in 2022 and eased to 0.28 in 2024 as TAMS II ended and the derogation was tightened. M rose in three steps: with the Nitrates Action Programme and the Farm Waste Management Scheme in 2006–2009 (from 0.06 to 0.44); with GLAS, the suckler programmes and the two Origin Green assurance schemes in 2015–2018 (from 0.40 to 0.62); and with the chemical-N maxima and ACRES in 2022–2024 (to 0.69). The strategy signal G was 0.18 under Food Harvest 2020 (2011–2014), 0.17 under Food Wise 2025 (2016–2020) and 0.09 under Food Vision 2030.
 
-FIG indices | Mitigation index M, production-pressure index P and net signal S, 1990–2024 | fig_indices.png | 6.3
-FIGNOTE: Each index is the sum of the instrument scores x = I × C × B shown in {{fig:scores}}. S above zero indicates that mitigation outweighs pressure on the common scale. Dotted vertical lines mark the five policy events. M is based on provisional coding.
+FIG indices | Mitigation index M, production-pressure index P, net signal S and strategy signal G, 1990–2024 | fig_indices.png | 6.3
+FIGNOTE: Each index is the sum of the instrument scores x = I × s × e × B × w shown in {{fig:scores}}; G is not part of P or S. S above zero indicates that mitigation outweighs pressure on the common scale. Dotted vertical lines mark the five policy events. M is based on provisional coding.
 
-Because both indices rose between 2005 and 2020, the net signal grew far less than mitigation effort. S was 0.05 in 2010 and only 0.17 in 2016, even though M had risen to 0.62 by then. This pattern is policy incoherence made measurable. By instrument type, the mandatory sub-index dominates M by 2024 (0.44 of 0.64), followed by the incentive sub-index (0.12, down from a 2020 peak of 0.25) and the voluntary sub-index (0.08).
+Because both indices rose between 2005 and 2020, the net signal grew far less than mitigation effort. S *fell* from 0.31 in 2009 to 0.17 in 2016 while M rose from 0.44 to 0.50, because P rose faster over the same years; in 45% of the years in which either index rose, both rose together. This pattern is policy incoherence made measurable. By instrument type, the mandatory sub-index dominates M by 2024 (0.44 of 0.69), followed by the voluntary sub-index (0.16) and the incentive sub-index (0.10, down from a 2019 peak of 0.13). As a check on the construction of P, year-to-year changes in P predict growth of the dairy herd (sum of lag 0 and lag 1 coefficients 0.49, *p* = 0.035).
 
 ## 4.3 RQ1: Trends and structural breaks
 
@@ -708,109 +714,108 @@ FIGNOTE: Stacked bars show the year-on-year contribution of each factor; dots sh
 
 ## 4.5 RQ3: The policy-mix model
 
-**Model selection and fit.** The AICc selects ARDL(1, 0, 2) (AICc = −135.5). The next-best candidate is ARDL(1, 0, 0), with AICc = −134.8 ({{tab:laggrid}}). The model is estimated over 1997–2024 (*n* = 28), and its short-run coefficients are reported in {{tab:ardlcoef}}.
+**Model selection and fit.** The AICc selects ARDL(1, 0, 0) (AICc = −131.8). The next-best candidates are ARDL(1, 1, 0) and ARDL(1, 0, 1), with AICc = −128.1 and −127.9 ({{tab:laggrid}}). The model is estimated over 1997–2024 (*n* = 28), and its short-run coefficients are reported in {{tab:ardlcoef}}.
 
-TAB ardlcoef | ARDL(1,0,2) short-run coefficients (dependent variable: ln CRF3)
+TAB ardlcoef | ARDL(1,0,0) short-run coefficients (dependent variable: ln CRF3)
 
 | Term | Coefficient | HAC SE | HAC *p* |
 |:---|---:|---:|---:|
-| Constant (α) | 2.4898 | 0.5037 | < 0.001 |
-| Trend (τ) | −0.0036 | 0.0014 | 0.008 |
-| ln *E*(*t*−1) (φ) | 0.7441 | 0.0544 | < 0.001 |
-| *M*(*t*) (β~0~) | 0.1190 | 0.0431 | 0.006 |
-| *P*(*t*) (γ~0~) | 0.0178 | 0.0426 | 0.676 |
-| *P*(*t*−1) (γ~1~) | 0.0211 | 0.0737 | 0.775 |
-| *P*(*t*−2) (γ~2~) | 0.1389 | 0.0583 | 0.017 |
-| ln real milk price | 0.0394 | 0.0217 | 0.070 |
-| ln real fertiliser price | −0.0364 | 0.0086 | < 0.001 |
+| Constant (α) | 3.3759 | 0.8274 | < 0.001 |
+| Trend (τ) | −0.0012 | 0.0019 | 0.533 |
+| ln *E*(*t*−1) (φ) | 0.6563 | 0.0866 | < 0.001 |
+| *M*(*t*) (β~0~) | 0.0765 | 0.0507 | 0.131 |
+| *P*(*t*) (γ~0~) | 0.1580 | 0.0566 | 0.005 |
+| ln real milk price | 0.0481 | 0.0301 | 0.110 |
+| ln real fertiliser price | −0.0529 | 0.0139 | < 0.001 |
 
 NOTE: *n* = 28 (1997–2024). HAC = Newey–West standard errors with two lags.
 
-With φ̂ = 0.744 and Σγ̂~j~ = 0.178, the long-run pressure multiplier is θ̂~P~ = 0.178 / (1 − 0.744) = **0.695**, and the mitigation multiplier is θ̂~M~ = 0.119 / (1 − 0.744) = **0.465** ({{tab:longrun}}; {{fig:ardl}}).
+With φ̂ = 0.656 and γ̂~0~ = 0.158, the long-run pressure multiplier is θ̂~P~ = 0.158 / (1 − 0.656) = **0.460**, and the mitigation multiplier is θ̂~M~ = 0.077 / (1 − 0.656) = **0.223** ({{tab:longrun}}; {{fig:ardl}}).
 
 TAB longrun | Long-run multipliers
 
 | Index | θ | SE (delta, HAC) | HAC *p* (one-sided) | Bootstrap *p* (one-sided) | 90% bootstrap interval | % per +0.1 | SD of index | % per 1 SD |
 |:---|---:|---:|---:|---:|:---|---:|---:|---:|
-| P | 0.695 | 0.153 | < 0.001 | **0.032** | 0.43 to 0.99 | +7.2 | 0.127 | +9.2 |
-| M | 0.465 | 0.175 | 0.996 | **0.985** | 0.16 to 0.77 | +4.8 | 0.236 | +11.6 |
+| P | 0.460 | 0.126 | < 0.001 | **0.043** | 0.25 to 0.69 | +4.7 | 0.097 | +4.5 |
+| M | 0.223 | 0.153 | 0.927 | **0.880** | −0.06 to 0.56 | +2.3 | 0.237 | +5.4 |
 
-NOTE: One-sided tests are θ~P~ > 0 and θ~M~ < 0. Bootstrap *p*-values come from the restricted bootstrap (*B* = 999); intervals come from the unrestricted bootstrap (999 draws). The interval for θ~P~ excludes zero; the interval for θ~M~ lies entirely above zero.
+NOTE: One-sided tests are θ~P~ > 0 and θ~M~ < 0. Bootstrap *p*-values come from the restricted bootstrap (*B* = 999); intervals come from the unrestricted bootstrap (999 draws). The interval for θ~P~ excludes zero; the interval for θ~M~ includes zero.
 
-FIG ardl | Long-run multipliers of the ARDL(1,0,2) policy-mix model | fig_ardl.png | 6.3
-FIGNOTE: (a) Point estimates with 90% unrestricted-bootstrap intervals. (b) Joint distribution of the 999 bootstrap draws of (θ~M~, θ~P~); the diamond marks the point estimate. Draws lie almost entirely in the quadrant where both indices are associated with higher emissions.
+FIG ardl | Long-run multipliers of the ARDL(1,0,0) policy-mix model | fig_ardl.png | 6.3
+FIGNOTE: (a) Point estimates with 90% unrestricted-bootstrap intervals. (b) Joint distribution of the 999 bootstrap draws of (θ~M~, θ~P~); the diamond marks the point estimate. θ~P~ is positive in every draw; θ~M~ is positive in most draws.
 
-**Diagnostics.** Every residual diagnostic passes at the 10% level ({{tab:diag}}). The bounds statistic, *F* = 5.23, exceeds the I(1) bound at the 10% (4.06) and 5% (4.57) levels, indicating a level relationship; at the 1% level the result is inconclusive (I(0) bound 4.40, I(1) bound 5.72). The unit-root tests show mixed orders of integration ({{tab:unitroots}}). P is stationary in levels (ADF *p* = 0.001), M appears to be I(1) (ADF *p* = 0.26 in levels and < 0.001 in differences), and ln CRF3 is borderline in levels (ADF *p* = 0.10; KPSS *p* = 0.02). This mix justifies the ARDL bounds framework. The hypothesis that the two indices have equal and opposite per-unit effects (Σβ + Σγ = 0) is rejected (*F* = 28.1, *p* < 0.001). In a model with the net signal S alone, θ~S~ = −0.37 (*p* = 0.11).
+**Diagnostics.** Every residual diagnostic passes at the 10% level ({{tab:diag}}). The bounds statistic, *F* = 1.17, lies below the I(0) bound at every level (3.03 at 10%), so **the bounds test does not confirm a level relationship**. The unit-root tests ({{tab:unitroots}}) indicate that both indices are stationary in levels (ADF *p* = 0.010 for M and < 0.001 for P), while ln CRF3 is borderline (ADF *p* = 0.10; KPSS *p* = 0.02). The model is therefore best read as a stationary dynamic regression whose long-run multipliers summarise the cumulative response to a sustained change in an index; without a confirmed level relationship they are indicative rather than equilibrium estimates. The hypothesis that the two indices have equal and opposite per-unit effects (Σβ + Σγ = 0) is rejected (*F* = 8.57, *p* = 0.008). In a model with the net signal S alone, θ~S~ = −0.20 (*p* = 0.21).
 
-TAB diag | Residual diagnostics for the ARDL(1,0,2) model
+TAB diag | Residual diagnostics for the ARDL(1,0,0) model
 
 | Diagnostic | Statistic | *p*-value | Result at 10% |
 |:---|---:|---:|:---|
-| Breusch–Godfrey (2 lags) | 2.40 | 0.121 | Pass |
-| Jarque–Bera normality | 0.16 | 0.922 | Pass |
-| Breusch–Pagan heteroskedasticity | 0.47 | 0.863 | Pass |
-| RESET (squares) | – | 0.915 | Pass |
-| CUSUM (OLS residuals) | 0.33 | 1.000 | Pass |
+| Breusch–Godfrey (2 lags) | 1.60 | 0.228 | Pass |
+| Jarque–Bera normality | 1.03 | 0.597 | Pass |
+| Breusch–Pagan heteroskedasticity | 0.36 | 0.894 | Pass |
+| RESET (squares) | – | 0.763 | Pass |
+| CUSUM (OLS residuals) | 0.58 | 0.885 | Pass |
 
-**Interpretation.** Production pressure raised long-run emissions by 7.2% per sustained 0.1-unit rise (bootstrap *p* = 0.032), so **H3b is supported**. The mitigation coefficient has the opposite sign to that hypothesised (+0.47) and is never negative in the bootstrap, so **H3a is not supported**. A positive association of this size is not plausible as a causal effect of mitigation policy. It reflects the expansion of schemes in the same years as output, that is, reverse timing. All of these estimates are conditional associations rather than causal effects.
+**Interpretation.** A sustained 0.1-unit rise in production pressure is associated with 4.7% higher long-run emissions (bootstrap *p* = 0.043), so **H3b is supported**. The mitigation coefficient has the opposite sign to that hypothesised (+0.22; bootstrap *p* = 0.88), and its 90% interval includes zero, so **H3a is not supported**. A positive association is not plausible as a causal effect of mitigation policy; it reflects the expansion of schemes in the same years as output, that is, reverse timing. All of these estimates are conditional associations rather than causal effects, and the failed bounds test is a further reason to treat the long-run magnitudes as indicative.
 
 ## 4.6 RQ3: Counterfactuals and the offset ratio
 
-Holding P at its 2000 level and simulating the fitted ARDL forward shows that **production pressure raised 2024 emissions by 11.2% (90% CI 6.7–15.7%) and added 12.5 Mt CO₂e cumulatively over 2000–2024** ({{fig:cf}}; {{tab:offset}}). This dynamic effect is larger than the static long-run value implied by the 2000–2024 change in P (+0.095, equivalent to +6.8%). The difference arises because P stood well above its 2024 level during 2010–2020, and the lagged adjustment still carries part of that higher pressure into 2024.
+Holding P at its 2000 level and simulating the fitted ARDL forward shows that **the post-2000 change in production pressure raised 2024 emissions by only 2.2% (90% CI 1.1–3.2%)** ({{fig:cf}}; {{tab:offset}}), because P in 2024 (0.28) was barely above its 2000 level (0.27). The path matters more than the end points. After decoupling, P fell far below its 2000 level, and the model attributes lower emissions to this in 2005–2016; P then rebuilt above its 2000 level, and the model attributes higher emissions to it from 2017. Summed over 2000–2024, the pressure effect is −7.2 Mt CO₂e. The comparison year is therefore decisive: relative to the post-decoupling low of 2005 (P = 0.04), the rebuilding of P to 0.28 corresponds to a long-run effect of about +12%.
 
 FIG cf | Observed CRF3 emissions and model-based counterfactual paths, 2000–2024 | fig_cf.png | 6.3
-FIGNOTE: (a) Counterfactual paths simulate the fitted ARDL with one index held at its 2000 value. The shaded gap between the observed (black) and the P-frozen (orange) paths is the emission footprint of production-oriented policy. (b) Distribution of the effect of the post-2000 change in P on 2024 emissions across 999 unrestricted bootstrap draws; the solid line is the point estimate and the dotted lines bound the 90% interval.
+FIGNOTE: (a) Counterfactual paths simulate the fitted ARDL with one index held at its 2000 value. The shaded gap between the observed (black) and the P-frozen (orange) paths is the model-based effect of the change in production pressure since 2000: negative while P was below its 2000 level (2005–2016) and positive afterwards. (b) Distribution of the effect of the post-2000 change in P on 2024 emissions across 999 unrestricted bootstrap draws; the solid line is the point estimate and the dotted lines bound the 90% interval.
 
 TAB offset | Counterfactual effects of the post-2000 change in each index
 
 | Quantity | Estimate | 90% interval |
 |:---|---:|:---|
-| Pressure effect on 2024 emissions (%) | +11.2 | 6.7 to 15.7 |
-| Mitigation effect on 2024 emissions (%) | +29.1 | 9.6 to 51.2 |
-| Cumulative pressure effect, 2000–2024 (kt CO₂e) | +12,538 | – |
-| Bootstrap draws with a negative mitigation effect | 1 of 999 | – |
-| Offset ratio, 2024 | Undefined | – |
+| Pressure effect on 2024 emissions (%) | +2.2 | 1.1 to 3.2 |
+| Mitigation effect on 2024 emissions (%) | +14.4 | −3.8 to 39.1 |
+| Cumulative pressure effect, 2000–2024 (kt CO₂e) | −7,239 | – |
+| Cumulative mitigation effect, 2000–2024 (kt CO₂e) | +30,080 | – |
+| Bootstrap draws with a negative mitigation effect | 109 of 999 | – |
+| Offset ratio, 2024 | Undefined | 0.13 to 10.1 (in the 109 valid draws) |
 
-NOTE: The offset ratio is defined only when the mitigation effect is negative.
+NOTE: The offset ratio is defined only when the mitigation effect is negative; the interval is computed over the bootstrap draws in which it is defined.
 
-Freezing M at its 2000 level yields a counterfactual *below* observed emissions: the rise in M is associated with 29.1% *higher* 2024 emissions (90% CI 9.6–51.2%). Only 1 of 999 bootstrap draws gives a negative mitigation effect. With no negative mitigation effect, there is nothing for pressure to offset. The offset ratio is undefined, and **H3c is not supported**. In short, expansion left a measurable emissions footprint, whereas the mitigation portfolio left too small an effect to be offset.
+Freezing M at its 2000 level yields a counterfactual *below* observed emissions: the rise in M is associated with 14.4% *higher* 2024 emissions, although the 90% interval (−3.8% to 39.1%) includes zero. Only 109 of 999 bootstrap draws give a negative mitigation effect, and the offset ratio in those draws ranges from 0.13 to 10.1. With no negative mitigation effect in the point estimate, the offset ratio is undefined, and **H3c is not supported**. In short, pressure moves emissions in the hypothesised direction, whereas the mitigation portfolio left no detectable reduction to be offset.
 
 ## 4.7 Robustness, statistical power and timing
 
 ### 4.7.1 Robustness
 
-θ~P~ is positive in **all 14** estimable core specifications and significant at the 10% level in **13** ({{fig:robust}}; {{tab:robustgrid}}). The single exception adds GNI\* and shock-year indicators (θ~P~ = 0.49, *p* = 0.13), because GNI\* is collinear with quota abolition. All **8 of 8** leave-one-policy-out runs remain significant, with θ~P~ ranging from 0.49 (omitting Food Harvest 2020) to 1.12 (omitting quota abolition, the most influential single instrument). θ~M~ is positive in 13 of 14 specifications and is **never** significantly negative. The only negative estimate, from the static first-difference model (θ~M~ = −0.03), is far from significant (*p* = 0.30).
+θ~P~ is positive in **all 17** estimable core specifications and significant at the 10% level in **14** ({{fig:robust}}; {{tab:robustgrid}}). The exceptions are fixed lags (θ~P~ = 0.51, *p* = 0.11), down-weighting the Nitrates Action Programme (0.42, *p* = 0.11) and adding GNI\* and shock-year indicators (0.22, *p* = 0.25), the last because GNI\* is collinear with quota abolition. Adding the strategy signal to P leaves θ~P~ unchanged (0.45, *p* = 0.02). Four of the five leave-one-policy-out runs remain significant, with θ~P~ ranging from 0.35 (omitting the quota increases) to 1.23 (omitting the coupled premia); omitting quota abolition gives θ~P~ = 0.51 (*p* = 0.12). θ~M~ is positive in 14 of 17 specifications but is significantly negative in **two**: when the Nitrates Action Programme is dropped from M (θ~M~ = −0.81, *p* = 0.03) and when the two framework laws are scored in M (θ~M~ = −0.19, *p* = 0.03). The mitigation null therefore depends on how the Nitrates Action Programme, the dominant and water-quality-oriented component of M, and the 2021–2022 climate framework are treated.
 
-FIG robust | Robustness of the long-run multipliers across 14 specifications and 8 leave-one-policy-out runs | fig_robust.png | 6.3
-FIGNOTE: Filled circles indicate a one-sided bootstrap *p* < 0.10 (*B* = 299); hollow circles are not significant. Dotted lines mark the baseline estimates. Leave-out rows drop one pressure instrument (P01–P08; see {{tab:codebookP}}) from P at a time; one-sided *p*-values for θ~M~ are not computed for these runs.
+FIG robust | Robustness of the long-run multipliers across 17 specifications and 5 leave-one-policy-out runs | fig_robust.png | 6.3
+FIGNOTE: Filled circles indicate a one-sided bootstrap *p* < 0.10 (*B* = 299); hollow circles are not significant. Dotted lines mark the baseline estimates. Leave-out rows drop one pressure instrument (P01–P05; see {{tab:codebookP}}) from P at a time; one-sided *p*-values for θ~M~ are not computed for these runs.
 
 ### 4.7.2 Statistical power
 
-Nominal 10% HAC tests have a true size of 0.15 for M and 0.32 for P, which confirms the need for bootstrap inference. With size-adjusted critical values, the minimum detectable effect at 80% power is |θ| ≈ 0.40 for both indices, equivalent to about 4% per 0.1 index units ({{tab:power}}; {{fig:power}}). Mitigation effects larger than |θ| ≈ 0.40 would very likely have been detected; smaller effects cannot be ruled out.
+Nominal 10% HAC tests have a true size of 0.23 for M and 0.26 for P, which confirms the need for bootstrap inference. With size-adjusted critical values, the minimum detectable effect at 80% power is |θ| ≈ 0.43 for M and 0.35 for P, equivalent to about 4.4% and 3.5% per 0.1 index units ({{tab:power}}; {{fig:power}}). Mitigation effects larger than |θ| ≈ 0.43 would very likely have been detected; smaller effects cannot be ruled out.
 
 TAB power | Size-adjusted power by true effect size
 
 | True \|θ\| | 0 | 0.1 | 0.2 | 0.3 | 0.5 | 0.75 | 1.0 | 1.5 |
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Power, θ~M~ | 0.10 | 0.23 | 0.44 | 0.66 | 0.94 | 1.00 | 1.00 | 1.00 |
-| Power, θ~P~ | 0.10 | 0.26 | 0.49 | 0.70 | 0.91 | 0.98 | 0.99 | 1.00 |
+| Power, θ~M~ | 0.10 | 0.20 | 0.42 | 0.60 | 0.91 | 1.00 | 1.00 | 1.00 |
+| Power, θ~P~ | 0.10 | 0.29 | 0.47 | 0.75 | 0.97 | 1.00 | 1.00 | 1.00 |
 
 NOTE: Based on 500 simulated series per effect size, with size-adjusted critical values.
 
 FIG power | Size-adjusted power curves for the long-run multipliers | fig_power.png | 4.0
-FIGNOTE: The dashed horizontal line marks 80% power; the dotted vertical line marks the minimum detectable effect (|θ| ≈ 0.40).
+FIGNOTE: The dashed horizontal line marks 80% power; the dotted vertical lines mark the minimum detectable effects (|θ| ≈ 0.43 for M and 0.35 for P).
 
 ### 4.7.3 Mitigation by instrument type (RQ4a)
 
-No mitigation sub-index shows a detectable emission-reducing effect ({{tab:subindex}}), so **H4a is not supported**. Only the incentive sub-index turns negative at a three-year lag (θ = −1.13). This is an isolated estimate that was not tested formally.
+The mandatory sub-index, which the hypothesis expected to be strongest, shows no emission-reducing effect (θ = +0.25, *p* = 0.94), so **H4a is not supported** ({{tab:subindex}}). The voluntary sub-index (Carbon Navigator and the two Origin Green assurance schemes) is negative and significant (θ = −0.59, *p* = 0.03), but it is active in only 12 years, its standard error is large (1.41), and it rose in the same years as the post-quota herd, so the estimate is fragile. The incentive sub-index turns negative only at two- and three-year lags (θ = −1.87 and −2.21), estimates that were not tested formally.
 
 TAB subindex | Mitigation sub-index estimates
 
 | Instrument type | Active years | θ | Bootstrap *p* (θ < 0) | θ at 3-year lag |
 |:---|---:|---:|---:|---:|
-| Mandatory | 19 | +0.20 | 0.966 | +0.09 |
-| Incentive | 28 | +0.59 | 0.904 | −1.13 |
-| Voluntary | 12 | +0.95 | 0.826 | +0.09 |
+| Mandatory | 19 | +0.25 | 0.936 | +0.44 |
+| Incentive | 28 | +0.58 | 0.784 | −2.21 |
+| Voluntary | 12 | −0.59 | 0.030 | −0.67 |
 
 NOTE: Each sub-index is estimated with the remainder of M and the pressure index as controls (*B* = 499).
 
@@ -842,19 +847,19 @@ TAB did | Continuous-exposure DiD: post-2015 effect per +10 pp of pre-2015 dairy
 
 | Outcome | Specification | % per +10 pp | *p* (RI) | *p* (WCB) | Placebo 2010 (%) | Placebo *p* (RI) | *n* |
 |:---|:---|---:|---:|---:|---:|---:|---:|
-| log dairy cows | Two-way FE | −0.50 | 0.842 | 0.866 | +2.91 | 0.067 | 170 |
-| log dairy cows | TWFE + region trends | −0.69 | 0.567 | 0.663 | +2.77 | 0.042 | 170 |
-| log livestock units | Two-way FE | +1.17 | 0.142 | 0.215 | +1.32 | 0.008 | 170 |
-| log livestock units | TWFE + region trends | +0.72 | 0.133 | 0.039 | +1.24 | 0.050 | 170 |
-| log imputed livestock emissions | Two-way FE | +2.11 | 0.108 | 0.171 | +1.63 | 0.017 | 165 |
-| log imputed livestock emissions | TWFE + region trends | +1.28 | 0.075 | 0.058 | +1.51 | 0.008 | 165 |
+| log dairy cows | Two-way FE | −0.50 | 0.842 | 0.888 | +2.91 | 0.067 | 170 |
+| log dairy cows | TWFE + region trends | −0.69 | 0.567 | 0.638 | +2.77 | 0.042 | 170 |
+| log livestock units | Two-way FE | +1.17 | 0.142 | 0.183 | +1.32 | 0.008 | 170 |
+| log livestock units | TWFE + region trends | +0.72 | 0.133 | 0.045 | +1.24 | 0.050 | 170 |
+| log imputed livestock emissions | Two-way FE | +2.11 | 0.108 | 0.150 | +1.63 | 0.017 | 165 |
+| log imputed livestock emissions | TWFE + region trends | +1.28 | 0.075 | 0.049 | +1.51 | 0.008 | 165 |
 
 NOTE: RI = randomisation inference over all 120 permutations; WCB = wild cluster bootstrap with Webb weights (*B* = 999); TWFE = two-way fixed effects.
 
 FIG event | Event-study coefficients for regional dairy exposure, 2005–2024 (2014 = 0) | fig_event.png | 6.3
 FIGNOTE: Coefficients are percentage differences per 10 percentage points of pre-2015 dairy exposure, relative to 2014. The shaded band is a 90% interval for imputed livestock emissions based on cluster-robust errors with five clusters and is indicative only. Imputed emissions end in 2023.
 
-In the main specification, imputed livestock emissions rose by 2.1% more per 10 pp of exposure after 2015 (*p*~RI~ = 0.11; *p*~WCB~ = 0.17). However, the event-study gap opens steadily from 2005, and the placebo dated to 2010 (+1.6%, *p*~RI~ = 0.017) is almost as large as the main estimate and is significant. More exposed regions were already diverging before abolition, so the parallel-trends assumption fails and **H4b is not supported**. The region-trend specification for emissions is nominally significant (+1.3%, *p*~RI~ = 0.075, *p*~WCB~ = 0.058), but its placebo is also significant (*p*~RI~ = 0.008), so it cannot be interpreted as an abolition effect either. The dairy herd itself grew no faster in percentage terms in more exposed regions (−0.5% per 10 pp; *p* = 0.84). Post-quota growth was national and came partly from regions with little dairying.
+In the main specification, imputed livestock emissions rose by 2.1% more per 10 pp of exposure after 2015 (*p*~RI~ = 0.11; *p*~WCB~ = 0.15). However, the event-study gap opens steadily from 2005, and the placebo dated to 2010 (+1.6%, *p*~RI~ = 0.017) is almost as large as the main estimate and is significant. More exposed regions were already diverging before abolition, so the parallel-trends assumption fails and **H4b is not supported**. The region-trend specification for emissions is nominally significant (+1.3%, *p*~RI~ = 0.075, *p*~WCB~ = 0.049), but its placebo is also significant (*p*~RI~ = 0.008), so it cannot be interpreted as an abolition effect either. The dairy herd itself grew no faster in percentage terms in more exposed regions (−0.5% per 10 pp; *p* = 0.84). Post-quota growth was national and came partly from regions with little dairying.
 
 ## 4.9 Mechanism: linking the decomposition to policy
 
@@ -864,19 +869,19 @@ TAB mech | LMDI effects regressed on changes in P and M (sum of lag 0 and lag 1,
 
 | LMDI outcome | Policy | kt CO₂e per +0.1 | SE (per 0.1) | *p* (two-sided) |
 |:---|:---|---:|---:|---:|
-| Activity effect | ΔP | −218.4 | 147.3 | 0.154 |
-| Activity effect | ΔM | +53.8 | 191.9 | 0.782 |
-| Dairy-herd activity effect | ΔP | −21.9 | 42.3 | 0.611 |
-| Dairy-herd activity effect | ΔM | +84.9 | 64.9 | 0.206 |
-| Intensity effect | ΔP | **+111.2** | 47.5 | **0.030** |
-| Intensity effect | ΔM | +61.6 | 43.9 | 0.176 |
+| Activity effect | ΔP | **+748.0** | 252.3 | **0.008** |
+| Activity effect | ΔM | −66.5 | 218.3 | 0.764 |
+| Dairy-herd activity effect | ΔP | **+259.1** | 122.8 | **0.048** |
+| Dairy-herd activity effect | ΔM | +30.0 | 59.0 | 0.617 |
+| Intensity effect | ΔP | −10.2 | 77.5 | 0.897 |
+| Intensity effect | ΔM | +28.9 | 84.0 | 0.735 |
 
 NOTE: Newey–West standard errors; 1997–2023, *n* = 27.
 
 FIG mech | Association between annual LMDI effects and changes in the policy indices | fig_mech.png | 5.0
 FIGNOTE: Bars show the sum of the contemporaneous and one-year-lagged coefficients, scaled to a +0.1 change in each index, with 90% confidence intervals (Newey–West). The framework predicts positive pressure bars for activity and negative mitigation bars for intensity.
 
-The hypothesised division of labour is **not confirmed**. ΔP is not associated with the activity effect (−218 kt per 0.1; *p* = 0.15). It is, however, associated with the intensity effect (+111 kt per 0.1; *p* = 0.03): years of rising pressure were years in which emissions per head and per litre rose, which is consistent with intensification. ΔM is associated with neither effect.
+The **pressure half** of the hypothesised division of labour is confirmed. ΔP is associated with the activity effect (+748 kt per 0.1; *p* = 0.008), and in particular with the dairy-herd activity effect (+259 kt per 0.1; *p* = 0.048), but not with the intensity effect (−10 kt; *p* = 0.90). Years of rising pressure were years in which herds and nitrogen inputs grew. The **mitigation half** is not confirmed: ΔM is associated with neither effect, and in particular not with lower intensity (+29 kt; *p* = 0.73).
 
 ## 4.10 The 2030 sectoral ceiling
 
@@ -909,7 +914,9 @@ FIGNOTE: GWP\* converts methane into CO₂-warming-equivalents (CO₂-we) as E\*
 
 ## 5.1 Expansion with little to offset
 
-Three independent lines of evidence point in the same direction. First, growth in scale and yield after 2014 outpaced intensity gains by more than three to one (IO = 0.32). Second, the policy-mix model attributes an 11.2% rise in 2024 emissions to production pressure, a result that survives every pre-specified robustness variant in sign and nearly all of them in significance. Third, the same model finds no emission-reducing effect of mitigation. A rival account would need to explain all three findings. The evidence therefore favours a refined version of Explanation B. Production-oriented policy measurably raised emissions, but the mitigation portfolio did not produce a detectable reduction that expansion then cancelled; expansion had little mitigation to offset. Read in this way, Explanation A, that mitigation was weak, also holds as a statement about the *portfolio's* effect on total emissions.
+Three lines of evidence point in the same direction. First, growth in scale and yield after 2014 outpaced intensity gains by more than three to one (IO = 0.32). Second, production pressure is associated with higher long-run emissions (+4.7% per 0.1), a result that holds in sign in every pre-specified robustness variant and in significance in most of them, and changes in P line up with the activity component of the decomposition, the channel the framework predicts. Third, no emission-reducing effect of mitigation can be detected. The evidence therefore favours a refined version of Explanation B. Production-oriented policy moved emissions through scale, but the mitigation portfolio did not produce a detectable reduction that expansion then cancelled; expansion had little mitigation to offset. Read in this way, Explanation A, that mitigation was weak, also holds as a statement about the *portfolio's* effect on total emissions.
+
+The size of the pressure footprint depends on the comparison chosen. Relative to 2000, when coupled premia were still in force, the 2024 level of pressure is almost unchanged and its net effect on 2024 emissions is small (+2.2%). Relative to the post-decoupling low of 2005, the rebuilding of pressure through the derogation, the quota increases, abolition and TAMS II corresponds to a long-run effect of about 12%. Decoupling removed one expansion instrument; the policies that followed replaced it with others that acted more directly on the dairy herd.
 
 ## 5.2 Timing: 2010, not 2015
 
@@ -917,25 +924,25 @@ Three results agree that the trend changed in 2010–2012: the Bai–Perron brea
 
 ## 5.3 Why mitigation did not register
 
-Most mitigation instruments were voluntary or incentive-based schemes that acted on intensity, and the main binding instrument, the Nitrates Action Programme, was designed for water quality. A portfolio that acts only on intensity can lower emissions per litre while total emissions rise, and this is precisely what the decomposition shows for 2014–2021. The positive association between M and emissions is best interpreted as reverse timing: schemes such as GLAS grew in the same years as the herd. The power analysis bounds what the data can reveal. Long-run mitigation effects with |θ| above about 0.40 (roughly 4% per 0.1 index units) would very likely have been detected, but smaller beneficial effects cannot be excluded. The mechanism regression adds a further caution. Rising pressure coincided with rising *intensity*, consistent with intensification at the margin (higher stocking rates and more nitrogen per hectare), which would work directly against an intensity-based mitigation strategy.
+Most mitigation instruments were voluntary or incentive-based schemes that acted on intensity, and the main binding instrument, the Nitrates Action Programme, was designed for water quality. A portfolio that acts only on intensity can lower emissions per litre while total emissions rise, and this is precisely what the decomposition shows for 2014–2021. The positive association between M and emissions is best interpreted as reverse timing: schemes such as GLAS grew in the same years as the herd. The power analysis bounds what the data can reveal. Long-run mitigation effects with |θ| above about 0.43 (roughly 4% per 0.1 index units) would very likely have been detected, but smaller beneficial effects cannot be excluded. The mechanism regression adds a further caution: changes in M are not associated with lower intensity, which is the channel through which an intensity-oriented portfolio would have to work. Two robustness results qualify the mitigation null. When the Nitrates Action Programme, designed for water quality and the largest component of M, is removed, the remaining mitigation index is significantly associated with lower emissions; and the voluntary assurance and advisory schemes show a negative association. Both estimates are fragile, but they suggest that the portfolio average may mask instruments with modest beneficial effects.
 
 ## 5.4 Relation to stakeholder-identified barriers
 
-Of the five barriers identified by Augustenborg et al. (2026), **policy incoherence** receives quantitative support. P and M rose together over 2005–2020, the net signal grew far more slowly than mitigation effort, and P has a detectable effect on emissions. **Competing political priorities** are consistent with the regime change around Food Harvest 2020, a growth strategy adopted alongside mitigation commitments. **Capacity, financial and planning constraints** cannot be separated with these data. In the terms of Marsh and McConnell (2010), the mitigation portfolio shows some *process* success, in that instruments were implemented and their coverage grew, but no detectable *programme* success on total emissions. Its *political* success was limited by the parallel growth agenda.
+Of the five barriers identified by Augustenborg et al. (2026), **policy incoherence** receives quantitative support. P and M rose together over 2005–2020, the net signal fell between 2009 and 2016 even as mitigation effort grew, and P has a detectable association with emissions. **Competing political priorities** are consistent with the regime change around Food Harvest 2020, a growth strategy adopted alongside mitigation commitments (strategy signal G). **Capacity, financial and planning constraints** cannot be separated with these data. In the terms of Marsh and McConnell (2010), the mitigation portfolio shows some *process* success, in that instruments were implemented and their coverage grew, but no detectable *programme* success on total emissions. Its *political* success was limited by the parallel growth agenda.
 
 ## 5.5 Policy implications
 
 The findings carry four implications. They are offered as interpretations of the evidence, not as estimated policy effects.
 
-1. **Coherence before additionality.** Because pressure has a detectable effect and the mitigation portfolio does not, adding further intensity-oriented instruments is unlikely, on its own, to close the gap while expansion incentives remain. Assessing growth instruments (derogations, capital grants for capacity and volume targets) for their emission consequences would address the measured source of the problem.
+1. **Coherence before additionality.** Because pressure has a detectable association with emissions, acting through scale, and the mitigation portfolio does not, adding further intensity-oriented instruments is unlikely, on its own, to close the gap while expansion incentives remain. Assessing growth instruments (derogations, capital grants for capacity and volume targets) for their emission consequences would address the measured source of the problem.
 2. **Targets on totals, not only on intensity.** An intensity offset of 0.32 means that efficiency gains cancelled only about a third of scale growth. Policy framed around emissions per litre can succeed on its own terms while total emissions rise.
 3. **The arithmetic of the 2030 ceiling.** On recent trends, compliance implies roughly 16–23% fewer livestock units by 2030 unless intensity falls far faster than has ever been observed. This implication should be stated explicitly in sectoral planning.
-4. **Measuring the net signal.** The common I × C × B scale allows governments to track whether new instruments raise mitigation intensity faster than concurrent sectoral policy raises pressure. The index is transferable to other land-based sectors that face growth and decarbonisation mandates at the same time.
+4. **Measuring the net signal.** The common I × *s* × *e* × B scale allows governments to track whether new instruments raise mitigation intensity faster than concurrent sectoral policy raises pressure. The index is transferable to other land-based sectors that face growth and decarbonisation mandates at the same time.
 
 ## 5.6 Limitations
 
-- **Provisional policy coding.** The mitigation index M uses the authors' provisional coding under the INPACT scoring rule and is to be replaced by the INPACT export. The eligibility shares for the nitrates derogation (0.30) and TAMS II (0.15) are provisional pending DAFM statistics. The second coding of P is a placeholder, so the reported kappa values do not yet measure reliability. [AUTHOR INPUT REQUIRED: INPACT export for M; DAFM eligibility statistics for P03 and P08; independent second coding of P.]
-- **Short national series.** With *n* = 28 in the ARDL, inference rests on the bootstrap and power is limited (MDE ≈ 0.40). The results are conditional associations, not causal estimates. The positive M coefficient illustrates the limits of a time-series design when instruments are adopted alongside output growth.
+- **Policy coding.** The mitigation index M uses the authors' coding under the INPACT scoring rule and is to be replaced by the INPACT export. Eligibility shares are anchored on participation statistics but several are graded low or low-to-medium confidence, and three coverage shares (P01, P02 and M11) are transferred from the nearest inventory year. The second coding of P and G is a placeholder that predates the revised codebook, so the reported kappa values do not yet measure reliability. The results are sensitive to the coding of the policy indices: moving from the earlier to the revised codebook reduced θ~P~ from 0.69 to 0.46 and changed the selected lag structure. [AUTHOR INPUT REQUIRED: INPACT export for M; independent second coding of P and G against the revised codebook.]
+- **Short national series.** With *n* = 28 in the ARDL, inference rests on the bootstrap and power is limited (MDE ≈ 0.43 for M and 0.35 for P). The bounds test does not confirm a level relationship, so the long-run multipliers are indicative. The results are conditional associations, not causal estimates. The positive M coefficient illustrates the limits of a time-series design when instruments are adopted alongside output growth.
 - **No untreated comparator.** Quota abolition and CAP reform applied across the EU. The regional design therefore relies on within-Ireland exposure, and its parallel-trends assumption fails.
 - **Five clusters.** Regional inference uses randomisation inference and the wild cluster bootstrap. These methods are appropriate but cannot create information that five units do not contain, and the event-study bands are indicative only.
 - **Inventory data.** The LMDI decomposition and the regional emissions end in 2023, because the 2024 CRT split is not yet available. Changes in inventory methodology appear as changes in intensity, and regional emissions are imputed from national implied emission factors.
@@ -944,11 +951,11 @@ The findings carry four implications. They are offered as interpretations of the
 
 # 6. Conclusion
 
-Three decades of farm climate policy left Irish agricultural emissions almost exactly where they began. This paper places expansion and mitigation policy on a common scale and attributes the flat emission path using three designs whose assumptions fail in different ways. Production-oriented policy measurably raised emissions. A sustained 0.1-unit rise in pressure raised long-run emissions by about 7%, and pressure added 11.2% to 2024 emissions and 12.5 Mt CO₂e over 2000–2024. The largely voluntary, intensity-oriented mitigation portfolio shows no detectable effect on total emissions, so expansion had little mitigation to offset. The turning point came in 2010–2012, under the quota increases and Food Harvest 2020, rather than at abolition in 2015. After abolition, efficiency gains cancelled only a third of scale growth. On current trends, the 2030 ceiling implies 16–23% fewer livestock units unless emission intensity falls far faster than it ever has.
+Three decades of farm climate policy left Irish agricultural emissions almost exactly where they began. This paper places expansion and mitigation policy on a common scale and attributes the flat emission path using three designs whose assumptions fail in different ways. Production-oriented policy is associated with higher emissions and acts through scale: a sustained 0.1-unit rise in pressure is associated with about 5% higher long-run emissions, and changes in pressure track the growth of herds and nitrogen inputs. Because decoupling removed coupled premia before later instruments rebuilt pressure, the net change in pressure between 2000 and 2024 was small, and so is its net effect on 2024 emissions. The largely voluntary, intensity-oriented mitigation portfolio shows no detectable effect on total emissions, so expansion had little mitigation to offset. The turning point came in 2010–2012, under the quota increases and Food Harvest 2020, rather than at abolition in 2015. After abolition, efficiency gains cancelled only a third of scale growth. On current trends, the 2030 ceiling implies 16–23% fewer livestock units unless emission intensity falls far faster than it ever has.
 
 ## 6.1 Future research
 
-Several extensions would strengthen the evidence base. On the data side, the provisional mitigation coding should be replaced with the INPACT export for M; the P codebook should receive independent, blind second coding; DAFM statistics should be used for the derogation and TAMS II eligibility shares; and the CRT 2026 submission should be used to extend the LMDI decomposition and the regional emissions to 2024. On the design side, a county-level panel built from the Census of Agriculture and DAFM derogation statistics would support a continuous-treatment design (Callaway et al., 2024). The common-scale approach could also be transferred to other jurisdictions in which land-based sectors face growth and decarbonisation mandates at the same time.
+Several extensions would strengthen the evidence base. On the data side, the provisional mitigation coding should be replaced with the INPACT export for M; the revised P and G codebook should receive independent, blind second coding; the low-confidence eligibility and coverage shares should be refined with DAFM scheme statistics; and the CRT 2026 submission should be used to extend the LMDI decomposition and the regional emissions to 2024. On the design side, a county-level panel built from the Census of Agriculture and DAFM derogation statistics would support a continuous-treatment design (Callaway et al., 2024). The common-scale approach could also be transferred to other jurisdictions in which land-based sectors face growth and decarbonisation mandates at the same time.
 
 # Declarations {.unnumbered}
 
@@ -962,7 +969,7 @@ Several extensions would strengthen the evidence base. On the data side, the pro
 
 # Data and Code Availability {.unnumbered}
 
-All numbers in this paper come from a full re-run of `ireland_agri_ghg_analysis.ipynb` (seed 20261019, run on 21 October 2026). Data come from the EPA, Ireland's CRT 2025 submission to the UNFCCC, the CSO and Eurostat. The annual panel (1990–2024), the result tables and an interactive results platform (covering the research problem, research questions, a dataset explorer, the methods with live calculators, the results and the conclusions) are available from the authors. The platform reads every number from the exported `results.json` file and recomputes nothing except simple arithmetic for its interactive calculators. All figures in this paper were regenerated directly from the same `results.json` file. [AUTHOR INPUT REQUIRED: public repository URL or DOI for the data, code and platform, if they are to be deposited.]
+All numbers in this paper come from a full re-run of `ireland_agri_ghg_analysis.ipynb` (seed 20261019, run on 29 October 2026) with the revised policy codebook. Data come from the EPA, Ireland's CRT 2025 submission to the UNFCCC, the CSO and Eurostat. The annual panel (1990–2024), the result tables and an interactive results platform (covering the research problem, research questions, a dataset explorer, the methods with live calculators, the results and the conclusions) are available from the authors. The platform reads every number from the exported `results.json` file and recomputes nothing except simple arithmetic for its interactive calculators. All figures in this paper were regenerated directly from the same `results.json` file. [AUTHOR INPUT REQUIRED: public repository URL or DOI for the data, code and platform, if they are to be deposited.]
 
 # References {.unnumbered}
 
@@ -1070,15 +1077,15 @@ TAB acronyms=A1 | Acronyms and symbols
 
 | Acronym | Meaning | Note |
 |:---|:---|:---|
-| ACRES | Agri-Climate Rural Environment Scheme | Agri-environment scheme from 2023 (M11) |
+| ACRES | Agri-Climate Rural Environment Scheme | Agri-environment scheme from 2023 (M10) |
 | ADF | Augmented Dickey–Fuller | Unit-root test (null: non-stationary) |
-| AEOS | Agri-Environment Options Scheme | Agri-environment scheme 2010–2014 (M04) |
+| AEOS | Agri-Environment Options Scheme | Agri-environment scheme 2010–2018 (M04) |
 | AIC / AICc | (Corrected) Akaike Information Criterion | Lag selection; AICc corrects for small samples |
 | AR(1) | First-order autoregressive process | Error structure under the UDmax null |
 | AR5 | IPCC Fifth Assessment Report | Source of GWP100 values |
 | ARDL | Autoregressive distributed lag | Policy-mix time-series model |
-| BDGP | Beef Data and Genomics Programme | M08 |
-| BEEP-S | Beef Environmental Efficiency Programme – Sucklers | M09 |
+| BDGP | Beef Data and Genomics Programme | Part of M08 |
+| BEEP-S | Beef Environmental Efficiency Programme – Sucklers | Part of M08 |
 | BIC | Bayesian Information Criterion | Selects the number of breaks |
 | CAP | Common Agricultural Policy | EU farm policy; 2005 decoupling |
 | CH₄ / N₂O / CO₂e | Methane / nitrous oxide / CO₂ equivalent | – |
@@ -1088,7 +1095,7 @@ TAB acronyms=A1 | Acronyms and symbols
 | CRT | Common Reporting Tables | UNFCCC inventory submission format |
 | CSO | Central Statistics Office (Ireland) | Livestock, milk, prices, CPI, GNI* |
 | CUSUM | Cumulative sum of recursive residuals | Parameter stability test |
-| DAFM | Department of Agriculture, Food and the Marine | Future source of eligibility shares |
+| DAFM | Department of Agriculture, Food and the Marine | Source of scheme participation statistics |
 | DiD | Difference-in-differences | Regional design |
 | EF | Emission factor | e.g. kg CH₄ per dairy cow per year |
 | EPA | Environmental Protection Agency (Ireland) | Inventory compiler |
@@ -1098,17 +1105,17 @@ TAB acronyms=A1 | Acronyms and symbols
 | GNI* | Modified gross national income | Robustness control |
 | GWP / GWP100 / GWP* | Global warming potential (100-year) / warming-equivalent metric | – |
 | HAC | Heteroskedasticity and autocorrelation consistent | Newey–West covariance |
-| I × C × B | Implementation × coverage × bindingness | Policy score |
+| I × *s* × *e* × B × *w* | Implementation × coverage × eligibility × bindingness × content weight | Policy score |
 | IO | Intensity offset | Share of scale growth cancelled by intensity |
 | IPCC | Intergovernmental Panel on Climate Change | – |
 | ITS | Interrupted time series | Segmented regression |
 | KPSS | Kwiatkowski–Phillips–Schmidt–Shin | Stationarity test |
-| LESS | Low Emission Slurry Spreading | Part of M10 |
+| LESS | Low Emission Slurry Spreading | Excluded from the M09 baseline |
 | LMDI | Logarithmic Mean Divisia Index | Exact decomposition |
 | LU / LSU | Livestock unit / Eurostat LSU coefficients | – |
-| M / P / S | Mitigation index / production-pressure index / net signal | – |
+| M / P / S / G | Mitigation index / production-pressure index / net signal / strategy signal | G is not part of P or S |
 | MDE | Minimum detectable effect | 80% power |
-| NAP | Nitrates Action Programme | M02, M10 |
+| NAP | Nitrates Action Programme | M02, M09 |
 | NO / NE / NA | Not occurring / not estimated / not applicable | Treated as missing |
 | NUTS | Nomenclature of Territorial Units for Statistics | – |
 | OLS | Ordinary least squares | – |
@@ -1116,13 +1123,14 @@ TAB acronyms=A1 | Acronyms and symbols
 | REPS | Rural Environment Protection Scheme | M01 |
 | RESET | Regression Equation Specification Error Test | Functional form |
 | RI | Randomisation inference | Five-region DiD |
-| SCEP | Suckler Carbon Efficiency Programme | M12 |
+| SBLAS | Sustainable Beef and Lamb Assurance Scheme | M11 |
+| SCEP | Suckler Carbon Efficiency Programme | Part of M08 |
 | SDAS | Sustainable Dairy Assurance Scheme | M06 |
 | SE / SD | Standard error / standard deviation | – |
 | SHA-256 | Secure Hash Algorithm, 256-bit | File provenance |
 | S.I. | Statutory Instrument | Irish secondary legislation |
 | SSR | Sum of squared residuals | – |
-| TAMS II | Targeted Agricultural Modernisation Scheme II | P08 |
+| TAMS II | Targeted Agricultural Modernisation Scheme II | P05 |
 | TWFE | Two-way fixed effects | – |
 | UDmax | Unweighted double maximum | Test for any break |
 | UNFCCC | United Nations Framework Convention on Climate Change | – |
@@ -1136,28 +1144,28 @@ TAB robustgrid=B1 | Robustness grid for the long-run multipliers
 
 | Variant | *n* | θ~M~ | *p* (θ~M~ < 0) | θ~P~ | *p* (θ~P~ > 0) |
 |:---|---:|---:|---:|---:|---:|
-| Baseline | 28 | 0.465 | 0.987 | 0.695 | 0.040 |
-| No deterministic trend | 28 | 0.096 | 0.850 | 0.546 | 0.037 |
-| Fixed lags ARDL(1,1,1) | 28 | 0.409 | 0.927 | 0.643 | 0.043 |
-| Equal bindingness (*B* = 1) | 28 | 0.228 | 0.963 | 0.181 | 0.023 |
-| Drop Nitrates Action Programme from M | 28 | 0.411 | 0.897 | 0.430 | 0.007 |
-| NAP weighted by climate relevance 0.5 | 28 | 0.536 | 0.973 | 0.524 | 0.023 |
-| Food Vision 2030 coded as zero pressure | 28 | 0.474 | 0.997 | 0.641 | 0.037 |
-| Extended controls (GNI*, 2018 and 2022 indicators) | 28 | 0.424 | 0.947 | 0.487 | 0.133 |
-| Milk-to-feed price ratio as control | 28 | 0.561 | 0.973 | 0.861 | 0.043 |
-| Static model (*p* = 0) | 28 | 0.175 | 0.933 | 0.305 | 0.003 |
-| Pre-ceiling sample (to 2021) | 25 | 0.435 | 0.970 | 0.657 | 0.070 |
-| CH₄-only outcome | 28 | 0.708 | 0.970 | 0.962 | 0.073 |
-| N₂O-only outcome | 28 | 0.205 | 0.870 | 0.484 | 0.017 |
-| First differences (static) | 28 | −0.027 | 0.298 | 0.058 | 0.080 |
-| Leave out P01 Coupled livestock premia | 28 | 0.289 | – | 0.882 | 0.033 |
-| Leave out P02 Milk quota increases | 28 | 0.265 | – | 0.521 | 0.057 |
-| Leave out P03 Nitrates derogation | 28 | 0.461 | – | 0.701 | 0.040 |
-| Leave out P04 Food Harvest 2020 | 28 | 0.175 | – | 0.494 | 0.067 |
-| Leave out P05 EU milk quota abolition | 28 | 0.943 | – | 1.123 | 0.027 |
-| Leave out P06 Food Wise 2025 | 28 | 0.824 | – | 0.982 | 0.050 |
-| Leave out P07 Food Vision 2030 | 28 | 0.474 | – | 0.641 | 0.047 |
-| Leave out P08 TAMS II | 28 | 0.498 | – | 0.716 | 0.050 |
+| Baseline | 28 | 0.223 | 0.903 | 0.460 | 0.050 |
+| No deterministic trend | 28 | 0.122 | 0.947 | 0.436 | 0.043 |
+| Fixed lags ARDL(1,1,1) | 28 | 0.226 | 0.837 | 0.507 | 0.110 |
+| Equal bindingness (*B* = 1) | 28 | 0.101 | 0.793 | 0.196 | 0.090 |
+| Drop Nitrates Action Programme from M | 28 | −0.814 | 0.030 | 0.788 | 0.080 |
+| NAP weighted by climate relevance 0.5 | 28 | 0.173 | 0.730 | 0.424 | 0.110 |
+| Strategies added to P (P + G) | 28 | 0.242 | 0.893 | 0.455 | 0.023 |
+| Quota abolition *B* = 0.75 | 28 | 0.266 | 0.880 | 0.500 | 0.063 |
+| SDAS *B* = 0.50 | 28 | 0.223 | 0.887 | 0.438 | 0.080 |
+| Event markers E01, E02 scored in M (*B* = 0.25) | 28 | −0.191 | 0.033 | 0.483 | 0.087 |
+| Extended controls (GNI*, 2018 and 2022 indicators) | 28 | 0.077 | 0.653 | 0.220 | 0.247 |
+| Milk-to-feed price ratio as control | 28 | 0.214 | 0.823 | 0.594 | 0.067 |
+| Static model (*p* = 0) | 28 | 0.113 | 0.777 | 0.394 | 0.003 |
+| Pre-ceiling sample (to 2021) | 25 | 0.180 | 0.837 | 0.436 | 0.093 |
+| CH₄-only outcome | 28 | 0.218 | 0.840 | 0.573 | 0.053 |
+| N₂O-only outcome | 28 | 0.152 | 0.823 | 0.345 | 0.047 |
+| First differences (static) | 28 | −0.014 | 0.413 | 0.143 | 0.013 |
+| Leave out P01 Coupled livestock premia | 28 | −0.039 | – | 1.235 | 0.043 |
+| Leave out P02 Milk quota increases | 28 | 0.134 | – | 0.348 | 0.060 |
+| Leave out P03 Nitrates derogation | 28 | 0.271 | – | 0.467 | 0.070 |
+| Leave out P04 EU milk quota abolition | 28 | 0.431 | – | 0.512 | 0.120 |
+| Leave out P05 TAMS II Dairy Equipment Scheme | 28 | 0.279 | – | 0.454 | 0.070 |
 
 # Appendix C. ARDL Lag-Selection Grid {.unnumbered}
 
@@ -1165,24 +1173,24 @@ TAB laggrid=C1 | ARDL lag-selection grid (common sample 1997–2024, *n* = 28)
 
 | *p* | *q*~M~ | *q*~P~ | Parameters *k* | AICc |
 |---:|---:|---:|---:|---:|
-| **1** | **0** | **2** | **9** | **−135.53** (selected) |
-| 1 | 0 | 0 | 7 | −134.80 |
-| 1 | 1 | 2 | 10 | −133.19 |
-| 1 | 0 | 1 | 8 | −132.91 |
-| 1 | 1 | 0 | 8 | −130.85 |
-| 1 | 2 | 2 | 11 | −129.26 |
-| 1 | 1 | 1 | 9 | −128.50 |
-| 1 | 2 | 0 | 9 | −126.45 |
-| 1 | 2 | 1 | 10 | −123.59 |
-| 0 | 0 | 2 | 8 | −88.46 |
-| 0 | 1 | 2 | 9 | −85.66 |
-| 0 | 0 | 0 | 6 | −85.38 |
-| 0 | 0 | 1 | 7 | −84.98 |
-| 0 | 1 | 0 | 7 | −81.78 |
-| 0 | 1 | 1 | 8 | −81.14 |
-| 0 | 2 | 2 | 10 | −80.94 |
-| 0 | 2 | 0 | 8 | −78.09 |
-| 0 | 2 | 1 | 9 | −76.97 |
+| **1** | **0** | **0** | **7** | **−131.82** (selected) |
+| 1 | 1 | 0 | 8 | −128.05 |
+| 1 | 0 | 1 | 8 | −127.94 |
+| 1 | 1 | 1 | 9 | −123.90 |
+| 1 | 2 | 0 | 9 | −123.63 |
+| 1 | 0 | 2 | 9 | −123.57 |
+| 1 | 2 | 1 | 10 | −119.01 |
+| 1 | 1 | 2 | 10 | −118.96 |
+| 1 | 2 | 2 | 11 | −113.46 |
+| 0 | 0 | 2 | 8 | −112.54 |
+| 0 | 1 | 1 | 8 | −110.37 |
+| 0 | 1 | 2 | 9 | −109.48 |
+| 0 | 0 | 1 | 7 | −108.75 |
+| 0 | 2 | 2 | 10 | −107.13 |
+| 0 | 2 | 1 | 9 | −106.92 |
+| 0 | 0 | 0 | 6 | −104.02 |
+| 0 | 1 | 0 | 7 | −103.33 |
+| 0 | 2 | 0 | 8 | −99.40 |
 
 # Appendix D. Independent Workflow Verification {.unnumbered}
 
@@ -1212,9 +1220,9 @@ TAB verification=D1 | Independent workflow verification (30 of 30 checks pass)
 | 5 CRT | Manure N = CRT rates × CSO head counts; 2024 missing | 2023: 108.4 / 48.1 / 7.52 kg N per head |
 | 6 Panel | 35 unique years, 1990–2024 | Pass |
 | 6 Panel | No weather variable | Pass |
-| 7 Indices | M and P recomputed independently (I × C × B) | P~2024~ 0.3362; M~2024~ 0.6383 |
+| 7 Indices | M, P and G recomputed independently (I × *s* × *e* × B × *w*) | P~2024~ 0.2812; M~2024~ 0.6933; G~2024~ 0.0877 |
 | 8 LMDI | Annual effects sum exactly to ΔCRF3 | Residual 1.9 × 10⁻¹¹ kt |
-| 9 ARDL | θ~M~, θ~P~ reproduced by an independent OLS | θ~M~ 0.4651, θ~P~ 0.6946, *n* = 28 |
+| 9 ARDL | θ~M~, θ~P~ reproduced by an independent OLS | ARDL(1,0,0): θ~M~ 0.2227, θ~P~ 0.4598, *n* = 28 |
 | 9 ARDL | `key_results.json` = `results.xlsx` | Pass |
 | 10 Ceiling | 2030 target = 0.75 × CRF3~2018~ | 15,546.2 kt CO₂e |
 | 11 Outputs | 34 sheets; 7 figures in PNG and PDF | Pass |
@@ -1228,10 +1236,10 @@ TAB unitroots=E1 | Unit-root tests
 |:---|:---|---:|---:|---:|---:|
 | ln CRF3 | Level | −3.13 | 0.100 | 0.185 | 0.022 |
 | ln CRF3 | First difference | −3.22 | 0.019 | 0.168 | > 0.10 |
-| M | Level | −2.64 | 0.262 | 0.087 | > 0.10 |
-| M | First difference | −4.19 | 0.001 | 0.086 | > 0.10 |
-| P | Level | −4.61 | 0.001 | 0.106 | > 0.10 |
-| P | First difference | −4.90 | < 0.001 | 0.098 | > 0.10 |
+| M | Level | −3.98 | 0.009 | 0.072 | > 0.10 |
+| M | First difference | −3.01 | 0.034 | 0.087 | > 0.10 |
+| P | Level | −6.62 | < 0.001 | 0.156 | 0.042 |
+| P | First difference | −4.51 | < 0.001 | 0.103 | > 0.10 |
 | ln real milk price | Level | −3.12 | 0.101 | 0.218 | 0.010 |
 | ln real milk price | First difference | −6.62 | < 0.001 | 0.346 | > 0.10 |
 | ln real fertiliser price | Level | −2.96 | 0.143 | 0.064 | > 0.10 |

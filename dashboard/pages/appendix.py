@@ -48,8 +48,9 @@ ACRONYMS = [
     ("SE", "Standard Error", "Methods & statistics", "Estimated standard deviation of a coefficient estimate."),
     ("SD", "Standard Deviation", "Methods & statistics", "Spread of a variable; effects are also reported per 1 SD change in an index."),
     # Study symbols
-    ("M", "Mitigation index", "Study indices & symbols", "Sum of the scores of the 12 mitigation instruments in each year (implementation × coverage × bindingness)."),
-    ("P", "Production-pressure index", "Study indices & symbols", "Sum of the scores of the 8 expansion (production-pressure) instruments in each year."),
+    ("M", "Mitigation index", "Study indices & symbols", "Sum of the scores of the 11 mitigation instruments in each year (implementation × coverage × eligibility × bindingness)."),
+    ("P", "Production-pressure index", "Study indices & symbols", "Sum of the scores of the 5 expansion (production-pressure) instruments in each year."),
+    ("G", "Strategy signal", "Study indices & symbols", "Sum of the scores of the 3 national growth strategies (G01–G03); reported separately from P."),
     ("S", "Net policy signal", "Study indices & symbols", "S = M − P: positive when mitigation effort outweighs production pressure."),
     ("I × C × B", "Implementation × Coverage × Bindingness", "Study indices & symbols", "The three components multiplied to score one policy in one year."),
     ("IO", "Intensity Offset", "Study indices & symbols", "Share of the activity-driven emission increase cancelled by falling emission intensity."),
@@ -90,16 +91,16 @@ ACRONYMS = [
     ("S.I.", "Statutory Instrument", "Institutions & data", "Irish secondary legislation, e.g. S.I. 113/2022 (nitrates regulations)."),
     # Policies & schemes
     ("REPS", "Rural Environment Protection Scheme", "Policies & schemes", "Agri-environment scheme 1994–2014 (M01)."),
-    ("NAP", "Nitrates Action Programme", "Policies & schemes", "Good Agricultural Practice regulations limiting nitrogen use (M02, M10)."),
-    ("AEOS", "Agri-Environment Options Scheme", "Policies & schemes", "Agri-environment scheme 2010–2013 (M04)."),
+    ("NAP", "Nitrates Action Programme", "Policies & schemes", "Good Agricultural Practice regulations limiting nitrogen use (M02, M09)."),
+    ("AEOS", "Agri-Environment Options Scheme", "Policies & schemes", "Agri-environment scheme 2010–2018 (M04)."),
     ("SDAS", "Sustainable Dairy Assurance Scheme", "Policies & schemes", "Origin Green dairy sustainability certification from 2014 (M06)."),
     ("GLAS", "Green Low-Carbon Agri-Environment Scheme", "Policies & schemes", "Agri-environment scheme 2015–2022 (M07)."),
-    ("BDGP", "Beef Data and Genomics Programme", "Policies & schemes", "Payments for genotyping and breeding more efficient suckler herds (M08)."),
-    ("BEEP-S", "Beef Environmental Efficiency Programme – Sucklers", "Policies & schemes", "Payments for weighing calves and cows to improve suckler efficiency (M09)."),
-    ("LESS", "Low Emission Slurry Spreading", "Policies & schemes", "Trailing-shoe and similar spreading methods that cut ammonia and N losses (part of M10)."),
-    ("ACRES", "Agri-Climate Rural Environment Scheme", "Policies & schemes", "Agri-environment scheme from 2023 (M11)."),
-    ("SCEP", "Suckler Carbon Efficiency Programme", "Policies & schemes", "Successor to BEEP-S from 2023 (M12)."),
-    ("TAMS II", "Targeted Agricultural Modernisation Scheme II", "Policies & schemes", "Capital grants, including the Dairy Equipment Scheme that supported expansion (P08)."),
+    ("BDGP", "Beef Data and Genomics Programme", "Policies & schemes", "Payments for genotyping and breeding more efficient suckler herds (part of M08)."),
+    ("BEEP-S", "Beef Environmental Efficiency Programme – Sucklers", "Policies & schemes", "Payments for weighing calves and cows to improve suckler efficiency (part of M08)."),
+    ("LESS", "Low Emission Slurry Spreading", "Policies & schemes", "Trailing-shoe and similar spreading methods that cut ammonia and N losses (excluded from the M09 baseline)."),
+    ("ACRES", "Agri-Climate Rural Environment Scheme", "Policies & schemes", "Agri-environment scheme from 2023 (M10)."),
+    ("SCEP", "Suckler Carbon Efficiency Programme", "Policies & schemes", "Successor to BEEP-S from 2023 (part of M08)."),
+    ("TAMS II", "Targeted Agricultural Modernisation Scheme II", "Policies & schemes", "Capital grants, including the Dairy Equipment Scheme that supported expansion (P05)."),
 ]
 
 CATEGORIES = list(dict.fromkeys(a[2] for a in ACRONYMS))

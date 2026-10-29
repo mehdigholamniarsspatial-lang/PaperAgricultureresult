@@ -114,7 +114,7 @@ def layout():
                         "The analysis is Ireland-only. Quota abolition and CAP reform applied to every EU member state, so no untreated "
                         "foreign comparator exists; within-Ireland variation in exposure provides the comparison instead.")),
         section("The study at a glance",
-                kpi_row(kpi("35", "years of CRF3 emissions", "1990–2024"), kpi("20", "policy instruments coded", "12 mitigation · 8 pressure"),
+                kpi_row(kpi("35", "years of CRF3 emissions", "1990–2024"), kpi("19", "policy instruments coded", "11 mitigation · 5 pressure · 3 strategies"),
                         kpi("3", "triangulated designs", "breaks & LMDI · ARDL · regional DiD"), kpi("30 / 30", "automated verification checks pass")),
                 html.Div(className="roadmap", children=[
                     dcc.Link(className="road-step", href=h, children=[html.Span(n, className="road-num"), html.Span(t)])

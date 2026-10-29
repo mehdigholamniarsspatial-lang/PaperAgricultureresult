@@ -41,7 +41,9 @@ VERDICTS = [
     ("H3a", "Mitigation lowers emissions (θ_M < 0)", "Not supported", "no", f"θ_M = +{K['ardl']['theta_M']:.2f}, bootstrap p = {K['ardl']['p_boot_M']:.3f}"),
     ("H3b", "Pressure raises emissions (θ_P > 0)", "Supported", "yes", f"θ_P = +{K['ardl']['theta_P']:.2f}, bootstrap p = {K['ardl']['p_boot_P']:.3f}"),
     ("H3c", "Offset ratio ≥ 0.5", "Undefined", "na", "mitigation effect is not negative, so OR cannot be computed"),
-    ("H4a", "Mandatory instruments strongest", "Not supported", "no", "all M sub-indices positive, p > 0.8"),
+    ("H4a", "Mandatory instruments strongest", "Not supported", "no",
+     f"mandatory θ = +{K['subindex']['mandatory']['theta']:.2f} (p = {K['subindex']['mandatory']['p_boot_one_sided']:.2f}); only voluntary is negative "
+     f"(θ = {K['subindex']['voluntary']['theta']:.2f}, p = {K['subindex']['voluntary']['p_boot_one_sided']:.2f})".replace("-", "−")),
     ("H4b", "Exposed regions expanded more after 2015", "Not supported", "no", "significant placebo: divergence began before 2015"),
 ]
 
@@ -57,7 +59,8 @@ def scorecard():
 # ------------------------------------------------------------------ figures
 def indices_fig(show):
     fig = go.Figure()
-    spec = [("M", "Mitigation intensity M", C_M, "solid"), ("P", "Production pressure P", C_P, "solid"), ("S", "Net signal S = M − P", C_S, "dash")]
+    spec = [("M", "Mitigation intensity M", C_M, "solid"), ("P", "Production pressure P", C_P, "solid"), ("S", "Net signal S = M − P", C_S, "dash"),
+            ("G", "Strategy signal G", INK2, "dot")]
     for c, lab, col, dash in spec:
         if c not in show:
             continue
@@ -358,17 +361,20 @@ def t_indices():
         kpi_row(kpi(f"{p['M_2000']:.2f} → {p['M_2024']:.2f}", "Mitigation intensity M, 2000 → 2024", tone="tone-blue"),
                 kpi(f"{p['P_2000']:.2f} → {p['P_2024']:.2f}", "Production pressure P, 2000 → 2024", tone="tone-orange"),
                 kpi(f"{p['S_2000']:+.2f} → {p['S_2024']:+.2f}".replace("-", "−"), "Net signal S = M − P", tone="tone-aqua"),
-                kpi(f"+{p['largest_P_step']:.3f}", f"largest one-year rise in P ({p['largest_P_step_year']})", "Food Harvest 2020 + quota increments")),
+                kpi(f"+{p['largest_P_step']:.3f}", f"largest one-year rise in P ({p['largest_P_step_year']})", "quota abolition and TAMS II at full scale")),
         card(dcc.Checklist(id="rs-ix-show", value=["M", "P", "S"], inline=True, className="chk",
-                           options=[{"label": " M", "value": "M"}, {"label": " P", "value": "P"}, {"label": " S", "value": "S"}]),
+                           options=[{"label": " M", "value": "M"}, {"label": " P", "value": "P"}, {"label": " S", "value": "S"},
+                                    {"label": " G (strategies)", "value": "G"}]),
              dcc.Graph(id="rs-ix-fig", figure=indices_fig(["M", "P", "S"]), config=GRAPH_CONFIG, className="graph")),
-        reading("The annual mitigation index M, the production-pressure index P and their difference S, built from the 20 coded instruments.",
+        reading("The annual mitigation index M, the production-pressure index P and their difference S, built from the 16 scored instruments "
+                "(11 mitigation, 5 pressure). The strategy signal G (3 national growth strategies) is shown separately and is not part of P.",
                 "Higher M = more mitigation policy in force, weighted by coverage and bindingness. Higher P = more expansion policy. "
                 "S above zero means mitigation outweighs pressure on this common scale.",
-                "P was high until 2004 (coupled headage premia), collapsed with decoupling in 2005, then rebuilt through the derogation, quota increases "
-                "and Food Harvest 2020, peaking at about 0.45 in 2015–2020. M rose in two steps (Nitrates Action Programme 2006–07; GLAS and beef "
-                "schemes 2015–16). Because both rose between 2005 and 2020, the net signal grew far less than mitigation effort — policy "
-                "incoherence, made measurable (S: 0.05 in 2010 → 0.17 in 2016)."),
+                f"P was high until 2004 (coupled headage premia, {p['P_2000']:.2f}), collapsed with decoupling in 2005, then rebuilt step by step "
+                f"through the quota increases, the derogation, quota abolition and TAMS II, reaching {p['P_2024']:.2f} in 2024 — about its 2000 level. "
+                "M rose in steps (Nitrates Action Programme 2006–09; GLAS, suckler programmes and SDAS 2015–17; chemical-N maxima and ACRES 2022–24). "
+                f"S has been positive since {p['first_year_S_positive']}, but because P and M rose in the same years the net signal grew far less "
+                f"than mitigation effort — policy incoherence, made measurable. The strategy signal G peaks at {max(COLS['G']):.2f} and is not part of P."),
     ])
 
 
@@ -442,7 +448,7 @@ def t_ardl():
         kpi_row(kpi(f"θ_P = {a['theta_P']:.2f}", f"long-run pressure effect (SE {a['se_P']:.2f})", f"bootstrap p = {a['p_boot_P']:.3f} → H3b ✓", tone="tone-orange"),
                 kpi(f"+{a['pct_per_0p1_P']:.1f}%", "emissions per sustained +0.1 in P", f"+{lr['P']['pct_per_sd']:.1f}% per 1 SD"),
                 kpi(f"θ_M = +{a['theta_M']:.2f}", f"long-run mitigation effect (SE {a['se_M']:.2f})", f"bootstrap p (θ_M<0) = {a['p_boot_M']:.3f} → H3a ✕", tone="tone-blue"),
-                kpi(f"F = {a['bounds_F']:.2f}", "bounds test > 4.57 (5% I(1) bound)", "a level relationship exists")),
+                kpi(f"F = {a['bounds_F']:.2f}", "bounds test (10% verdict)", a["bounds_verdict_10"], tone="tone-red" if a["bounds_verdict_10"].startswith("no") else "")),
         card(html.H3("Long-run multipliers with 90% bootstrap intervals"), dcc.Graph(figure=forest_fig(), config=GRAPH_CONFIG, className="graph")),
         two_col(card(dcc.Graph(figure=boot_scatter_fig(), config=GRAPH_CONFIG, className="graph")),
                 html.Div([
@@ -451,27 +457,31 @@ def t_ardl():
                           [("ix", "Index"), ("theta", "θ", num(3)), ("se", "SE (delta, HAC)", num(3)), ("phac", "HAC p", num(3)),
                            ("pb", "bootstrap p", num(3)), ("p01", "% per +0.1", num(1)), ("psd", "% per 1 SD", num(1))], sort=False),
                     callout("caution", "Model checks",
-                            "ARDL(1,0,2) on 1997–2024 (n = 28), φ = 0.74. Every diagnostic passes at 10% (Breusch–Godfrey p = 0.12, Jarque–Bera 0.92, "
-                            "Breusch–Pagan 0.86, RESET 0.92, CUSUM 1.00). Equal-and-opposite per-unit effects are rejected (p < 0.001)."),
+                            f"ARDL({a['model']['p']},{a['model']['qM']},{a['model']['qP']}) on {a['years'].replace('-', '–')} (n = {a['n']}). Every diagnostic passes at 10% "
+                            "(" + ", ".join(f"{r['test'].split(' (')[0]} p = {r['p']:.2f}" for r in DATA["diag"]) + "). "
+                            f"Equal-and-opposite per-unit effects are rejected (p = {a['p_equal_opposite']:.3f}). The bounds test does not find a "
+                            "level relationship, so the long-run multipliers should be read as indicative."),
                 ]), ratio="1-1"),
         reading("How strongly long-run emissions respond to each policy index, with the uncertainty from 999 bootstrap re-estimations.",
                 "θ is the log-point change in long-run emissions per 1-unit change in an index; 100 × (exp(0.1 × θ) − 1) gives the % change per 0.1 index units. A dot right of "
                 "zero with an interval that excludes zero means the index is associated with higher emissions.",
-                "Production pressure raised long-run emissions: +7.2% per sustained 0.1-unit rise (bootstrap p = 0.032), so H3b is supported. "
-                "The mitigation coefficient has the wrong sign (+0.47) and is never negative in the bootstrap, so H3a is not supported. A positive "
-                "association this large is not plausible as a causal effect of mitigation policy; it reflects schemes expanding in the same years as "
-                "output (reverse timing). These are conditional associations, not causal estimates."),
+                f"Production pressure is associated with higher long-run emissions: +{a['pct_per_0p1_P']:.1f}% per sustained 0.1-unit rise "
+                f"(bootstrap p = {a['p_boot_P']:.3f}), so H3b is supported at 10%. The mitigation coefficient has the wrong sign (+{a['theta_M']:.2f}; "
+                f"bootstrap p = {a['p_boot_M']:.2f}), so H3a is not supported; it reflects schemes expanding in the same years as output (reverse timing). "
+                f"The bounds test (F = {a['bounds_F']:.2f}) does not confirm a level relationship, so these are conditional associations, not causal estimates."),
     ])
 
 
 def t_cf():
     o = K["offset"]
     return html.Div([
-        kpi_row(kpi(f"+{o['pressure_effect_pct']:.1f}%", "2024 emissions due to pressure above its 2000 level",
+        kpi_row(kpi(f"{o['pressure_effect_pct']:+.1f}%", "2024 emissions due to pressure above its 2000 level",
                     f"90% CI [{o['pressure_lo']:.1f}, {o['pressure_hi']:.1f}]", tone="tone-orange"),
-                kpi(f"{o['cum_P_kt'] / 1e3:.1f} Mt", "cumulative CO₂e added by pressure, 2000–2024"),
-                kpi(f"+{o['mitigation_effect_pct']:.1f}%", "'effect' of the rise in M since 2000", f"90% CI [{o['mitigation_lo']:.1f}, {o['mitigation_hi']:.1f}] — not negative", tone="tone-blue"),
-                kpi("1 in 999", "bootstrap draws with a negative M effect", "offset ratio undefined → H3c ✕", tone="tone-red")),
+                kpi(f"{o['cum_P_kt'] / 1e3:+.1f} Mt".replace("-", "−"), "cumulative CO₂e due to pressure vs its 2000 level, 2000–2024",
+                    "negative: P stayed below its 2000 level until the 2010s"),
+                kpi(f"+{o['mitigation_effect_pct']:.1f}%", "'effect' of the rise in M since 2000", f"90% CI [{o['mitigation_lo']:.1f}, {o['mitigation_hi']:.1f}]".replace("-", "−"), tone="tone-blue"),
+                kpi(f"{sum(1 for r in DATA['boot_draws'] if r['dM'] is not None and r['dM'] < 0)} in {len(DATA['boot_draws'])}",
+                    "bootstrap draws with a negative M effect", "offset ratio undefined → H3c ✕", tone="tone-red")),
         card(dcc.Checklist(id="rs-cf-show", value=["no_pressure_change_kt", "no_mitigation_change_kt"], inline=True, className="chk",
                            options=[{"label": " P frozen at 2000", "value": "no_pressure_change_kt"},
                                     {"label": " M frozen at 2000", "value": "no_mitigation_change_kt"},
@@ -486,9 +496,11 @@ def t_cf():
         reading("What emissions would have been without the post-2000 change in each index, according to the fitted model.",
                 "If the dashed line lies below the observed line, the index pushed emissions up. The offset ratio would compare the pressure effect "
                 "with a (negative) mitigation effect.",
-                "By 2024 production pressure had raised emissions by 11.2% (6.7–15.7%), adding 12.5 Mt CO₂e over 2000–2024. The rise in M is associated "
-                "with higher, not lower, emissions, so there is nothing to offset: the offset ratio is undefined and H3c is not supported. Expansion left "
-                "a measurable footprint; the mitigation portfolio left too small a footprint to be offset."),
+                f"P in 2024 is only slightly above its 2000 level, so the model attributes a small rise in 2024 emissions to pressure "
+                f"({o['pressure_effect_pct']:+.1f}%, 90% CI {o['pressure_lo']:.1f}–{o['pressure_hi']:.1f}%). Over 2000–2024 the cumulative pressure "
+                f"effect is {o['cum_P_kt'] / 1e3:+.1f} Mt CO₂e, because P sat below its 2000 level (coupled premia) through most of the 2000s. "
+                "The rise in M is associated with higher, not lower, emissions (its interval includes zero), so the offset ratio is undefined in "
+                "the point estimate and H3c is not supported."),
     ])
 
 
@@ -511,8 +523,11 @@ def t_robust():
                 card(html.H3("Mitigation sub-indices (RQ4a)"),
                      table([{"s": r_["sub_index"], "n": r_["active_years"], "t": r_["theta"], "p": r_["p_boot_one_sided"], "l3": r_["theta_lag3"]} for r_ in DATA["subindex"]],
                            [("s", "Instrument type"), ("n", "active yrs"), ("t", "θ", num(2)), ("p", "boot p (θ<0)", num(3)), ("l3", "θ at 3-yr lag", num(2))], sort=False),
-                     callout("finding", "H4a not supported", "No sub-index shows a detectable emission-reducing effect. Only the incentive sub-index turns "
-                             "negative at a 3-year lag (θ = −1.13), an isolated estimate not tested formally."))),
+                     callout("finding", "H4a not supported", "The mandatory sub-index (Nitrates Action Programme, chemical-N maxima) has no detectable "
+                             f"emission-reducing effect (θ = +{K['subindex']['mandatory']['theta']:.2f}). Only the voluntary sub-index (Carbon Navigator, "
+                             f"SDAS, SBLAS; 12 active years) is negative and significant (θ = {K['subindex']['voluntary']['theta']:.2f}, "
+                             f"p = {K['subindex']['voluntary']['p_boot_one_sided']:.2f}), with a wide standard error; the incentive sub-index turns "
+                             "negative only at 2–3-year lags, not tested formally."))),
         section("Timing: interrupted time series at the pre-specified dates",
                 card(dcc.Graph(figure=its_fig(), config=GRAPH_CONFIG, className="graph")),
                 callout("finding", "The turn came in 2010, not 2015",
@@ -521,9 +536,12 @@ def t_robust():
                         "Harvest 2020 and continued at the same pace after abolition.")),
         reading("Whether the headline results survive alternative modelling choices, and how large an effect the data could detect.",
                 "Each dot is θ re-estimated under one alternative choice. A robust result keeps its sign across ≥ 80% of variants.",
-                "θ_P is positive in all 14 estimable variants and significant in 13; the exception adds GNI* and shock-year dummies (θ_P = 0.49, p = 0.13), "
-                "because GNI* is collinear with quota abolition. θ_M is never significantly negative. Mitigation effects larger than |θ| ≈ 0.40 would very "
-                "likely have been detected; smaller ones cannot be ruled out."),
+                f"θ_P is positive in all {r['m_estimable']} estimable variants and significant in {r['sig_P']}; it loses significance with fixed lags, "
+                "with NAP down-weighted, and with GNI* and shock-year dummies (GNI* is collinear with quota abolition). Dropping quota abolition (P04) "
+                f"is the one leave-one-out run that is not significant. θ_M is significantly negative in {r['sig_M_negative']} variants — when the "
+                "Nitrates Action Programme is dropped from M and when the 2021–22 climate framework is scored in M — so the mitigation result depends "
+                f"on how the NAP and the framework laws are treated. Mitigation effects larger than |θ| ≈ {K['power']['MDE_M']:.2f} would very likely "
+                "have been detected; smaller ones cannot be ruled out."),
     ])
 
 
@@ -531,7 +549,8 @@ def t_regional():
     did = DATA["did"]
     return html.Div([
         kpi_row(kpi("16% → 74%", "pre-2015 dairy exposure: West → South-West"),
-                kpi("+2.1%", "imputed emissions per +10 pp exposure after 2015 (TWFE)", "p_RI = 0.11, p_WCB = 0.17"),
+                kpi(f"+{did[4]['pct_per_10pp']:.1f}%", "imputed emissions per +10 pp exposure after 2015 (TWFE)",
+                    f"p_RI = {did[4]['p_randomisation']:.2f}, p_WCB = {did[4]['p_wild_cluster']:.2f}"),
                 kpi("+1.6%", "placebo dated 2010 (pre-2015 data only)", "p_RI = 0.017 — pre-trends", tone="tone-red"),
                 kpi("✕ H4b", "parallel trends fail", tone="tone-red")),
         card(html.Div(className="control-row", children=[html.Span("Outcome", className="ctl-label"),
@@ -555,6 +574,7 @@ def t_regional():
 
 
 def t_mech():
+    MECH = K["mechanism"]
     return html.Div([
         card(dcc.Graph(figure=mech_fig(), config=GRAPH_CONFIG, className="graph"),
              fig_note("Sum of the contemporaneous and one-year-lagged coefficients, scaled to a +0.1 change in the index; Newey–West errors; 1997–2023, n = 27.")),
@@ -563,9 +583,11 @@ def t_mech():
         reading("Whether year-to-year changes in P and M line up with the activity and intensity parts of the decomposition.",
                 "The framework predicts orange bars above zero for activity (pressure → more animals) and blue bars below zero for intensity "
                 "(mitigation → less per unit).",
-                "The hypothesised division of labour is not confirmed. ΔP is not associated with the activity effect (−218 kt per 0.1; p = 0.15) but is "
-                "associated with the intensity effect (+111 kt per 0.1; p = 0.03): years of rising pressure were years in which emissions per head and per "
-                "litre rose — consistent with intensification. ΔM is associated with neither."),
+                "The pressure half of the division of labour is confirmed. ΔP is associated with the activity effect "
+                f"(+{MECH['activity effect (kt)|P']['kt_per_0p1']:.0f} kt per 0.1; p = {MECH['activity effect (kt)|P']['p']:.3f}), including the dairy-herd "
+                f"activity effect (+{MECH['dairy-herd activity effect (kt)|P']['kt_per_0p1']:.0f} kt; p = {MECH['dairy-herd activity effect (kt)|P']['p']:.3f}), "
+                f"and not with the intensity effect (p = {MECH['intensity effect (kt)|P']['p']:.2f}). ΔM is associated with neither, so the mitigation "
+                "half is not confirmed."),
     ])
 
 

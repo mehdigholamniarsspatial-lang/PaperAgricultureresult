@@ -20,7 +20,7 @@ SOURCES = [
     ("UNFCCC", "Ireland CRT 2025 submission", "34 workbooks, one per inventory year", "Dairy / non-dairy CH₄ split, N excretion, mineral N 1990–99", "1990–2023"),
     ("Eurostat", "env_air_gge · aei_fm_usefert · LSU", "Downloaded CSV extracts", "Species CH₄ detail, mineral N 2000–24, LSU coefficients", "1990–2024"),
     ("CSO", "Central Statistics Office", "AAA01/07/09, AKA01, AHA01–05, CPA01, NA002", "Livestock (national + regional), milk, prices, CPI, GNI*", "1991–2024"),
-    ("Authors", "Policy codebooks", "pressure_codebook.csv · mitigation_codebook_PROVISIONAL.csv", "20 instruments scored I × C × B", "1990–2024"),
+    ("Authors", "Policy codebooks", "pressure_codebook.csv · mitigation_codebook_PROVISIONAL.csv", "19 instruments scored I × s × e × B (× w)", "1990–2024"),
 ]
 
 HARMONISATION = [
@@ -265,15 +265,14 @@ def exposure_fig():
 
 
 def codebook_heatmap(which):
-    key = "scoreM" if which == "M" else "scoreP"
-    sc = DATA[key]
+    sc = DATA["score" + which]
     pids = list(sc["cols"])
     z = [sc["cols"][p] for p in pids]
     labels = [f"{p} · {CODEBOOK[p]['name'][:42]}" for p in pids]
-    col = C_M if which == "M" else C_P
-    fig = go.Figure(go.Heatmap(z=z, x=sc["years"], y=labels, colorscale=[[0, "#f6f5f1"], [0.0001, "#e9f0fb" if which == "M" else "#fdeee6"], [1, col]],
+    col = SET_COLOR[which]
+    fig = go.Figure(go.Heatmap(z=z, x=sc["years"], y=labels, colorscale=[[0, "#f6f5f1"], [0.0001, {"M": "#e9f0fb", "P": "#fdeee6", "G": "#e3f4f2"}[which]], [1, col]],
                                xgap=1, ygap=2, colorbar=dict(title="score", thickness=12, len=0.8),
-                               hovertemplate="%{y}<br>%{x}: score x = I·C·B = <b>%{z:.4f}</b><extra></extra>"))
+                               hovertemplate="%{y}<br>%{x}: score x = I·s·e·B·w = <b>%{z:.4f}</b><extra></extra>"))
     base_layout(fig, height=34 * len(pids) + 90, legend=False, hover="closest")
     fig.update_layout(margin=dict(l=330, r=20, t=20, b=40))
     fig.update_yaxes(autorange="reversed", showgrid=False)
@@ -291,38 +290,53 @@ def parse_impl(s):
     return out
 
 
+SET_COLOR = {"M": C_M, "P": C_P, "G": C_S}
+SET_BADGE = {"M": ("Mitigation", "blue"), "P": ("Pressure", "orange"), "G": ("Strategy", "aqua")}
+
+
+def parse_elig(e):
+    """Eligibility is a constant or time-varying 'year-range:value' segments."""
+    return parse_impl(e) if ":" in str(e) else {y: float(e) for y in YEARS}
+
+
 def policy_detail(pid, year):
     r = CODEBOOK[pid]
     impl = parse_impl(r["implementation"])
-    s, e, B = r["coverage_share"], r["eligibility"], r["bindingness"]
+    elig = parse_elig(r["eligibility"])
+    s, B = float(r["coverage_share"]), float(r["bindingness"])
+    w = float(r.get("content_weight") or 1.0)
+    e = elig.get(year, max(elig.values()))
     C = s * e
     I = impl.get(year, 0.0)
-    x = I * C * B
-    key = "scoreM" if r["policy_set"] == "M" else "scoreP"
-    col = C_M if r["policy_set"] == "M" else C_P
-    sc = DATA[key]["cols"][pid]
+    x = I * C * B * w
+    col = SET_COLOR[r["policy_set"]]
+    sc = DATA["score" + r["policy_set"]]["cols"][pid]
+    w_parts = [html.Div("×", className="f-op"),
+               html.Div([html.Div("w", className="f-sym"), html.Div(f"{w:g}", className="f-val"), html.Div("content weight", className="f-lab")])] if w != 1 else []
     fig = go.Figure()
-    fig.add_trace(go.Bar(x=YEARS, y=sc, name="Score x = I·C·B",
+    fig.add_trace(go.Bar(x=YEARS, y=sc, name="Score x = I·s·e·B·w",
                          marker=dict(color=[col if y == year else col for y in YEARS],
                                      opacity=[1 if y == year else 0.45 for y in YEARS], cornerradius=3),
                          customdata=[impl.get(y, 0) for y in YEARS],
                          hovertemplate="%{x}: I = %{customdata} → x = <b>%{y:.4f}</b><extra></extra>"))
-    fig.add_hline(y=C * B, line=dict(color=MUTED, dash="dot", width=1))
-    fig.add_annotation(x=1990, y=C * B, text=f"maximum C·B = {C * B:.4f} (when I = 1)", showarrow=False, xanchor="left",
+    top = s * max(elig.values()) * B * w
+    fig.add_hline(y=top, line=dict(color=MUTED, dash="dot", width=1))
+    fig.add_annotation(x=1990, y=top, text=f"maximum s·e·B·w = {top:.4f} (when I = 1)", showarrow=False, xanchor="left",
                        yanchor="bottom", font=dict(size=11, color=INK2))
     base_layout(fig, height=280, legend=False, ytitle="policy score x", hover="closest")
     fig.update_yaxes(rangemode="tozero")
     info = html.Div(className="policy-info", children=[
-        html.Div([badge("Pressure" if r["policy_set"] == "P" else "Mitigation", "orange" if r["policy_set"] == "P" else "blue"),
+        html.Div([badge(*SET_BADGE[r["policy_set"]]),
                   badge(r["instrument_type"], "neutral")]),
         html.H3(f"{pid} · {r['name']}"),
         html.Div(className="formula-strip", children=[
             html.Div([html.Div("I", className="f-sym"), html.Div(f"{I:g}", className="f-val"), html.Div(f"in force in {year}", className="f-lab")]),
             html.Div("×", className="f-op"),
-            html.Div([html.Div("C = s·e", className="f-sym"), html.Div(f"{s:.3f}·{e:g} = {C:.3f}", className="f-val"),
-                      html.Div(f"s: {COVERAGE_LABEL.get(r['coverage_key'], r['coverage_key'])} share in {int(r['start']) - 1}", className="f-lab")]),
+            html.Div([html.Div("s·e", className="f-sym"), html.Div(f"{s:.3f}·{e:g} = {C:.3f}", className="f-val"),
+                      html.Div(f"s: {COVERAGE_LABEL.get(r['coverage_key'], r['coverage_key'])} share; e in {year}", className="f-lab")]),
             html.Div("×", className="f-op"),
             html.Div([html.Div("B", className="f-sym"), html.Div(f"{B:g}", className="f-val"), html.Div("bindingness", className="f-lab")]),
+            *w_parts,
             html.Div("=", className="f-op"),
             html.Div([html.Div("x", className="f-sym"), html.Div(f"{x:.4f}", className="f-val strong"), html.Div("policy score", className="f-lab")]),
         ]),
@@ -451,17 +465,20 @@ def tab_regional():
 
 
 def tab_codebooks():
-    first = "P05"
+    first = "P04"
     info, fig = policy_detail(first, 2016)
     return html.Div([
         callout("plain", "How a policy becomes a number",
-                "Each instrument gets a score in every year: implementation I (is it in force?) × coverage C (how much of CRF3 does "
-                "it target?) × bindingness B (how strong is the signal?). Summing scores gives the mitigation index M and the pressure index P."),
+                "Each instrument gets a score in every year: implementation I (is it in force?) × coverage s (how much of CRF3 does "
+                "it target?) × eligibility e (what share of it is reached?) × bindingness B (how strong is the signal?), times a content "
+                "weight w for strategies. Summing scores gives the mitigation index M, the pressure index P and the strategy signal G."),
         card(
             html.Div(className="control-row", children=[
                 html.Span("Policy set", className="ctl-label"),
                 dcc.RadioItems(id="cb-set", value="P", className="seg", inline=True,
-                               options=[{"label": "Production pressure P (8)", "value": "P"}, {"label": "Mitigation M (12)", "value": "M"}])]),
+                               options=[{"label": f"Production pressure P ({len(DATA['scoreP']['cols'])})", "value": "P"},
+                                        {"label": f"Strategies G ({len(DATA['scoreG']['cols'])})", "value": "G"},
+                                        {"label": f"Mitigation M ({len(DATA['scoreM']['cols'])})", "value": "M"}])]),
             dcc.Graph(id="cb-heat", config=GRAPH_CONFIG, className="graph"),
             html.P("Click a row in the heatmap to open that policy below.", className="fig-note"),
         ),
@@ -471,7 +488,7 @@ def tab_codebooks():
                         html.Div([html.Label("Policy", className="ctl-label"),
                                   dcc.Dropdown(id="cb-pid", value=first, clearable=False,
                                                options=[{"label": f"{p} · {CODEBOOK[p]['name']}", "value": p}
-                                                        for p in CODEBOOK if CODEBOOK[p]["direction"] != 0])], className="span-2"),
+                                                        for p in CODEBOOK if CODEBOOK[p]["policy_set"] != "event"])], className="span-2"),
                         html.Div([html.Label("Year", className="ctl-label"),
                                   dcc.Slider(id="cb-year", min=1990, max=2024, step=1, value=2016,
                                              marks={y: str(y) for y in range(1990, 2025, 5)}, tooltip={"placement": "bottom"})], className="span-2"),
@@ -479,17 +496,17 @@ def tab_codebooks():
                     html.Div(id="cb-info", children=info),
                     dcc.Graph(id="cb-fig", figure=fig, config=GRAPH_CONFIG, className="graph"),
                     html.P("Bars: the policy's score in each year (the selected year is highlighted). The score is the implementation "
-                           "level I times the constant C·B, so it reaches the dotted line only when the policy is fully in force.", className="fig-note"),
+                           "level I times s·e·B·w, so it reaches the dotted line only when the policy is fully in force at its highest eligibility.", className="fig-note"),
                 )),
         section("Full codebooks",
                 card(table([{k: (round(v, 4) if isinstance(v, float) else v) for k, v in r.items()
                              if k in ("policy_id", "policy_set", "name", "instrument_type", "start", "end", "coverage_key",
-                                      "coverage_share", "eligibility", "bindingness", "implementation", "climate_relevance")}
+                                      "coverage_share", "eligibility", "bindingness", "implementation", "content_weight", "confidence_s_e_B_I")}
                             for r in DATA["codebook"]],
                            [("policy_id", "ID"), ("policy_set", "Set"), ("name", "Policy"), ("instrument_type", "Type"), ("start", "Start"),
                             ("end", "End"), ("implementation", "Implementation I"), ("coverage_key", "Coverage key"),
-                            ("coverage_share", "s", num(3)), ("eligibility", "e", num(2)), ("bindingness", "B", num(2)),
-                            ("climate_relevance", "Climate relevance", num(1))], page_size=22, filter=True))),
+                            ("coverage_share", "s", num(3)), ("eligibility", "e"), ("bindingness", "B", num(2)),
+                            ("content_weight", "w", num(2)), ("confidence_s_e_B_I", "Confidence s/e/B/I")], page_size=22, filter=True))),
     ])
 
 

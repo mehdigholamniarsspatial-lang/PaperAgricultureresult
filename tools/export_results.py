@@ -28,7 +28,7 @@ keep = ['agri_total_kt','enteric_kt','manure_kt','soils_kt','liming_kt','urea_kt
         'livestock_units','milk_mlitres','milk_fat_pct','milk_protein_pct','milk_per_cow_l','milk_price_real','milk_price_nominal',
         'fertiliser_price_real','fertiliser_price_nominal','feed_price_real','output_all_price_real','input_all_price_real',
         'milk_feed_ratio','cpi','gni_star_meur','fertiliser_n_use_t','n_fert_kt','n_manure_kt','nex_dairy_kg','nex_other_cattle_kg',
-        'nex_sheep_kg','dairy_kt','other_cattle_kt','sheep_kt','M','P','S','M_mandatory','M_incentive','M_voluntary']
+        'nex_sheep_kg','dairy_kt','other_cattle_kt','sheep_kt','M','P','S','G','M_mandatory','M_incentive','M_voluntary']
 pan = panel[keep].copy(); pan.index.name = "Year"
 data = {}
 data["panel"] = {"years": [int(y) for y in pan.index], "cols": {c: clean(pan[c].values) for c in keep}}
@@ -36,6 +36,7 @@ data["regional"] = recs(S["R"][["unit","Year","dairy_cows","other_cows","cattle_
 data["key"] = clean(S["KEY"])
 data["scoreM"] = {"years": [int(y) for y in S["scoreM"].index], "cols": {c: clean(S["scoreM"][c].values) for c in S["scoreM"]}}
 data["scoreP"] = {"years": [int(y) for y in S["scoreP"].index], "cols": {c: clean(S["scoreP"][c].values) for c in S["scoreP"]}}
+data["scoreG"] = {"years": [int(y) for y in S["scoreG"].index], "cols": {c: clean(S["scoreG"][c].values) for c in S["scoreG"]}}
 data["codebook"] = recs(R["02_codebooks_with_coverage"].fillna(""))
 data["kappa"] = recs(S["kap"])
 data["trend"] = recs(S["trend_tab"])

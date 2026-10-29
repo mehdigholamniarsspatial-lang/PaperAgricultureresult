@@ -47,7 +47,7 @@ DESIGNS = html.Div(className="grid-3", children=[
     html.Div(className="card card-accent-blue", children=[html.Div("Design A · descriptive", className="eyebrow"), html.H3("Trends, breaks & decomposition"),
                                                          html.P("Mann–Kendall, Theil–Sen, Bai–Perron with bootstrap UDmax, exact LMDI-I. Answers RQ1, RQ2.")]),
     html.Div(className="card card-accent-orange", children=[html.Div("Design B · policy-mix time series", className="eyebrow"), html.H3("ARDL with block bootstrap"),
-                                                           html.P("ARDL(1,0,2), 1997–2024, n = 28; restricted bootstrap p-values; counterfactuals; power/MDE. Answers RQ3.")]),
+                                                           html.P(f"ARDL({KEY['ardl']['model']['p']},{KEY['ardl']['model']['qM']},{KEY['ardl']['model']['qP']}), 1997–2024, n = 28; restricted bootstrap p-values; counterfactuals; power/MDE. Answers RQ3.")]),
     html.Div(className="card card-accent-aqua", children=[html.Div("Design C · within-Ireland comparison", className="eyebrow"), html.H3("Regional DiD"),
                                                          html.P("Five constant-boundary regions; exposure = pre-2015 dairy share; randomisation inference. Answers RQ4.")]),
 ])
@@ -93,7 +93,7 @@ def step_data():
 
 
 def contrib_fig(which):
-    sc = DATA["scoreM" if which == "M" else "scoreP"]
+    sc = DATA["score" + which]
     fig = go.Figure()
     pids = [p for p in sc["cols"] if max(sc["cols"][p]) > 0]
     for i, p in enumerate(pids):
@@ -113,13 +113,16 @@ def step_indices():
     return html.Div([
         callout("plain", "Purpose", "Put expansion and mitigation policy on one common, comparable scale, year by year."),
         block("2.1 Policy score",
-              maths(r"x_{pt}=I_{pt}\;C_p\;B_p,\qquad C_p=s_{a(p),\,t^0_p-1}\;e_p", "Equation (1)"),
-              md("**I** implementation (0, 0.25, 0.5, 0.75, 1) · **C** coverage = $s$ (share of CRF3 in the targeted activity *a(p)* in the year "
-                 "**before** the policy starts, $t^0_p-1$) × $e$ (eligible fraction) · **B** bindingness. The product is non-compensatory: a "
+              maths(r"x_{pt}=I_{pt}\;s_p\;e_{pt}\;B_p\;w_p", "Equation (1)"),
+              md("**I** implementation (0–1) · **s** coverage (share of CRF3 in the targeted activity *a(p)*, fixed before the policy starts) "
+                 "· **e** eligible fraction (may vary by year, e.g. the derogation) · **B** bindingness · **w** content weight (1 except "
+                 "Food Vision 2030, w = 0.5). The product is non-compensatory: a "
                  "policy only counts if it is in force, covers emissions and carries a signal (OECD et al., 2008).", math=True)),
         block("2.2 Indices",
-              maths(r"M_t=\sum_{p\in\mathcal M}x_{pt},\qquad P_t=\sum_{q\in\mathcal P}x_{qt},\qquad S_t=M_t-P_t", "Equation (2)"),
-              md("Framework laws (Climate Act 2021, sectoral ceiling 2022) are **event markers**, not index terms, to avoid double counting.")),
+              maths(r"M_t=\sum_{p\in\mathcal M}x_{pt},\qquad P_t=\sum_{q\in\mathcal P}x_{qt},\qquad S_t=M_t-P_t,\qquad G_t=\sum_{g\in\mathcal G}x_{gt}", "Equation (2)"),
+              md("Non-binding national growth strategies (Food Harvest 2020, Food Wise 2025, Food Vision 2030) form a separate strategy "
+                 "signal **G**, not part of P; a robustness variant adds G to P. Framework laws (Climate Act 2021, sectoral ceiling 2022) "
+                 "are **event markers**, not index terms, to avoid double counting.")),
         two_col(block("Bindingness scale", table([
             {"b": "0.25", "m": "Information, voluntary scheme, strategy target"}, {"b": "0.5", "m": "Incentive payment"},
             {"b": "0.75", "m": "Conditional relaxation of a legal limit"}, {"b": "1.0", "m": "Mandatory rule, or removal of a legal cap"}],
@@ -127,7 +130,8 @@ def step_indices():
             block("Coverage keys", table([{"k": k, "m": v} for k, v in COVERAGE_LABEL.items()], [("k", "Key"), ("m", "Share of CRF3 in…")], sort=False))),
         block("Interactive: how the index is built from its parts",
               card(dcc.RadioItems(id="mt-ix", value="P", inline=True, className="seg",
-                                  options=[{"label": "Pressure index P", "value": "P"}, {"label": "Mitigation index M", "value": "M"}]),
+                                  options=[{"label": "Pressure index P", "value": "P"}, {"label": "Strategy signal G", "value": "G"},
+                                           {"label": "Mitigation index M", "value": "M"}]),
                    dcc.Graph(id="mt-ix-fig", figure=contrib_fig("P"), config=GRAPH_CONFIG, className="graph"),
                    html.P("Each coloured block is one policy's score x in that year; the black line is their sum. Hover for policy names.", className="fig-note"))),
         callout("read", "Why coverage is fixed before adoption",
@@ -296,7 +300,10 @@ def step_ardl():
              "P_L2": "P(t−2)  γ₂", "ln_milk_real": "ln real milk price", "ln_fert_real": "ln real fertiliser price"}
     for r in coef_rows:
         r["term"] = names.get(r["term"], r["term"])
-    phi = c["y_L1"]; sg = c["P_L0"] + c["P_L1"] + c["P_L2"]
+    mod = KEY["ardl"]["model"]
+    phi = c["y_L1"]; sg = sum(c[f"P_L{j}"] for j in range(mod["qP"] + 1))
+    lag_txt = lambda q: "contemporaneously" if q == 0 else f"with lags 0–{q}"
+    gam = "+".join(rf"\gamma_{j}P_{{t{'-' + str(j) if j else ''}}}" for j in range(mod["qP"] + 1))
     return html.Div([
         callout("plain", "Purpose", "Estimate how emissions respond, in the long run, to sustained changes in the mitigation index M and the "
                 "pressure index P, holding prices and a trend constant (RQ3)."),
@@ -309,8 +316,9 @@ def step_ardl():
               maths(r"\text{AICc}=\text{AIC}+\frac{2k(k+1)}{n-k-1},\qquad p\in\{0,1\},\;q_M,q_P\in\{0,1,2\}"),
               two_col(lag_table(), html.Div([
                   md(f"All 18 candidates use the **same sample** (1997–2024, n = 28), because prices start in 1995 and up to two lags are allowed. "
-                     f"AICc selects **ARDL(1, 0, 2)**: one lag of emissions, M enters contemporaneously, P with lags 0–2."),
-                  maths(r"\ln E_t=\alpha+\tau t+\phi\ln E_{t-1}+\beta_0M_t+\gamma_0P_t+\gamma_1P_{t-1}+\gamma_2P_{t-2}+\lambda'X_t+\varepsilon_t")]))),
+                     f"AICc selects **ARDL({mod['p']}, {mod['qM']}, {mod['qP']})**: one lag of emissions, M enters {lag_txt(mod['qM'])}, "
+                     f"P {lag_txt(mod['qP'])}."),
+                  maths(r"\ln E_t=\alpha+\tau t+\phi\ln E_{t-1}+\beta_0M_t+" + gam + r"+\lambda'X_t+\varepsilon_t")]))),
         block("5.3 Long-run multipliers and the delta method",
               maths(r"\theta_M=\frac{\sum_j\beta_j}{1-\sum_i\phi_i},\qquad \theta_P=\frac{\sum_j\gamma_j}{1-\sum_i\phi_i}", "Equation (7)"),
               maths(r"\operatorname{Var}(\hat\theta)\approx\nabla\theta'\,\hat V_{HAC}\,\nabla\theta,\qquad \frac{\partial\theta_P}{\partial\gamma_j}=\frac{1}{1-\phi},\;\;"
@@ -460,13 +468,14 @@ def step_cf():
 def step_other():
     return html.Div([
         callout("plain", "Purpose", "Check that the headline result is not an artefact of one modelling choice, and test timing and instrument type (RQ4a)."),
-        block("8.1 Robustness grid (14 pre-specified variants + leave-one-policy-out)",
+        block("8.1 Robustness grid (17 pre-specified variants + leave-one-policy-out)",
               table([{"v": v} for v in ["baseline", "no deterministic trend", "fixed lags ARDL(1,1,1)", "equal bindingness (B = 1)",
                                         "drop Nitrates Action Programme from M", "NAP weighted by climate relevance 0.5",
-                                        "Food Vision 2030 coded as zero pressure", "extended controls (GNI*, 2018, 2022 dummies)",
+                                        "strategies added to P (P + G)", "quota abolition B = 0.75", "SDAS B = 0.50",
+                                        "event markers E01, E02 scored in M (B = 0.25)", "extended controls (GNI*, 2018, 2022 dummies)",
                                         "milk-to-feed price ratio as control", "static model (p = 0)", "pre-ceiling sample (to 2021)",
                                         "CH₄-only outcome", "N₂O-only outcome", "first differences (static)",
-                                        "leave out each of P01–P08 in turn"]], [("v", "Variant")], page_size=20, sort=False),
+                                        "leave out each of P01–P05 in turn"]], [("v", "Variant")], page_size=20, sort=False),
               md("Rule fixed in advance: a sign is **robust** if it holds in ≥ 80% of estimable variants. Variants use B = 299 bootstrap draws.")),
         block("8.2 Mitigation sub-indices by instrument type",
               maths(r"\ln E_t=\dots+\beta^{s}M^{s}_t+\beta^{rest}\big(M_t-M^{s}_t\big)+\sum_j\gamma_jP_{t-j}+\dots,\quad s\in\{\text{mandatory, incentive, voluntary}\}"),

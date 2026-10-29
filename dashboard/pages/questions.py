@@ -4,7 +4,7 @@ from dash import html, dcc, Input, Output
 
 from ..components import page_header, section, card, callout, maths, two_col, badge
 from ..data_store import DATA
-from ..theme import base_layout, C_M, C_P, INK2, MUTED
+from ..theme import base_layout, C_M, C_P, C_S, INK2, MUTED
 
 RQS = [
     ("RQ1", "Do breaks in the emission path coincide with policy changes?",
@@ -49,8 +49,8 @@ def parse_impl(s):
 
 
 def timeline_fig(which="both"):
-    rows = [r for r in DATA["codebook"] if r["direction"] != 0 and (which == "both" or r["policy_set"] == which)]
-    rows = sorted(rows, key=lambda r: (r["policy_set"] != "P", -int(r["start"])))
+    rows = [r for r in DATA["codebook"] if r["policy_set"] != "event" and (which == "both" or r["policy_set"] == which)]
+    rows = sorted(rows, key=lambda r: ("PGM".index(r["policy_set"]), -int(r["start"])))
     fig = go.Figure()
     shown = set()
     for r in rows:
@@ -64,8 +64,8 @@ def timeline_fig(which="both"):
                 if cur: runs.append(cur)
                 cur = [y, y, impl[y]]
         if cur: runs.append(cur)
-        col = C_P if r["policy_set"] == "P" else C_M
-        setname = "Production pressure (P)" if r["policy_set"] == "P" else "Mitigation (M)"
+        col = {"P": C_P, "G": C_S, "M": C_M}[r["policy_set"]]
+        setname = {"P": "Production pressure (P)", "G": "Strategy signal (G)", "M": "Mitigation (M)"}[r["policy_set"]]
         lab = f"{r['policy_id']} · {r['name'][:38]}{'…' if len(r['name']) > 38 else ''}"
         for a, b, v in runs:
             fig.add_trace(go.Bar(
@@ -137,7 +137,7 @@ def layout():
                         html.Span("Show:", className="ctl-label"),
                         dcc.RadioItems(id="q-set", value="both", inline=True, className="seg",
                                        options=[{"label": "Both sets", "value": "both"}, {"label": "Pressure (P)", "value": "P"},
-                                                {"label": "Mitigation (M)", "value": "M"}])]),
+                                                {"label": "Strategies (G)", "value": "G"}, {"label": "Mitigation (M)", "value": "M"}])]),
                     dcc.Graph(id="q-timeline", figure=timeline_fig(), config={"displaylogo": False}, className="graph"),
                     html.P("Each bar shows when an instrument was in force; darker shading = higher implementation level I (0.25 → 1). "
                            "Hover a bar to see its bindingness, coverage and eligibility scores.", className="fig-note")),

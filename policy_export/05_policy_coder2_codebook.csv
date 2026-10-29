@@ -1,0 +1,9 @@
+policy_id,bindingness,implementation,is_simulated,note
+P01,0.5,1990-2004:1.0,1,"Remapped to the revised instrument IDs; coder-2 values unchanged from the earlier file (PROVISIONAL, simulated)"
+P02,0.75,2006-2007:0.25;2008:0.75;2009-2014:1.0,1,"Remapped to the revised instrument IDs; coder-2 values unchanged from the earlier file (PROVISIONAL, simulated)"
+P03,0.75,2007-2023:0.75;2024:0.75,1,"Remapped to the revised instrument IDs; coder-2 values unchanged from the earlier file (PROVISIONAL, simulated)"
+P04,1.0,2015-2024:1.0,1,"Remapped to the revised instrument IDs; coder-2 values unchanged from the earlier file (PROVISIONAL, simulated)"
+P05,0.5,2015-2022:1.0,1,"Remapped to the revised instrument IDs; coder-2 values unchanged from the earlier file (PROVISIONAL, simulated)"
+G01,0.25,2010-2014:1.0,1,"Remapped to the revised instrument IDs; coder-2 values unchanged from the earlier file (PROVISIONAL, simulated)"
+G02,0.25,2015-2020:1.0,1,"Remapped to the revised instrument IDs; coder-2 values unchanged from the earlier file (PROVISIONAL, simulated)"
+G03,0.25,2021-2024:0.5,1,"Remapped to the revised instrument IDs; coder-2 values unchanged from the earlier file (PROVISIONAL, simulated)"
