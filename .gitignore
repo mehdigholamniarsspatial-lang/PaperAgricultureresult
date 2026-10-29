@@ -3,3 +3,7 @@ __pycache__/
 .venv/
 .vercel/
 paper/_build/
+
+# Office lock files
+~$*
+**/~$*
