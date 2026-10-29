@@ -1,0 +1,9 @@
+﻿Analysis,Unit of observation,Period,Observations,Binding constraint
+Trend tests and structural breaks,Nation-year,1990–2024,35,Full CRF3 series
+Exact LMDI decomposition,Annual change,1992–2023,31 annual changes,Milk intake (from 1992); CRT dairy split (to 2023)
+ARDL policy-mix model,Nation-year,1997–2024,28,Prices from 1995 plus up to two lags
+Interrupted time series,Nation-year,1995–2024,30,Price controls
+Decomposition–regression link,Annual change,1997–2023,27,LMDI end year and price lags
+Regional DiD (livestock outcomes),Region-year,1991–2024,170 (5 × 34),CSO regional livestock series
+Regional DiD (imputed emissions),Region-year,1991–2023,165 (5 × 33),National implied emission factors (to 2023)
+Regional event study,Region-year,2005–2024,5 × 20,Post-classification-break years

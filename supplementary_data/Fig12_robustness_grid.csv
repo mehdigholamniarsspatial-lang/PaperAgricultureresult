@@ -1,0 +1,23 @@
+﻿variant,n,theta_M,p_boot_M,theta_P,p_boot_P,estimable
+baseline,28,0.222678,0.903333,0.459787,0.05,True
+no deterministic trend,28,0.122136,0.946667,0.43563,0.043333,True
+"fixed lags ARDL(1,1,1)",28,0.225554,0.836667,0.507053,0.11,True
+equal bindingness (B = 1),28,0.100584,0.793333,0.196276,0.09,True
+drop Nitrates Action Programme from M,28,-0.813826,0.03,0.787962,0.08,True
+NAP weighted by climate relevance 0.5,28,0.173015,0.73,0.424268,0.11,True
+strategies added to P (P + G),28,0.241701,0.893333,0.454617,0.023333,True
+quota abolition B = 0.75,28,0.265819,0.88,0.499569,0.063333,True
+SDAS B = 0.50,28,0.223214,0.886667,0.438106,0.08,True
+"event markers E01, E02 scored in M (B = 0.25)",28,-0.190701,0.033333,0.482584,0.086667,True
+"extended controls (GNI*, 2018, 2022 dummies)",28,0.077002,0.653333,0.219979,0.246667,True
+milk-to-feed price ratio as control,28,0.213556,0.823333,0.593708,0.066667,True
+static model (p = 0),28,0.113224,0.776667,0.393827,0.003333,True
+pre-ceiling sample (to 2021),25,0.179829,0.836667,0.435827,0.093333,True
+CH4-only outcome,28,0.217687,0.84,0.573496,0.053333,True
+N2O-only outcome,28,0.151604,0.823333,0.344843,0.046667,True
+first differences (static),28,-0.013802,0.413093,0.142943,0.013195,True
+"leave out P01: Coupled livestock premia (special beef, suckl",28,-0.039204,,1.234927,0.043333,True
+leave out P02: Milk quota increases (Agenda 2000 allocation;,28,0.134066,,0.347875,0.06,True
+leave out P03: Nitrates derogation (stocking above 170 kg or,28,0.270911,,0.466611,0.07,True
+leave out P04: EU milk quota abolition,28,0.430768,,0.51242,0.12,True
+leave out P05: TAMS II Dairy Equipment Scheme (capital grant,28,0.278538,,0.453952,0.07,True

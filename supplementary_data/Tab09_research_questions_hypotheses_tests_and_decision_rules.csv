@@ -1,0 +1,5 @@
+﻿RQ,Question,Hypothesis,Primary test,Supported if
+RQ1,Do breaks in the emission path coincide with policy changes?,H1: an endogenous break lies within ±1 year of 2010 (Food Harvest 2020) or 2015 (quota abolition),Bai–Perron structural breaks with bootstrap UDmax,UDmax p < 0.10 and a break date within ±1 year
+RQ2,Did intensity gains keep pace with scale growth?,H2: intensity offset IO < 1 after 2015 (efficiency did not keep pace),Exact LMDI decomposition; decomposition–regression link,IO < 1 across the range of dairy emission factors
+RQ3,Did production pressure offset mitigation?,H3a: θM < 0 (mitigation lowers emissions); H3b: θP > 0 (pressure raises emissions); H3c: offset ratio ≥ 0.5,"ARDL long-run multipliers, restricted block bootstrap, dynamic counterfactuals","One-sided bootstrap p < 0.10; for H3c, the 90% interval of the pressure effect excludes zero"
+RQ4,Do effects differ by instrument type and by regional exposure?,H4a: mandatory instruments have the largest negative effect; H4b: more dairy-exposed regions expanded more after 2015,Sub-index ARDL; within-Ireland regional DiD,p < 0.10 with the predicted sign; placebo not significant

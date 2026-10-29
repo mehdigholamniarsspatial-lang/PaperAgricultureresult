@@ -1,0 +1,9 @@
+﻿ID,Instrument,Type,Years,Coverage key (share s),Eligible e,Bindingness B,Implementation I
+P01,"Coupled livestock premia (special beef, suckler cow, slaughter and ewe premia)",Incentive,1990–2004,beef_sheep (0.482),1 [0.85–1.00],0.50,1
+P02,Milk quota increases (Agenda 2000 allocation; 2% in 2008; 1% p.a. 2009–2013),Conditional,2000–2014,dairy (0.185),1,0.75,"0.18 (2000); 0.28 (2001–07); 0.48, 0.58, 0.68, 0.79, 0.89 (2008–12); 1 (2013–14)"
+P03,Nitrates derogation (stocking above 170 kg organic N/ha),Conditional,2007–2024,dairy (0.194),0.35 (2007–13); 0.45 (2014–17); 0.55 (2018–21); 0.6 (2022–24),0.75,0.25 (2007); 1 (2008–23); 0.75 (2024)
+P04,EU milk quota abolition,Mandatory removal,2015–2024,dairy (0.216),1,1.00 [0.75–1.00],0.75 (2015); 1 (2016–24)
+P05,TAMS II Dairy Equipment Scheme (capital grants),Incentive,2015–2023,dairy (0.216),0.45 [0.35–0.60],0.50,0.5 (2015); 1 (2016–22); 0.25 (2023)
+G01,Food Harvest 2020 (+50% milk volume target),Strategy,2010–2014,cattle_sheep (0.701),1,0.25,0.5 (2010); 1 (2011–14)
+G02,Food Wise 2025 (+65% primary production value),Strategy,2015–2020,cattle_sheep (0.698),1,0.25,0.5 (2015); 1 (2016–20)
+G03,Food Vision 2030,Strategy,2021–2024,cattle_sheep (0.702),1,0.25,1

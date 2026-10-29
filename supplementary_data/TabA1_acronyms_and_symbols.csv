@@ -1,0 +1,59 @@
+﻿Acronym,Meaning,Note
+ACRES,Agri-Climate Rural Environment Scheme,Agri-environment scheme from 2023 (M10)
+ADF,Augmented Dickey–Fuller,Unit-root test (null: non-stationary)
+AEOS,Agri-Environment Options Scheme,Agri-environment scheme 2010–2018 (M04)
+AIC / AICc,(Corrected) Akaike Information Criterion,Lag selection; AICc corrects for small samples
+AR(1),First-order autoregressive process,Error structure under the UDmax null
+AR5,IPCC Fifth Assessment Report,Source of GWP100 values
+ARDL,Autoregressive distributed lag,Policy-mix time-series model
+BDGP,Beef Data and Genomics Programme,Part of M08
+BEEP-S,Beef Environmental Efficiency Programme – Sucklers,Part of M08
+BIC,Bayesian Information Criterion,Selects the number of breaks
+CAP,Common Agricultural Policy,EU farm policy; 2005 decoupling
+CH₄ / N₂O / CO₂e,Methane / nitrous oxide / CO₂ equivalent,–
+CI,Confidence interval,90% unless stated
+CPI,Consumer price index,Deflator
+CRF / CRF3,Common Reporting Format / sector 3 (agriculture),Outcome boundary
+CRT,Common Reporting Tables,UNFCCC inventory submission format
+CSO,Central Statistics Office (Ireland),"Livestock, milk, prices, CPI, GNI"
+CUSUM,Cumulative sum of recursive residuals,Parameter stability test
+DAFM,"Department of Agriculture, Food and the Marine",Source of scheme participation statistics
+DiD,Difference-in-differences,Regional design
+EF,Emission factor,e.g. kg CH₄ per dairy cow per year
+EPA,Environmental Protection Agency (Ireland),Inventory compiler
+GHG,Greenhouse gas,–
+GISCO,Geographic Information System of the Commission,Regional boundaries
+GLAS,Green Low-Carbon Agri-Environment Scheme,M07
+GNI,Modified gross national income,Robustness control
+GWP / GWP100 / GWP,Global warming potential (100-year) / warming-equivalent metric,–
+HAC,Heteroskedasticity and autocorrelation consistent,Newey–West covariance
+I × s × e × B × w,Implementation × coverage × eligibility × bindingness × content weight,Policy score
+IO,Intensity offset,Share of scale growth cancelled by intensity
+IPCC,Intergovernmental Panel on Climate Change,–
+ITS,Interrupted time series,Segmented regression
+KPSS,Kwiatkowski–Phillips–Schmidt–Shin,Stationarity test
+LESS,Low Emission Slurry Spreading,Excluded from the M09 baseline
+LMDI,Logarithmic Mean Divisia Index,Exact decomposition
+LU / LSU,Livestock unit / Eurostat LSU coefficients,–
+M / P / S / G,Mitigation index / production-pressure index / net signal / strategy signal,G is not part of P or S
+MDE,Minimum detectable effect,80% power
+NAP,Nitrates Action Programme,"M02, M09"
+NO / NE / NA,Not occurring / not estimated / not applicable,Treated as missing
+NUTS,Nomenclature of Territorial Units for Statistics,–
+OLS,Ordinary least squares,–
+OR,Offset ratio,Defined only if the mitigation effect < 0
+REPS,Rural Environment Protection Scheme,M01
+RESET,Regression Equation Specification Error Test,Functional form
+RI,Randomisation inference,Five-region DiD
+SBLAS,Sustainable Beef and Lamb Assurance Scheme,M11
+SCEP,Suckler Carbon Efficiency Programme,Part of M08
+SDAS,Sustainable Dairy Assurance Scheme,M06
+SE / SD,Standard error / standard deviation,–
+SHA-256,"Secure Hash Algorithm, 256-bit",File provenance
+S.I.,Statutory Instrument,Irish secondary legislation
+SSR,Sum of squared residuals,–
+TAMS II,Targeted Agricultural Modernisation Scheme II,P05
+TWFE,Two-way fixed effects,–
+UDmax,Unweighted double maximum,Test for any break
+UNFCCC,United Nations Framework Convention on Climate Change,–
+WCB,Wild cluster bootstrap,Webb weights

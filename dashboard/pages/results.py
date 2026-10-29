@@ -488,7 +488,8 @@ def t_cf():
                                     {"label": " Both frozen", "value": "neither_kt"}]),
              dcc.Graph(id="rs-cf-fig", figure=cf_paths_fig(["no_pressure_change_kt", "no_mitigation_change_kt"]), config=GRAPH_CONFIG, className="graph"),
              fig_note("Counterfactual paths simulate the fitted ARDL with an index held at its 2000 value. The gap between the black and orange "
-                      "lines is the emission footprint of production-oriented policy.")),
+                      "lines is the model-based effect of the change in production pressure since 2000: negative while P was below its 2000 "
+                      "level (2005–2016) and positive afterwards.")),
         card(html.Div(className="control-row", children=[html.Span("Bootstrap distribution of the 2024 effect:", className="ctl-label"),
                                                           dcc.RadioItems(id="rs-cf-h", value="P", inline=True, className="seg",
                                                                          options=[{"label": "Pressure", "value": "P"}, {"label": "Mitigation", "value": "M"}])]),
@@ -639,9 +640,13 @@ def layout():
                     "then open each tab."),
         section("Hypothesis scorecard", scorecard(),
                 callout("finding", "The headline",
-                        "Expansion left a footprint; mitigation too little to offset. A sustained 0.1-unit rise in production pressure raised long-run "
-                        "emissions by about 7%, adding 12.5 Mt CO₂e over 2000–2024, while the mostly voluntary, intensity-oriented mitigation portfolio "
-                        "shows no detectable effect on total emissions.")),
+                        f"Production pressure is associated with higher emissions and acts through scale: a sustained 0.1-unit rise in P goes with "
+                        f"{K['ardl']['pct_per_0p1_P']:.1f}% higher long-run emissions (θ_P = {K['ardl']['theta_P']:.2f}, bootstrap p = {K['ardl']['p_boot_P']:.3f}), "
+                        f"and year-to-year changes in P line up with the activity component of the decomposition. Because P in 2024 was close to its "
+                        f"2000 level, its net effect on 2024 emissions is small ({K['offset']['pressure_effect_pct']:+.1f}%). The mostly voluntary, "
+                        f"intensity-oriented mitigation portfolio shows no detectable effect on total emissions (θ_M = {K['ardl']['theta_M']:+.2f}, "
+                        f"p = {K['ardl']['p_boot_M']:.2f}), so there was little mitigation for expansion to offset. The bounds test does not confirm "
+                        "a level relationship, so the long-run multipliers are indicative associations, not causal estimates.")),
         section("Results in detail",
                 dcc.Tabs(id="rs-tabs", value="indices", className="tabs", children=[
                     dcc.Tab(label=lab, value=v, children=html.Div(fn(), className="step-body"), className="tab", selected_className="tab--sel")

@@ -1,0 +1,171 @@
+﻿region,Year,dairy_cows_thousand
+Border + Dublin/Mid-East,1991,237.3
+Border + Dublin/Mid-East,1992,228.1
+Border + Dublin/Mid-East,1993,224.6
+Border + Dublin/Mid-East,1994,223.8
+Border + Dublin/Mid-East,1995,222.5
+Border + Dublin/Mid-East,1996,225.8
+Border + Dublin/Mid-East,1997,221.8
+Border + Dublin/Mid-East,1998,219.0
+Border + Dublin/Mid-East,1999,213.3
+Border + Dublin/Mid-East,2000,214.9
+Border + Dublin/Mid-East,2001,215.8
+Border + Dublin/Mid-East,2002,212.2
+Border + Dublin/Mid-East,2003,204.2
+Border + Dublin/Mid-East,2004,202.2
+Border + Dublin/Mid-East,2005,182.6
+Border + Dublin/Mid-East,2006,185.1
+Border + Dublin/Mid-East,2007,184.2
+Border + Dublin/Mid-East,2008,182.7
+Border + Dublin/Mid-East,2009,181.4
+Border + Dublin/Mid-East,2010,173.6
+Border + Dublin/Mid-East,2011,178.5
+Border + Dublin/Mid-East,2012,182.0
+Border + Dublin/Mid-East,2013,183.0
+Border + Dublin/Mid-East,2014,194.9
+Border + Dublin/Mid-East,2015,203.1
+Border + Dublin/Mid-East,2016,218.4
+Border + Dublin/Mid-East,2017,224.2
+Border + Dublin/Mid-East,2018,230.3
+Border + Dublin/Mid-East,2019,236.0
+Border + Dublin/Mid-East,2020,246.2
+Border + Dublin/Mid-East,2021,250.8
+Border + Dublin/Mid-East,2022,255.3
+Border + Dublin/Mid-East,2023,261.1
+Border + Dublin/Mid-East,2024,258.4
+Mid-West + South-East,1991,499.1
+Mid-West + South-East,1992,475.4
+Mid-West + South-East,1993,471.5
+Mid-West + South-East,1994,472.6
+Mid-West + South-East,1995,469.3
+Mid-West + South-East,1996,471.1
+Mid-West + South-East,1997,464.6
+Mid-West + South-East,1998,455.7
+Mid-West + South-East,1999,442.7
+Mid-West + South-East,2000,433.4
+Mid-West + South-East,2001,434.6
+Mid-West + South-East,2002,429.2
+Mid-West + South-East,2003,427.0
+Mid-West + South-East,2004,431.6
+Mid-West + South-East,2005,393.2
+Mid-West + South-East,2006,406.6
+Mid-West + South-East,2007,409.7
+Mid-West + South-East,2008,414.2
+Mid-West + South-East,2009,417.2
+Mid-West + South-East,2010,410.5
+Mid-West + South-East,2011,431.4
+Mid-West + South-East,2012,441.3
+Mid-West + South-East,2013,454.3
+Mid-West + South-East,2014,477.1
+Mid-West + South-East,2015,506.2
+Mid-West + South-East,2016,549.7
+Mid-West + South-East,2017,569.6
+Mid-West + South-East,2018,594.8
+Mid-West + South-East,2019,604.3
+Mid-West + South-East,2020,633.4
+Mid-West + South-East,2021,648.9
+Mid-West + South-East,2022,657.1
+Mid-West + South-East,2023,662.6
+Mid-West + South-East,2024,655.7
+Midland,1991,86.7
+Midland,1992,82.7
+Midland,1993,81.9
+Midland,1994,82.4
+Midland,1995,80.8
+Midland,1996,81.6
+Midland,1997,80.6
+Midland,1998,81.5
+Midland,1999,78.5
+Midland,2000,79.7
+Midland,2001,79.9
+Midland,2002,78.7
+Midland,2003,81.9
+Midland,2004,81.4
+Midland,2005,73.0
+Midland,2006,75.7
+Midland,2007,76.4
+Midland,2008,76.2
+Midland,2009,75.8
+Midland,2010,73.1
+Midland,2011,75.7
+Midland,2012,79.0
+Midland,2013,81.4
+Midland,2014,85.1
+Midland,2015,93.3
+Midland,2016,104.6
+Midland,2017,108.9
+Midland,2018,114.6
+Midland,2019,118.9
+Midland,2020,129.3
+Midland,2021,134.7
+Midland,2022,141.4
+Midland,2023,147.1
+Midland,2024,145.7
+South-West,1991,429.3
+South-West,1992,413.1
+South-West,1993,408.9
+South-West,1994,407.6
+South-West,1995,410.0
+South-West,1996,412.5
+South-West,1997,409.5
+South-West,1998,402.0
+South-West,1999,393.7
+South-West,2000,379.8
+South-West,2001,383.7
+South-West,2002,375.9
+South-West,2003,375.2
+South-West,2004,375.3
+South-West,2005,350.7
+South-West,2006,362.1
+South-West,2007,365.3
+South-West,2008,369.4
+South-West,2009,371.8
+South-West,2010,368.5
+South-West,2011,384.4
+South-West,2012,390.0
+South-West,2013,395.2
+South-West,2014,416.2
+South-West,2015,437.4
+South-West,2016,465.1
+South-West,2017,469.5
+South-West,2018,478.8
+South-West,2019,480.9
+South-West,2020,491.5
+South-West,2021,500.5
+South-West,2022,501.0
+South-West,2023,500.6
+South-West,2024,488.1
+West,1991,78.5
+West,1992,78.5
+West,1993,76.5
+West,1994,74.1
+West,1995,73.7
+West,1996,75.5
+West,1997,75.2
+West,1998,75.5
+West,1999,72.5
+West,2000,69.6
+West,2001,68.6
+West,2002,68.0
+West,2003,67.4
+West,2004,65.6
+West,2005,55.6
+West,2006,55.2
+West,2007,54.2
+West,2008,52.7
+West,2009,50.4
+West,2010,45.1
+West,2011,47.0
+West,2012,48.6
+West,2013,49.3
+West,2014,53.1
+West,2015,55.8
+West,2016,60.1
+West,2017,60.3
+West,2018,62.3
+West,2019,64.7
+West,2020,67.3
+West,2021,69.6
+West,2022,72.6
+West,2023,75.2
+West,2024,76.1

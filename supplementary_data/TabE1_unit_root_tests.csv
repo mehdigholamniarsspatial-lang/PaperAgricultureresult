@@ -1,0 +1,11 @@
+﻿Variable,Form,ADF statistic,ADF p,KPSS statistic,KPSS p
+ln CRF3,Level,−3.13,0.100,0.185,0.022
+ln CRF3,First difference,−3.22,0.019,0.168,> 0.10
+M,Level,−3.98,0.009,0.072,> 0.10
+M,First difference,−3.01,0.034,0.087,> 0.10
+P,Level,−6.62,< 0.001,0.156,0.042
+P,First difference,−4.51,< 0.001,0.103,> 0.10
+ln real milk price,Level,−3.12,0.101,0.218,0.010
+ln real milk price,First difference,−6.62,< 0.001,0.346,> 0.10
+ln real fertiliser price,Level,−2.96,0.143,0.064,> 0.10
+ln real fertiliser price,First difference,−5.89,< 0.001,0.500,0.042

@@ -1,0 +1,7 @@
+﻿Outcome,Specification,% per +10 pp,p (RI),p (WCB),Placebo 2010 (%),Placebo p (RI),n
+log dairy cows,Two-way FE,−0.50,0.842,0.888,+2.91,0.067,170
+log dairy cows,TWFE + region trends,−0.69,0.567,0.638,+2.77,0.042,170
+log livestock units,Two-way FE,+1.17,0.142,0.183,+1.32,0.008,170
+log livestock units,TWFE + region trends,+0.72,0.133,0.045,+1.24,0.050,170
+log imputed livestock emissions,Two-way FE,+2.11,0.108,0.150,+1.63,0.017,165
+log imputed livestock emissions,TWFE + region trends,+1.28,0.075,0.049,+1.51,0.008,165

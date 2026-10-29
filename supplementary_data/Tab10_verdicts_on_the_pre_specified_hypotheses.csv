@@ -1,0 +1,8 @@
+﻿Hypothesis,Statement,Verdict,Evidence
+H1,Breaks at 2010 or 2015,Not supported,"Three breaks (2000, 2012, 2020); none within ±1 year of a policy date"
+H2,Intensity offset < 1 after 2015,Supported,IO = 0.32 (0.21–0.33 across emission-factor ratios)
+H3a,Mitigation lowers emissions (θM < 0),Not supported,"θM = +0.22, bootstrap p = 0.880"
+H3b,Pressure raises emissions (θP > 0),Supported,"θP = +0.46, bootstrap p = 0.043"
+H3c,Offset ratio ≥ 0.5,Undefined,"The point estimate of the mitigation effect is not negative, so the offset ratio cannot be computed"
+H4a,Mandatory instruments have the strongest effect,Not supported,"Mandatory θ = +0.25 (p = 0.94); only the voluntary sub-index is negative (θ = −0.59, p = 0.03)"
+H4b,Exposed regions expanded more after 2015,Not supported,Significant placebo: divergence began before 2015

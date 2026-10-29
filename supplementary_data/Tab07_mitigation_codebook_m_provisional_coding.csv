@@ -1,0 +1,12 @@
+﻿ID,Instrument,Type,Years,Coverage key (share s),Eligible e,B,Implementation I
+M01,Rural Environment Protection Scheme (REPS 1–4),Incentive,1994–2014,n_soils_manure (0.342),0.35 [0.25–0.45],0.50,0.25 (1994); 0.5 (1995); 1 (1996–2009); 0.5 (2010–13); 0.25 (2014)
+M02,Nitrates Action Programme (Good Agricultural Practice Regulations),Mandatory,2006–2024,n_soils_manure (0.354),1,1.00,0.5 (2006); 0.75 (2007–08); 1 (2009–24)
+M03,"Farm Waste Management Scheme (revised, nitrates-driven)",Incentive,2006–2009,manure (0.125),0.47 [0.40–0.55],0.50,0.25 (2006); 0.5 (2007); 0.75 (2008); 1 (2009)
+M04,Agri-Environment Options Scheme (AEOS),Incentive,2010–2018,n_soils_manure (0.343),0.07 [0.05–0.10],0.50,0.5 (2010); 1 (2011–14); 0.5 (2015–16); 0.15 (2017–18)
+M05,Carbon Navigator and advisory programmes,Voluntary,2013–2024,cattle_sheep (0.706),0.1 (2013–14); 0.05 (2015–22); 0.1 (2023–24),0.25,0.25 (2013); 0.5 (2014); 1 (2015–22); 0.5 (2023–24)
+M06,Sustainable Dairy Assurance Scheme (Origin Green),Voluntary,2014–2024,dairy (0.207),0.95 [0.90–0.99],0.25 [0.25–0.50],0.25 (2014); 0.5 (2015); 0.75 (2016); 1 (2017–24)
+M07,Green Low-Carbon Agri-Environment Scheme (GLAS),Incentive,2015–2022,n_soils_manure (0.348),0.28 [0.20–0.36],0.50,0.5 (2015); 0.75 (2016); 1 (2017–22)
+M08,Suckler genetics and data programmes (BDGP 2015–2022; BEEP-S 2019–2022; SCEP from 2023),Incentive,2015–2024,beef_sheep (0.482),0.24 (2015–18); 0.33 (2019–22); 0.24 (2023–24),0.50,0.75 (2015); 1 (2016–20); 0.75 (2021–22); 1 (2023–24)
+M09,Chemical nitrogen maxima (5th Nitrates Action Programme increment),Mandatory,2022–2024,fertiliser (0.083),1 [0.70–1.00],1.00 [0.75–1.00],0.5 (2022); 1 (2023–24)
+M10,Agri-Climate Rural Environment Scheme (ACRES),Incentive,2023–2024,n_soils_manure (0.323),0.23 [0.18–0.32],0.50,0.75 (2023); 1 (2024)
+M11,Sustainable Beef and Lamb Assurance Scheme (Origin Green),Voluntary,2017–2024,beef_sheep (0.460),0.9 [0.85–0.95],0.25,0.5 (2017); 1 (2018–24)

@@ -1,0 +1,30 @@
+﻿Stage,Check,Result
+1 Load,SHA-256 of every loaded file matches the provenance sheet,53 files re-hashed; no mismatch
+1 Load,Only documented provisional inputs are loaded,Only `pressure_codebook_coder2_PROVISIONAL`
+2 Livestock,CSO tables cover disjoint years,1991–2004 / 2005–2014 / 2015–2026
+2 Livestock,Panel dairy cows equal CSO State totals,Maximum difference 0
+2 Livestock,Five constant-boundary units sum to the State,"Dairy 0.014%, cattle 0.004%, sheep 0.003%"
+2 Livestock,1990 livestock left missing,NaN (never imputed)
+2 Livestock,LU = 1.0·dairy + Eurostat LSU + 0.1·sheep,LSU per non-dairy head 0.632–0.682
+3 Prices,Chain-link overlaps fit,Maximum deviation 2.88% across 20 links
+3 Prices,Linked indices and CPI equal 100 in 2020,Exact
+3 Prices,Real price = nominal / CPI × 100,Exact
+4 Emissions,CRF3 = Agriculture − 1.A.4.c.ii − 1.A.4.c.iii,"19,760.0 (1990); 19,631.2 (2024) kt CO₂e"
+4 Emissions,CRF3 = sum of 5 categories (≤ 0.0001%),Gap 0
+4 Emissions,CRF3 = CO₂ + CH₄ + N₂O (≤ 0.0001%),Gap 2 × 10⁻¹⁴ %
+5 CRT,"34 workbooks, 1990–2023, no gaps",Complete
+5 CRT,Panel split equals CRT Table 3 rows,1990–2023
+5 CRT,2024 split left missing,NaN (never imputed)
+5 CRT,CRT cattle CH₄ vs Eurostat,1990–2020 ≤ 0.004%; 2021–23 ≤ 0.21%
+5 CRT,Table 3.D unit is kg N,"kg / 1,000 = Eurostat t N exactly, 2000–05"
+5 CRT,Panel mineral N 1990–1999 = CRT,"379,311 t (1990); 442,916 t (1999)"
+5 CRT,Manure N = CRT rates × CSO head counts; 2024 missing,2023: 108.4 / 48.1 / 7.52 kg N per head
+6 Panel,"35 unique years, 1990–2024",Pass
+6 Panel,No weather variable,Pass
+7 Indices,"M, P and G recomputed independently (I × s × e × B × w)",P2024 0.2812; M2024 0.6933; G2024 0.0877
+8 LMDI,Annual effects sum exactly to ΔCRF3,Residual 1.9 × 10⁻¹¹ kt
+9 ARDL,"θM, θP reproduced by an independent OLS","ARDL(1,0,0): θM 0.2227, θP 0.4598, n = 28"
+9 ARDL,`key_results.json` = `results.xlsx`,Pass
+10 Ceiling,2030 target = 0.75 × CRF32018,"15,546.2 kt CO₂e"
+11 Outputs,34 sheets; 7 figures in PNG and PDF,Pass
+11 Outputs,Provisional inputs listed in the JSON,Coder-2 placeholder scores (kappa only)

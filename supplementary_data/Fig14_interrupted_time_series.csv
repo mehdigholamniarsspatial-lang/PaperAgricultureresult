@@ -1,0 +1,7 @@
+﻿outcome,event,level_change_pct,p_level,slope_change_pct_per_yr,p_slope,note
+CRF3 emissions,2010,-2.92488,8.6e-05,2.245412,0.0,
+CRF3 emissions,2015,3.235607,0.0,-0.196906,0.384395,
+CRF3 emissions,2022,8.454359,0.003111,-6.400239,0.0,descriptive (3 post-event years)
+Dairy cows,2010,-2.527836,0.001875,4.174049,0.0,
+Dairy cows,2015,5.962666,0.017575,0.319337,0.296536,
+Dairy cows,2022,-4.685465,0.1947,-1.604094,0.223805,descriptive (3 post-event years)

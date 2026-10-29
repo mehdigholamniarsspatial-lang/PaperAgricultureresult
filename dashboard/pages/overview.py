@@ -45,7 +45,7 @@ def layout():
                     "Production-oriented policy and agricultural greenhouse-gas emissions in Ireland, 1990–2024. "
                     "Why did three decades of climate-related farm policy leave emissions almost exactly where they started?"),
         kpi_row(
-            kpi("37.9%", "of Ireland's national GHG emissions came from agriculture in 2024", "EPA, 2026"),
+            kpi("37.9%", "of Ireland's national GHG emissions came from agriculture in 2024", "EPA, 2026b"),
             kpi(f"{k['trend']['change_pct_1990_2024']:+.1f}%".replace("-", "−"), "CRF3 emissions, 2024 vs 1990",
                 "19.6 vs 19.8 Mt CO₂e", tone="tone-blue"),
             kpi(f"{k['ceiling_2030']['gap_pct_2024']:+.1f}%".replace("-", "−"), "2024 vs the 2018 baseline", "progress so far"),
@@ -64,7 +64,10 @@ def layout():
                     callout("plain", "In plain words",
                             "Ireland has run agri-environment schemes, nitrates rules and, since 2021, legally binding "
                             "carbon budgets. Yet farm emissions in 2024 were within 1% of 1990. Underneath the flat line "
-                            "emissions fell in the 2000s and rose sharply after 2011 — something pushed them back up."),
+                            "emissions fell in the 2000s and rose sharply after 2011 — something pushed them back up. "
+                            "Agricultural methane and nitrous oxide are hard to abate: the economic potential of livestock measures is a small "
+                            "fraction of their technical potential (Herrero et al., 2016), no country prices farm emissions (Leahy et al., 2020), "
+                            "and EU agricultural non-CO₂ emissions fell by only 6–7% over 2005–2023 (EEA, 2025)."),
                     callout("finding", "Why it matters",
                             "If mitigation instruments simply do not work, the remedy is better instruments. If they work but are "
                             "cancelled by policies that expand output, adding more instruments will not close the gap while the "
@@ -84,25 +87,56 @@ def layout():
                 callout("read", "Central research question",
                         html.B("Is the flat emission path failed mitigation, or mitigation offset by policies that expanded output?"))),
         section("What is known — and the gap",
-                html.Div(className="grid-2", children=[
-                    card(html.H3("Known: the direction of each mechanism"),
-                         html.Ul([
-                             html.Li("Läpple et al. (2022): productivity growth lowered emission intensity, but per-farm emissions rose with expansion after quota abolition."),
-                             html.Li("Donnellan et al. (2013): ex-ante, Food Harvest 2020 would raise emissions; growth and reduction targets were incoherent."),
-                             html.Li("Balaine et al. (2022): Ireland's efficiency-based strategy failed to offset intensification pressure."),
-                             html.Li("Henn et al. (2023): herd-composition shifts move implied emission factors, so aggregate intensity claims need care."),
-                         ])),
-                    card(html.H3("Unknown: the size of the offset"),
-                         html.P("Cross-country evaluations measure instruments labelled as climate policy and treat other sectoral policy "
-                                "as background (Eskander & Fankhauser, 2020; Stechemesser et al., 2024). The policy-mix and coherence "
-                                "literature stresses interactions, but mostly qualitatively (Nilsson et al., 2012; Rogge & Reichardt, 2016)."),
-                         html.P(html.B("No study has put expansion and mitigation policy on one scale and measured how much one offsets the other."))),
+                html.Div(className="grid-3", children=[
+                    card(html.H3("Ex post evaluation and attribution"),
+                         html.P("Evaluation asks how emissions would have evolved without a policy, which matters under binding carbon budgets "
+                                "(Climate Act 2021; CCAC, 2025). Cross-country studies link climate laws to lower CO₂ intensity (Eskander & Fankhauser, 2020) "
+                                "and screen about 1,500 policies for large reductions (Stechemesser et al., 2024), but they define treatment as climate-labelled "
+                                "policy and exclude agriculture, so quotas, coupled payments, derogations and growth strategies enter only as background."),
+                         html.P("Synthetic controls and DiD need credible comparators (Abadie, 2021; Rambachan & Roth, 2023); quota abolition and CAP "
+                                "reform hit every EU state at once, so this study uses within-Ireland exposure, interrupted time series and "
+                                "structural breaks (Lopez Bernal et al., 2017; Bai & Perron, 2003).")),
+                    card(html.H3("Mechanisms and dynamics"),
+                         html.P("LMDI decomposition splits emission change into activity, structure and intensity without a residual (Ang & Liu, 2001; "
+                                "Ang, 2015) but does not say which policy caused each part. ARDL models separate short- and long-run responses "
+                                "(Pesaran et al., 2001), yet a long-run relation is not causal direction, and with about 28 observations correlated "
+                                "indices make mitigation effects hard to detect — hence bootstrap inference and an explicit power analysis."),
+                         html.P("Sector models (Donnellan et al., 2013; Fellmann et al., 2018; Jansson et al., 2021) show growth–emissions tensions and "
+                                "leakage, but as conditional projections, not realised effects. Inference is most credible when designs with "
+                                "different biases agree (Lawlor et al., 2016; Munafò & Davey Smith, 2018).")),
+                    card(html.H3("Agriculture is a distinct case"),
+                         html.P("Over €100 billion of 2014–2020 CAP spending was attributed to climate action, yet farm emissions had not fallen since 2010 "
+                                "and the CAP never sought to limit livestock numbers (European Court of Auditors, 2021; Pe'er et al., 2020). "
+                                "Commodity-linked support is a production incentive and many mitigation targets are non-binding (OECD, 2022; "
+                                "Henderson & Lankoski, 2021). Voluntary agri-environment schemes show limited outcome evidence (Hasler et al., 2022; "
+                                "Finn & Ó hUallacháin, 2012; Cullen et al., 2021), and intensity targets lower totals only if output does not grow "
+                                "(Ellerman & Wing, 2003; Leahy et al., 2020).")),
+                    card(html.H3("Expansion, intensity and coherence"),
+                         html.P("Higher yields cut emissions per kg of milk while raising emissions per cow (Gerber et al., 2011) — an agricultural "
+                                "analogue of the energy-efficiency rebound (Greening et al., 2000; Sorrell, 2009). Post-quota EU milk supply was "
+                                "price-inelastic and few member states expanded herds (Jongeneel & Gonzalez-Martinez, 2022), whereas Ireland's dairy "
+                                "herd grew by about 38% over 2010–2018. Policy-coherence frameworks explain why opposing incentives persist "
+                                "(Nilsson et al., 2012; Rogge & Reichardt, 2016; Howlett & Rayner, 2013; Daugbjerg & Swinbank, 2016), but they "
+                                "measure declared priorities or diagnose conflict qualitatively (von Lüpke et al., 2026).")),
+                    card(html.H3("Evidence for Ireland"),
+                         html.P("Food Harvest 2020 targeted +50% milk, Food Wise 2025 +65% output value, and Food Vision 2030 pairs growth with "
+                                "methane cuts; the 2022 ceiling requires −25% by 2030. Donnellan et al. (2013) anticipated the conflict; "
+                                "Balaine et al. (2022) find efficiency-led development did not contain expansion; at farm level emissions per kg fell "
+                                "while total farm emissions rose (Läpple et al., 2022; Balaine et al., 2020). Stakeholders report incoherence, "
+                                "capacity and finance barriers (Augustenborg et al., 2026; Torney & O'Gorman, 2019).")),
+                    card(html.H3("The gap"),
+                         html.P("The literature establishes the direction of the mechanisms more securely than their combined magnitude."),
+                         html.P(html.B("No study jointly measures Ireland's annual expansion and mitigation portfolios on a common scale and "
+                                       "relates their balance to observed emissions, so an undetectable mitigation effect cannot be told apart "
+                                       "from demonstrated cancellation.")),
+                         html.P("The manuscript's Appendix F tabulates all 73 sources reviewed against the research questions.", className="small")),
                 ])),
         section("Contribution of this study",
                 html.Div(className="grid-3", children=[
                     card(html.Div("1", className="big-num"), html.H3("Measurement"),
-                         html.P("A new annual production-pressure index P, scored on the same implementation × coverage × bindingness "
-                                "scale that INPACT applies to mitigation (M). The two policy sets become commensurable.")),
+                         html.P("A new annual production-pressure index P, scored on the same implementation × coverage × eligibility × "
+                                "bindingness scale as the mitigation index M; non-binding growth strategies are tracked separately as G. "
+                                "The two policy sets become commensurable and incoherence becomes measurable (S = M − P).")),
                     card(html.Div("2", className="big-num"), html.H3("Attribution with a short series"),
                          html.P("Three designs whose assumptions fail in different ways — breaks & exact decomposition, an ARDL "
                                 "policy-mix model with block bootstrap, and a within-Ireland regional DiD — plus explicit power analysis.")),

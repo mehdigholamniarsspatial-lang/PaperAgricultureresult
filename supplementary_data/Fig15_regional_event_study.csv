@@ -1,0 +1,60 @@
+﻿outcome,year,beta,se
+log dairy cows,2005,-0.036838,0.015757
+log dairy cows,2006,-0.030738,0.012537
+log dairy cows,2007,-0.026537,0.010729
+log dairy cows,2008,-0.019693,0.008921
+log dairy cows,2009,-0.01135,0.005699
+log dairy cows,2010,0.005134,0.00296
+log dairy cows,2011,0.006586,0.001551
+log dairy cows,2012,0.002989,0.001441
+log dairy cows,2013,0.003432,0.002347
+log dairy cows,2014,0.0,0.0
+log dairy cows,2015,-0.001004,0.003639
+log dairy cows,2016,-0.00414,0.008149
+log dairy cows,2017,-0.003351,0.013203
+log dairy cows,2018,-0.005206,0.016101
+log dairy cows,2019,-0.011303,0.016997
+log dairy cows,2020,-0.015534,0.02246
+log dairy cows,2021,-0.018384,0.023138
+log dairy cows,2022,-0.026187,0.024375
+log dairy cows,2023,-0.033281,0.025681
+log dairy cows,2024,-0.038744,0.024906
+log livestock units,2005,-0.018602,0.002465
+log livestock units,2006,-0.019404,0.001743
+log livestock units,2007,-0.019156,0.001131
+log livestock units,2008,-0.01605,0.002605
+log livestock units,2009,-0.011017,0.001542
+log livestock units,2010,-0.007319,0.002422
+log livestock units,2011,-0.003849,0.002728
+log livestock units,2012,-0.00422,0.002304
+log livestock units,2013,-0.003087,0.000989
+log livestock units,2014,0.0,0.0
+log livestock units,2015,-0.000123,0.001048
+log livestock units,2016,0.002688,0.001705
+log livestock units,2017,0.002862,0.005854
+log livestock units,2018,0.005448,0.007569
+log livestock units,2019,0.002837,0.005011
+log livestock units,2020,0.000571,0.006065
+log livestock units,2021,0.001305,0.006931
+log livestock units,2022,-6.7e-05,0.007711
+log livestock units,2023,-0.000245,0.007207
+log livestock units,2024,-0.001585,0.007921
+log imputed livestock emissions,2005,-0.022608,0.004797
+log imputed livestock emissions,2006,-0.021951,0.003113
+log imputed livestock emissions,2007,-0.021771,0.003167
+log imputed livestock emissions,2008,-0.018579,0.004335
+log imputed livestock emissions,2009,-0.013525,0.002707
+log imputed livestock emissions,2010,-0.007182,0.002857
+log imputed livestock emissions,2011,-0.003456,0.003206
+log imputed livestock emissions,2012,-0.004587,0.002007
+log imputed livestock emissions,2013,-0.002306,0.000538
+log imputed livestock emissions,2014,0.0,0.0
+log imputed livestock emissions,2015,0.003626,0.00136
+log imputed livestock emissions,2016,0.005458,0.002796
+log imputed livestock emissions,2017,0.007149,0.0069
+log imputed livestock emissions,2018,0.011417,0.008339
+log imputed livestock emissions,2019,0.010816,0.007192
+log imputed livestock emissions,2020,0.009972,0.008979
+log imputed livestock emissions,2021,0.012869,0.009857
+log imputed livestock emissions,2022,0.01227,0.011186
+log imputed livestock emissions,2023,0.009715,0.010618

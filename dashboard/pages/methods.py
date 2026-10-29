@@ -28,7 +28,7 @@ WORKFLOW = [
     ("1", "Load & hash", "Files located by name; SHA-256 recorded; duplicates detected"),
     ("2", "Harmonise", "CRF3 boundary · livestock stacking · regions · price chain-link"),
     ("3", "Panels", "Annual panel 1990–2024 · regional panel 5 × 1991–2024"),
-    ("4", "Policy indices", "M, P, S = M − P from I × C × B codebooks"),
+    ("4", "Policy indices", "M, P, G and S = M − P from the I × s × e × B × w codebooks"),
     ("5", "Models", "Breaks · LMDI · ARDL + bootstrap · counterfactuals · power · DiD · 2030"),
     ("6", "Export & verify", "34 result sheets · 7 figures · 30 independent checks"),
 ]
@@ -450,7 +450,8 @@ def step_cf():
               ]),
                    html.Div(id="mt-cf-kpi"),
                    dcc.Graph(id="mt-cf-fig", figure=fig, config=GRAPH_CONFIG, className="graph"),
-                   html.P("t₀ = 2000 reproduces the paper (pressure: +11.2% in 2024, 12.5 Mt cumulative). Point estimates only; intervals are in Results.",
+                   html.P(f"t₀ = 2000 reproduces the manuscript (pressure: {KEY['offset']['pressure_effect_pct']:+.1f}% in 2024, "
+                          f"{KEY['offset']['cum_P_kt'] / 1e3:+.1f} Mt cumulative over 2000–2024). Point estimates only; intervals are in Results.".replace("-", "−"),
                           className="fig-note"))),
         block("7.2 Power and minimum detectable effect",
               steps_list([
@@ -482,7 +483,7 @@ def step_other():
               md("Each sub-index is estimated in turn while the rest of M and P are held as controls; bootstrap B = 499.")),
         block("8.3 Interrupted time series at pre-specified dates",
               maths(r"y_t=\beta_0+\beta_1t+\sum_{e\in\{2010,2015,2022\}}\Big[\lambda_e\mathbb 1(t\ge e)+\delta_e\,(t-e+1)\,\mathbb 1(t\ge e)\Big]+\lambda'X_t+u_t"),
-              md("$\\lambda_e$ = level change, $\\delta_e$ = slope change at event $e$ (segmented regression; Bernal et al., 2017). Outcomes: ln CRF3 and "
+              md("$\\lambda_e$ = level change, $\\delta_e$ = slope change at event $e$ (segmented regression; Lopez Bernal et al., 2017). Outcomes: ln CRF3 and "
                  "ln dairy cows (with a post-2005 dummy). Sample 1995–2024, HAC errors. 2022 has only three post-years and is descriptive.", math=True)),
     ])
 

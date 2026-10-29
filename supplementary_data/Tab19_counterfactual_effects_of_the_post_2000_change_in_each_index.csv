@@ -1,0 +1,7 @@
+﻿Quantity,Estimate,90% interval
+Pressure effect on 2024 emissions (%),+2.2,1.1 to 3.2
+Mitigation effect on 2024 emissions (%),+14.4,−3.8 to 39.1
+"Cumulative pressure effect, 2000–2024 (kt CO₂e)","−7,239",–
+"Cumulative mitigation effect, 2000–2024 (kt CO₂e)","+30,080",–
+Bootstrap draws with a negative mitigation effect,109 of 999,–
+"Offset ratio, 2024",Undefined,0.13 to 10.1 (in the 109 valid draws)

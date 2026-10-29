@@ -12,8 +12,10 @@ OUT = Path(sys.argv[2]); OUT.mkdir(parents=True, exist_ok=True)
 D = json.loads(SRC.read_text(encoding="utf-8"))
 K = D["key"]; Y = D["panel"]["years"]; C = D["panel"]["cols"]
 
+# Okabe–Ito colour-blind-safe palette (Okabe & Ito, 2008). YELLOW is mapped to sky blue because pure yellow is
+# illegible for thin lines on white; RED (vermilion) is reserved for targets and data breaks.
 BLUE, ORANGE, AQUA, YELLOW, MAGENTA, GREEN, VIOLET, RED = (
-    "#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948")
+    "#0072B2", "#E69F00", "#009E73", "#56B4E9", "#CC79A7", "#009E73", "#CC79A7", "#D55E00")
 INK, INK2, MUTED, GRID = "#0b0b0b", "#52514e", "#898781", "#e1e0d9"
 EVENTS = {2005: "Decoupling", 2007: "Derogation", 2010: "Food Harvest 2020", 2015: "Quota abolition", 2022: "Sectoral ceiling"}
 
@@ -40,6 +42,14 @@ def events(ax, label=True, at=None, color=MUTED, which=EVENTS):
 
 
 def save(fig, name):
+    # Every bottom-row axis whose x-axis is calendar time gets an explicit "Year" label.
+    for ax in fig.axes:
+        if not ax.axison or ax.get_xlabel():
+            continue
+        lo, hi = ax.get_xlim()
+        ss = ax.get_subplotspec()
+        if 1985 < lo < hi < 2040 and (ss is None or ss.is_last_row()):
+            ax.set_xlabel("Year")
     fig.savefig(OUT / f"{name}.png", facecolor="white")
     plt.close(fig)
 
@@ -59,7 +69,7 @@ def fig_emissions():
     ax.set_ylim(0, 23.5); ax.set_xlim(1989.5, 2031)
     ax.set_ylabel("Mt CO$_2$e (AR5 GWP100)")
     events(ax, at=0.4, color="white")
-    ax.legend(ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.1))
+    ax.legend(ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.22))
     save(fig, "fig_emissions")
 
 
@@ -166,7 +176,7 @@ def fig_indices():
     ax.axhline(0, color=MUTED, lw=0.7)
     ax.set_ylabel("index value"); ax.set_ylim(-0.48, 0.8)
     events(ax, at=-0.46)
-    ax.legend(ncol=4, loc="upper center", bbox_to_anchor=(0.5, -0.1))
+    ax.legend(ncol=4, loc="upper center", bbox_to_anchor=(0.5, -0.22))
     save(fig, "fig_indices")
 
 
@@ -208,8 +218,8 @@ def fig_lmdi_phase():
         ax.text(xi + 0.07, r["net_change"], f"{r['net_change']:+,.0f}".replace("-", "−"), ha="left", va="center", fontsize=7, fontweight="bold")
     ax.axhline(0, color=INK2, lw=0.7)
     ax.set_xticks(x); ax.set_xticklabels(labs, fontsize=7.5)
-    ax.set_ylabel("kt CO$_2$e, cumulative within phase")
-    ax.legend(ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.2), fontsize=7.5)
+    ax.set_ylabel("kt CO$_2$e, cumulative within phase"); ax.set_xlabel("Policy phase")
+    ax.legend(ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.22), fontsize=7.5)
     save(fig, "fig_lmdi_phase")
 
 
@@ -233,7 +243,7 @@ def fig_lmdi_annual():
         ax.text(xm, ax.get_ylim()[1] * 0.95, lab, ha="center", fontsize=7.5, color=MUTED)
     ax.axhline(0, color=INK2, lw=0.7)
     ax.set_ylabel("kt CO$_2$e, year on year")
-    ax.legend(ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.1), fontsize=7.5)
+    ax.legend(ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.22), fontsize=7.5)
     save(fig, "fig_lmdi_annual")
 
 
@@ -271,7 +281,7 @@ def fig_cf():
     a1.plot(yrs, [r["no_pressure_change_kt"] / 1e3 for r in rows], color=ORANGE, lw=1.8, ls="--", label="P frozen at 2000 level")
     a1.plot(yrs, [r["no_mitigation_change_kt"] / 1e3 for r in rows], color=BLUE, lw=1.8, ls="--", label="M frozen at 2000 level")
     a1.fill_between(yrs, [r["no_pressure_change_kt"] / 1e3 for r in rows], [r["observed_kt"] / 1e3 for r in rows], color=ORANGE, alpha=0.12, lw=0)
-    a1.set_ylabel("Mt CO$_2$e"); a1.legend(fontsize=6.5, ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.1))
+    a1.set_ylabel("Mt CO$_2$e"); a1.legend(fontsize=6.5, ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.25))
     a1.set_title("(a) Observed and counterfactual paths", loc="left", fontsize=8.5, color=INK)
     eff = [100 * (math.exp(d["dP"]) - 1) for d in D["boot_draws"]]
     a2.hist(eff, bins=35, color=ORANGE, alpha=0.8)

@@ -52,7 +52,7 @@ ACRONYMS = [
     ("P", "Production-pressure index", "Study indices & symbols", "Sum of the scores of the 5 expansion (production-pressure) instruments in each year."),
     ("G", "Strategy signal", "Study indices & symbols", "Sum of the scores of the 3 national growth strategies (G01–G03); reported separately from P."),
     ("S", "Net policy signal", "Study indices & symbols", "S = M − P: positive when mitigation effort outweighs production pressure."),
-    ("I × C × B", "Implementation × Coverage × Bindingness", "Study indices & symbols", "The three components multiplied to score one policy in one year."),
+    ("I × s × e × B × w", "Implementation × coverage × eligibility × bindingness × content weight", "Study indices & symbols", "The components multiplied to score one policy in one year (w = 1 except Food Vision 2030, w = 0.5)."),
     ("IO", "Intensity Offset", "Study indices & symbols", "Share of the activity-driven emission increase cancelled by falling emission intensity."),
     ("RQ", "Research Question", "Study indices & symbols", "The four research questions RQ1–RQ4 that structure the study."),
     ("LU", "Livestock Unit", "Study indices & symbols", "Common unit that weights animals by feed requirement (one dairy cow ≈ 1 LU)."),

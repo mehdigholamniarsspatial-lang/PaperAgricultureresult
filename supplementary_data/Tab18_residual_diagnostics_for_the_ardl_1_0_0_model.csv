@@ -1,0 +1,6 @@
+﻿Diagnostic,Statistic,p-value,Result at 10%
+Breusch–Godfrey (2 lags),1.60,0.228,Pass
+Jarque–Bera normality,1.03,0.597,Pass
+Breusch–Pagan heteroskedasticity,0.36,0.894,Pass
+RESET (squares),–,0.763,Pass
+CUSUM (OLS residuals),0.58,0.885,Pass

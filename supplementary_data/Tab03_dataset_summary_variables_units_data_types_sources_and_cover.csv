@@ -1,0 +1,41 @@
+﻿Group,Variable,Unit,Data type,Source,Coverage (n),Role
+Emissions,CRF3 agricultural emissions (outcome),kt CO₂e,Continuous (annual flow),EPA provisional GHG inventory 1990–2025,1990–2024 (35),Outcome
+,Enteric fermentation (3.A),kt CO₂e,Continuous (annual flow),EPA inventory,1990–2024 (35),Category
+,Manure management (3.B),kt CO₂e,Continuous (annual flow),EPA inventory,1990–2024 (35),Category
+,Agricultural soils (3.D),kt CO₂e,Continuous (annual flow),EPA inventory,1990–2024 (35),Category
+,Liming (3.G),kt CO₂e,Continuous (annual flow),EPA inventory,1990–2024 (35),Category
+,Urea application (3.H),kt CO₂e,Continuous (annual flow),EPA inventory,1990–2024 (35),Category
+,CRF3 methane (CH₄),kt CO₂e,Continuous (annual flow),EPA inventory (gas sheet),1990–2024 (35),Gas
+,CRF3 nitrous oxide (N₂O),kt CO₂e,Continuous (annual flow),EPA inventory (gas sheet),1990–2024 (35),Gas
+,CRF3 carbon dioxide (CO₂),kt CO₂e,Continuous (annual flow),EPA inventory (gas sheet),1990–2024 (35),Gas
+,Dairy cattle CH₄ (enteric + manure),kt CO₂e,Continuous (annual flow),"Ireland CRT 2025, Table 3 (3.A.1.a, 3.B.1.a)",1990–2023 (34),LMDI component
+,Non-dairy cattle CH₄ (enteric + manure),kt CO₂e,Continuous (annual flow),"Ireland CRT 2025, Table 3 (3.A.1.b, 3.B.1.b)",1990–2023 (34),LMDI component
+,Sheep enteric CH₄,kt CO₂e,Continuous (annual flow),Eurostat env_air_gge (CRF 3.A.2),1990–2024 (35),LMDI component
+Livestock,Dairy cows (June),thousand head,Count (June census),CSO AAA01 / AAA07 / AAA09,1991–2024 (34),Activity
+,Non-dairy cattle (June),thousand head,Count (June census),CSO AAA01 / AAA07 / AAA09,1991–2024 (34),Activity
+,Total cattle (June),thousand head,Count (June census),CSO,1991–2024 (34),Activity
+,Total sheep (June),thousand head,Count (June census),CSO,1991–2024 (34),Activity
+,Livestock units (LU),thousand LU,Continuous (weighted count),CSO + Eurostat LSU coefficients,1991–2024 (34),Activity; 2030 scenario
+,LU per non-dairy animal,LU per head,Continuous (ratio),Derived,1991–2024 (34),Diagnostic
+Milk,Milk intake by processors,million litres,Continuous (annual flow),CSO AKA01,1992–2024 (33),Productivity
+,Milk yield per cow,litres per cow,Continuous (ratio),Derived (AKA01 ÷ dairy cows),1992–2024 (33),LMDI productivity factor
+,Milk fat content,%,Continuous (percentage),CSO AKA01,1992–2024 (33),Context
+,Milk protein content,%,Continuous (percentage),CSO AKA01,1992–2024 (33),Context
+Nitrogen,Mineral N fertiliser use,kt N,Continuous (annual flow),CRT 2025 Table 3.D (1990–99); Eurostat aei_fm_usefert (2000–24),1990–2024 (35),LMDI soils activity
+,Manure N excreted,kt N,Continuous (annual flow),CRT 2025 Table 3.B(b) rates × CSO head counts,1991–2023 (33),LMDI soils activity
+,N excretion per dairy cow,kg N/head/yr,Continuous (rate),CRT 2025 Table 3.B(b),1990–2023 (34),Input to manure N
+,N excretion per non-dairy animal,kg N/head/yr,Continuous (rate),CRT 2025 Table 3.B(b),1990–2023 (34),Input to manure N
+,N excretion per sheep,kg N/head/yr,Continuous (rate),CRT 2025 Table 3.B(b),1990–2023 (34),Input to manure N
+Prices & economy,Real milk price index,"index, 2020 = 100","Index (chain-linked, real)",CSO AHA01–05 (chain-linked) ÷ CPI,1995–2024 (30),ARDL control
+,Real fertiliser price index,"index, 2020 = 100","Index (chain-linked, real)",CSO AHA01–05 ÷ CPI,1995–2024 (30),ARDL control
+,Real feed price index,"index, 2020 = 100","Index (chain-linked, real)",CSO AHA01–05 ÷ CPI,1995–2024 (30),Robustness
+,Milk-to-feed price ratio,ratio,Continuous (ratio),Derived,1995–2024 (30),Robustness control
+,Consumer price index,"index, 2020 = 100",Index (nominal),CSO CPA01,1990–2024 (35),Deflator
+,Modified GNI (GNI),"€ million, constant prices",Continuous (monetary),CSO NA002,1995–2024 (30),Robustness control
+Policy indices,Mitigation index Mb,index,Composite index,Author coding (INPACT scoring rule),1990–2024 (35),Policy
+,Production-pressure index P,index,Composite index,Authors' codebook,1990–2024 (35),Policy
+,Net policy signal S = M − P,index,Composite index,Derived,1990–2024 (35),Policy
+,Strategy signal G,index,Composite index,Authors' codebook,1990–2024 (35),Policy (reported; robustness)
+,M sub-index: mandatoryb,index,Composite index,Derived,1990–2024 (35),Sub-index
+,M sub-index: incentiveb,index,Composite index,Derived,1990–2024 (35),Sub-index
+,M sub-index: voluntaryb,index,Composite index,Derived,1990–2024 (35),Sub-index

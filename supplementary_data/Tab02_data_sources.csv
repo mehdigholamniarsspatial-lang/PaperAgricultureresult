@@ -1,0 +1,6 @@
+﻿Agency,Product,Form,Content used,Years
+Environmental Protection Agency (EPA),"Provisional GHG inventory workbook, 1990–2025",Excel workbook,"CRF3 total, five emission categories, three gases",1990–2024
+UNFCCC,"Ireland Common Reporting Tables (CRT), 2025 submission","34 workbooks, one per inventory year","Dairy/non-dairy CH₄ split, N excretion rates, mineral N 1990–1999",1990–2023
+Eurostat,"`env_air_gge`, `aei_fm_usefert`, livestock-unit (LSU) coefficients",CSV extracts,"Species-level CH₄ detail, mineral N 2000–2024, LSU coefficients",1990–2024
+Central Statistics Office (CSO),"AAA01/07/09, AKA01, AHA01–05, CPA01, NA002",PxStat CSV,"Livestock (national and regional), milk, agricultural prices, CPI, GNI",1991–2024
+Authors,"Policy codebooks (`pressure_codebook.csv`, `mitigation_codebook_PROVISIONAL.csv`)",CSV,"19 instruments (5 P, 3 G, 11 M) scored I × s × e × B (× w)",1990–2024

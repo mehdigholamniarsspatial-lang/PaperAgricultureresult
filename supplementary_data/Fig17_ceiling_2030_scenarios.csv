@@ -1,0 +1,5 @@
+﻿scenario,intensity_change_pct_per_yr,required_LU_2030_thousand,required_LU_change_vs_2024_pct
+2012-2024 intensity trend continues,0.373133,4402.966214,-22.558658
+intensity falls 1% a year,-1.0,4782.324694,-15.886331
+intensity falls 2% a year,-2.0,5082.691758,-10.603341
+intensity falls 3% a year,-3.0,5405.300228,-4.929159

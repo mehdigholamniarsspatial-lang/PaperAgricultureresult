@@ -1,0 +1,7 @@
+﻿outcome,policy,sum_coef_kt_per_unit,kt_per_0p1,se,p_two_sided,n
+activity effect (kt),P,7479.543962,747.954396,2522.568181,0.007953,27
+activity effect (kt),M,-665.306833,-66.530683,2182.869886,0.763843,27
+dairy-herd activity effect (kt),P,2591.111015,259.111102,1227.944672,0.048335,27
+dairy-herd activity effect (kt),M,299.792994,29.979299,590.278654,0.61738,27
+intensity effect (kt),P,-102.095001,-10.2095,775.233952,0.89661,27
+intensity effect (kt),M,288.950517,28.895052,840.042955,0.734645,27

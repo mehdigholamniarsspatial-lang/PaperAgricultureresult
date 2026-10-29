@@ -1,5 +1,5 @@
 ::: {custom-style="Running Label"}
-Working paper · October 2026
+Manuscript prepared for submission to Climate Policy · October 2026
 :::
 
 ::: {custom-style="Paper Title"}
@@ -19,15 +19,11 @@ Mehdi Gholamnia^1^ [AUTHOR INPUT REQUIRED: names and affiliations of any co-auth
 :::
 
 ::: {custom-style="Paper Meta"}
-**Manuscript status:** Working paper prepared from the study's interactive results platform. All results come from the analysis run of 29 October 2026 (random seed 20261019), which uses the revised policy codebook of 29 October 2026.
+**Manuscript status:** Submission draft. All results come from the analysis run of 29 October 2026 (random seed 20261019) with the revised policy codebook of 29 October 2026; no number is carried over from earlier drafts.
 :::
 
 ::: {custom-style="Paper Meta"}
-**Intended submission:** *Climate Policy*
-:::
-
-::: {custom-style="Paper Meta"}
-**Word count:** [AUTHOR INPUT REQUIRED: confirm against the target journal's limit after final editing]
+**Word count:** [AUTHOR INPUT REQUIRED: confirm main text against the journal's limit; the policy codebooks, robustness grid, lag grid, verification table, unit-root tests and evidence table can be moved to online supplementary material]
 :::
 
 PAGEBREAK
@@ -35,28 +31,20 @@ PAGEBREAK
 # Abstract {.unnumbered}
 
 ::: {custom-style="Abstract Text"}
-Agriculture produced 37.9% of Ireland's greenhouse-gas (GHG) emissions in 2024. Emissions from IPCC/CRF sector 3 that year (19.63 Mt CO₂e) were within 0.7% of their 1990 level (19.76 Mt CO₂e), after three decades of agri-environment schemes and nitrates regulation and, since 2021, legally binding carbon budgets. This paper asks whether the flat emission path reflects *failed mitigation* or *mitigation offset by policies that expanded output*. We construct a new annual production-pressure index (P) and score it on the same implementation × coverage × eligibility × bindingness scale used for a mitigation index (M); non-binding national growth strategies are tracked separately as a strategy signal (G). This places the two policy sets on one scale for the first time. We then combine three designs whose identifying assumptions fail in different ways: (i) trend, structural-break and exact Logarithmic Mean Divisia Index (LMDI) decomposition analysis; (ii) an autoregressive distributed-lag (ARDL) policy-mix model with restricted moving-block bootstrap inference, dynamic counterfactuals and explicit power analysis; and (iii) a within-Ireland regional difference-in-differences (DiD) design based on pre-2015 dairy exposure. Emissions follow four regimes, with breaks in 2000, 2012 and 2020 (bootstrap UDmax *p* = 0.013), but no break falls within a year of Food Harvest 2020 (2010) or milk-quota abolition (2015). After quota abolition (2014–2021), growth in scale and yield added 2,988 kt CO₂e, whereas declining emission intensity removed only 963 kt. This gives an intensity offset of 0.32 (0.21–0.33 across emission-factor assumptions). In the ARDL model, a sustained 0.1-unit rise in production pressure is associated with 4.7% higher long-run emissions (θ~P~ = 0.46, bootstrap *p* = 0.043), and year-to-year changes in P line up with the activity (scale) component of the decomposition (+748 kt CO₂e per 0.1, *p* = 0.008). Because P in 2024 was close to its 2000 level, its net effect on 2024 emissions is small (+2.2%, 90% CI 1.1–3.2%). The mitigation index shows no emission-reducing effect (θ~M~ = +0.22, *p* = 0.88). The positive pressure coefficient holds in all 17 estimable robustness variants (significant in 14) and in all five leave-one-policy-out runs (significant in four), but the bounds test does not confirm a level relationship, so the long-run multipliers are indicative. The regional design does not support a quota-abolition effect, because regions were already diverging before 2015, and interrupted time-series estimates place the turning point in 2010 rather than 2015. Meeting the 2030 sectoral ceiling (15.5 Mt CO₂e, 25% below 2018) would require roughly 23% fewer livestock units than in 2024 if the recent intensity trend continues, and 5–16% fewer even if intensity fell by 1–3% a year. Production pressure acts on emissions through scale, as hypothesised. The largely voluntary, intensity-oriented mitigation portfolio shows no detectable reduction in total emissions, so there was little mitigation for expansion to offset.
+Irish agricultural (CRF sector 3) emissions in 2024 (19.63 Mt CO₂e) were within 0.7% of their 1990 level, despite three decades of mitigation policy and, since 2021, statutory carbon budgets. We ask whether this flat path reflects failed mitigation or mitigation offset by policies that expanded output. We score five production-pressure (P) and eleven mitigation instruments (M) for 1990–2024 on one implementation × coverage × eligibility × bindingness scale, tracking growth strategies separately (G), and combine three designs with different identifying assumptions: structural breaks with exact LMDI decomposition; an ARDL policy-mix model with restricted block-bootstrap inference and power analysis; and a within-Ireland regional difference-in-differences design. Emissions break in 2000, 2012 and 2020, not at Food Harvest 2020 (2010) or quota abolition (2015); interrupted time-series estimates date the upturn to 2010. After abolition, growth in scale and yield added 2,988 kt CO₂e while falling intensity removed 963 kt (intensity offset 0.32). A sustained 0.1-unit rise in P is associated with 4.7% higher long-run emissions (θ~P~ = 0.46, bootstrap *p* = 0.043), annual changes in P track the decomposition's activity component (+748 kt per 0.1, *p* = 0.008), and θ~P~ is positive in all 17 robustness variants. The mitigation index shows no detectable reducing effect (θ~M~ = +0.22, *p* = 0.88; minimum detectable |θ| ≈ 0.43). The bounds test does not confirm a level relationship, so multipliers are indicative. Expansion acted through scale; the largely voluntary, intensity-oriented mitigation portfolio left little to offset. On recent intensity trends, the 2030 ceiling implies about 23% fewer livestock units.
 
 **Keywords:** agricultural emissions; policy coherence; policy mix; production pressure; milk quota abolition; LMDI decomposition; ARDL; block bootstrap; difference-in-differences; Ireland
 
 **JEL classification:** Q15, Q18, Q54, Q58, C22
 :::
 
-## Highlights {.unnumbered}
+## Key policy insights {.unnumbered}
 
-- A new production-pressure index (P) is scored on the same implementation × coverage × eligibility × bindingness scale as a mitigation index (M), so expansion and mitigation policy can be compared directly.
-- Irish CRF3 emissions were flat over 1990–2024 (−0.65%) but passed through four distinct regimes, with a sustained upturn from 2012.
-- After milk-quota abolition, falling emission intensity cancelled only about one third of the emission growth caused by scale and yield (intensity offset = 0.32).
-- A sustained 0.1-unit rise in production pressure is associated with 4.7% higher long-run emissions, acting through herd and nitrogen growth. No emission-reducing effect of the mitigation portfolio can be detected.
-- On recent intensity trends, the 2030 sectoral ceiling implies about 23% fewer livestock units than in 2024.
-
-PAGEBREAK
-
-::: {custom-style="TOC Heading"}
-Contents
-:::
-
-TOCFIELD
+- Expansion and mitigation instruments can be scored on one implementation × coverage × eligibility × bindingness scale. In Ireland both rose together over 2005–2020, so the net policy signal grew far less than mitigation effort.
+- Production-pressure policy is associated with higher emissions and acts through herd size and nitrogen use; the mitigation portfolio shows no detectable effect on total emissions.
+- The emissions upturn began in 2010–2012, under the quota increases and Food Harvest 2020, before quota abolition in 2015.
+- Falling emission intensity cancelled only a third of post-quota scale growth; intensity targets can be met while total emissions rise.
+- On recent intensity trends, the 2030 sectoral ceiling implies 16–23% fewer livestock units than in 2024.
 
 PAGEBREAK
 
@@ -64,7 +52,7 @@ PAGEBREAK
 
 ## 1.1 Background and motivation
 
-Agriculture is the largest source of greenhouse-gas emissions in Ireland, accounting for 37.9% of the national total in 2024 (Environmental Protection Agency [EPA], 2026). This share is exceptionally high among developed economies. It reflects a grass-based ruminant production system oriented towards export markets for dairy and beef. Since the early 1990s the sector has been subject to a growing body of policy described, wholly or partly, as environmental or climate mitigation. This includes the Rural Environment Protection Scheme (REPS, from 1994), the Nitrates Action Programme (from 2006), successive agri-environment schemes (AEOS, GLAS and ACRES), breeding and efficiency programmes (BDGP, BEEP-S and SCEP), advisory tools such as the Carbon Navigator and, from 2022, direct limits on chemical nitrogen. The Climate Action and Low Carbon Development (Amendment) Act 2021 and the 2022 sectoral emissions ceiling subsequently committed agriculture to a 25% reduction in emissions, relative to 2018, by 2030.
+Agriculture is the largest source of greenhouse-gas emissions in Ireland, accounting for 37.9% of the national total in 2024 under the Environmental Protection Agency's policy-sector definition (EPA, 2026b). This share is exceptionally high among developed economies and reflects a grass-based ruminant production system oriented towards export markets for dairy and beef (O'Brien et al., 2014). Agricultural methane and nitrous oxide are hard to abate: the economic potential of livestock measures is a small fraction of their technical potential (Herrero et al., 2016), no country prices agricultural emissions (Leahy et al., 2020), and EU agricultural non-CO₂ emissions fell by only 6–7% between 2005 and 2023 (EEA, 2025). Since the early 1990s the sector has been subject to a growing body of policy described, wholly or partly, as environmental or climate mitigation. This includes the Rural Environment Protection Scheme (REPS, from 1994), the Nitrates Action Programme (from 2006), successive agri-environment schemes (AEOS, GLAS and ACRES), breeding and efficiency programmes (BDGP, BEEP-S and SCEP), advisory tools such as the Carbon Navigator and, from 2022, direct limits on chemical nitrogen. The Climate Action and Low Carbon Development (Amendment) Act 2021 and the 2022 sectoral emissions ceiling subsequently committed agriculture to a 25% reduction in emissions, relative to 2018, by 2030.
 
 Despite this policy activity, emissions reported under sector 3 of the Common Reporting Format (CRF3) were 19.63 Mt CO₂e in 2024, against 19.76 Mt CO₂e in 1990, a change of −0.65% ({{fig:emissions}}). The 2024 level was only 5.3% below the 2018 baseline, so most of the required 25% reduction must still be achieved within six years. The flat endpoints conceal a path that was far from flat. Emissions fell through the 2000s to a low of 17.78 Mt CO₂e in 2011 and then rose sharply to 21.27 Mt CO₂e in 2021. Some force pushed them back up.
 
@@ -94,25 +82,29 @@ Five dates are treated as policy events throughout the analysis: decoupling (200
 
 ## 1.3 Related literature
 
-### 1.3.1 Evaluating climate policy in agriculture
+### 1.3.1 Ex post evaluation and attribution
 
-Cross-country ex post evaluations have estimated the emission effects of climate legislation (Eskander & Fankhauser, 2020) and identified the policy combinations associated with large reductions (Stechemesser et al., 2024). These studies define the treatment as instruments labelled as climate policy, so sectoral policies that raise output enter only as background variation. This matters considerably for agriculture. The main drivers of herd size and nitrogen use in the European Union (milk quotas, coupled payments, derogations and national growth strategies) are not climate instruments at all.
+Ex post evaluation distinguishes policy ambition from changes in emissions that can be attributed to public intervention. Monitoring establishes whether emissions have fallen; evaluation asks how they would have evolved without a policy and why particular instruments succeeded or failed. It therefore serves attribution, accountability under legally binding carbon budgets such as those created by the Climate Action and Low Carbon Development (Amendment) Act 2021 and tracked by the Climate Change Advisory Council (CCAC, 2025), and learning about instrument design. Yet a meta-analysis of 259 European evaluations found that practice meets only some of the standards set by evaluation theory (Huitema et al., 2011), and how evaluation itself should be governed remains poorly understood (Schoenefeld & Jordan, 2017). The task is most demanding where environmental measures coexist with support for emitting activities, because a stable emissions path can conceal either weak mitigation or real reductions cancelled by expansion; agricultural policy therefore calls for evaluation of the wider incentive structure (OECD, 2022). Cross-country studies show the value of systematic evaluation while exposing the limits of its transfer to agriculture. Eskander and Fankhauser (2020) associate additional climate laws in 133 countries over 1999–2016 with lower CO₂ intensity, with stronger effects for parliamentary acts and stronger institutions but weaker results for other gases. Stechemesser et al. (2024) screen about 1,500 policies in 41 countries over 1998–2022 and identify 63 interventions associated with large reductions, mostly within mixes that include pricing, but their sectors exclude agriculture; Koch et al. (2022) apply comparable break detection to EU road transport. Because treatment is defined as climate-labelled policy, output-raising instruments such as milk quotas, coupled payments, derogations and growth strategies enter these designs only as background. Quasi-experimental designs sharpen attribution where credible comparators exist. Synthetic control builds a weighted donor comparator (Abadie et al., 2010) and requires good pre-intervention fit, suitable untreated donors and stable underlying relationships (Abadie, 2021). Applied to Sweden, it attributes a fall of almost 11% in transport CO₂ mainly to the carbon tax (Andersson, 2019), whereas in British Columbia combined difference-in-differences (DiD), synthetic-control and break methods detect lower transport emissions but no large aggregate fall (Pretis, 2022). DiD requires parallel untreated trends; extensions address continuous treatments (Callaway et al., 2024) and bounded departures from parallel trends (Rambachan & Roth, 2023). Since quota abolition and CAP reform affected every EU comparator at once, the present study relies on within-Ireland dairy exposure for RQ4, where few regions and short post-treatment windows make pre-trend sensitivity central. Where no external comparator exists, interrupted time-series analysis compares outcomes with an extrapolated pre-intervention path and assumes no coincident shocks (Lopez Bernal et al., 2017), while structural-break procedures estimate regime changes without imposing dates (Bai & Perron, 2003). Neither temporal coincidence nor a significant break establishes causation, and in a 35-year series each additional break shortens the estimation segments, so these tools are used here to characterise regimes and to test the timing propositions of RQ1.
 
-### 1.3.2 Policy coherence, policy mixes and layering
+### 1.3.2 Mechanisms and dynamics
 
-The policy-coherence literature distinguishes sector–environment interactions that reinforce each other, are neutral or counteract each other (Nilsson et al., 2012). The policy-mix framework stresses that instruments operate jointly and that outcomes are determined by the mix rather than by individual instruments (Rogge & Reichardt, 2016). Scholarship on policy design describes *layering*, in which new goals are added on top of existing instruments without removing contradictory ones (Howlett & Rayner, 2013). Together these frameworks predict that Irish mitigation effort could be neutralised by concurrent expansion policy. They have mostly been applied qualitatively, however, and do not yield an estimate of how large such an offset might be.
+Three further families of methods address mechanisms and dynamics rather than comparison. Index decomposition, notably the logarithmic mean Divisia index (LMDI), divides emissions change into activity, structure and intensity effects without a residual and with aggregation consistency (Ang & Liu, 2001), and the chosen formulation determines how each component is interpreted (Ang, 2015). In livestock systems it separates herd expansion, yield growth and emissions per unit of output; in China's pig sector over 1976–2016, for example, technological progress lowered emissions while rising affluence and population raised them (Dai et al., 2021). Decomposition requires coherent boundaries rather than a comparator, but it does not identify which policy caused each component, so RQ2 requires a separate empirical link between components and policy variables. Autoregressive distributed-lag (ARDL) models distinguish short-run from long-run responses, and bounds testing accommodates regressors integrated of order zero or one, though not two (Pesaran et al., 2001). A long-run relationship does not establish causal direction: interpretation depends on lag and trend specification, parameter stability and exogeneity, and with about 28 usable observations correlated policy indices can make mitigation effects difficult to detect. RQ3 therefore combines ARDL estimation with restricted block-bootstrap inference and an explicit power analysis. Simulation models illuminate mechanisms that short series cannot resolve. Computable general equilibrium analysis with MAGNET sets out the market, food-security and leakage trade-offs of agricultural mitigation (OECD, 2019), while partial-equilibrium models add sectoral detail. An Irish sector model identified tensions between Food Harvest 2020 growth ambitions and emissions commitments (Donnellan et al., 2013). CAPRI simulations show that EU livestock emissions fall mainly through lower output, with leakage of up to 91% (Fellmann et al., 2018); that removing coupled ruminant support would cut EU emissions, about three quarters of which would be offset abroad (Jansson et al., 2021); and that combining carbon pricing with trade liberalisation increases leakage (Himics et al., 2018). These are conditional projections that depend on calibrated behaviour, technology assumptions and market closure, not ex post estimates of realised effects. Because each family fails in a different way, inference is most credible when designs with different sources of bias converge (Lawlor et al., 2016; Munafò & Davey Smith, 2018), and any index that combines heterogeneous instruments requires transparent scoring and sensitivity analysis (OECD et al., 2008).
 
-### 1.3.3 Decomposition and the rebound analogy
+### 1.3.3 Agriculture as a distinct evaluation problem
 
-Index-decomposition analysis, and the LMDI family in particular, splits changes in emissions exactly into activity, structure and intensity effects (Ang, 2015; Ang & Liu, 2001). In energy economics, the share of an efficiency gain that is cancelled by induced demand is known as the *rebound effect* (Greening et al., 2000). The agricultural analogue is the extent to which lower emissions per litre of milk or per animal are cancelled by more litres and more animals. We formalise this concept as the *intensity offset* (Section 3.1).
+Agriculture requires distinct evaluation because much of its emissions arise from biological processes. Agricultural CH₄ and N₂O averaged about 6 Gt CO₂e a year in 2010–2019 (IPCC, 2022), within an agriculture, forestry and other land-use share of about 13–21% of global emissions in which enteric fermentation is the main methane source and fertiliser and manure the main N₂O sources (Nabuurs et al., 2022). Including processing, transport and waste, food systems account for roughly a third of global emissions (Crippa et al., 2021). In the EU, enteric fermentation produces about half of agricultural emissions, soils about 30% and manure management about 17%, and non-CO₂ agricultural emissions fell by only 6–7% between 2005 and 2023 (EEA, 2025); progress has slowed, with rising milk output offsetting part of the improvement in methane intensity (EEA, 2026). Abatement is hard because the economic potential of livestock measures is estimated at under a tenth of their technical potential (Herrero et al., 2016) and no country yet prices agricultural emissions, given concerns about food security, competitiveness and leakage (Leahy et al., 2020). Evidence on policy is correspondingly weak. More than €100 billion of CAP spending in 2014–2020 was attributed to climate action, yet agricultural emissions had not fallen since 2010, funded practices often had low mitigation potential and the CAP did not seek to limit livestock numbers (European Court of Auditors, 2021); Pe'er et al. (2020) reach a similar verdict. The OECD (2022) identifies commodity-linked support as a production incentive and notes that many agricultural mitigation targets are not binding, and OECD modelling ranks market price support and unconstrained input payments as the most environmentally harmful forms of support and decoupled payments as the least (Henderson & Lankoski, 2021; DeBoe et al., 2020). Voluntary agri-environment schemes improve farmland biodiversity on average, depending on design and landscape (Batáry et al., 2015). However, the evidence was too thin to judge the national effectiveness of Ireland's Rural Environment Protection Scheme (Finn & Ó hUallacháin, 2012), EU schemes show limited impact and scant outcome evidence (Hasler et al., 2022), and a 23-year Irish farm panel indicates that successive schemes have not adequately addressed pressures on intensive farms (Cullen et al., 2021). Binding nitrates regulation shows modest, modelled climate co-benefits, with N₂O about 6% lower by 2008 across the EU-27 (Velthof et al., 2014), yet Ireland's conditional derogation permits higher manure-nitrogen applications on qualifying farms (European Commission, 2022). The contrast between voluntary and binding instruments is therefore suggestive rather than settled. The form of the target matters as much: intensity and absolute caps coincide only when future output is known (Ellerman & Wing, 2003), so intensity improvement lowers absolute emissions only if productivity gains do not also raise output (Leahy et al., 2020).
 
-### 1.3.4 Evidence for Ireland
+### 1.3.4 Expansion, intensity and policy coherence
 
-Läpple et al. (2022) find that EU milk-quota abolition increased dairy expansion and per-farm emissions despite lower emission intensity. Donnellan et al. (2013) show that the Food Harvest 2020 targets were incompatible with emission-reduction commitments. Balaine et al. (2022) conclude that Ireland's efficiency-based strategy did not offset intensification pressure. Henn et al. (2023) caution that shifts in herd composition alter implied emission factors, so aggregate claims about intensity require care. Augustenborg et al. (2026) identify five stakeholder-perceived barriers to environmental policy implementation in Ireland: policy incoherence, competing political priorities, capacity, financial constraints and planning constraints.
+The two policy sets in {{tab:context}} differ in the margins through which they act. Expansion instruments act on how much is produced: coupled payments support animal numbers, quota increments and abolition relax a production constraint, derogations accommodate higher stocking, and growth strategies shape investment expectations without changing the legal or financial conditions of production. Mitigation instruments act mainly on how output is produced, through nitrogen management, animal performance, technology and advice, although some measures and mixed-goal strategies affect both margins. Evidence on quota abolition is mixed. Across the EU, post-quota milk supply was price-inelastic and few member states increased dairy-cow numbers over 2007–2017 (Jongeneel & Gonzalez-Martinez, 2022), whereas Ireland's dairy herd grew by about 38% between 2010 and 2018 (Section 2.10; {{tab:descriptives}}). Efficiency gains can be absorbed by such growth. Higher yields lower emissions per kilogram of milk while raising emissions per cow (Gerber et al., 2011), much as energy-efficiency rebound lowers the effective cost of a service and stimulates demand (Greening et al., 2000); evidence of economy-wide backfire is contested, although rebound may be larger than conventionally assumed (Sorrell, 2009). Agricultural analogues include subsidised irrigation efficiency that increased groundwater extraction (Pfeiffer & Lin, 2014) and yield gains that could raise global cropland and CO₂ emissions under integrated markets (Hertel et al., 2014). The analogy has limits, because Irish expansion followed quota removal, export demand and investment incentives rather than efficiency savings alone; the intensity offset used here is therefore an accounting measure, not a causally identified rebound elasticity. Policy-coherence frameworks explain why opposing incentives persist. Nilsson et al. (2012) show that agreement on goals can conceal conflict between instruments and in implementation; Rogge and Reichardt (2016) emphasise the consistency and credibility of the whole mix; Howlett and del Río (2015) classify mixes by goals, instruments and levels of governance; Howlett and Rayner (2013) explain how incremental patching preserves inherited instruments that conflict with new objectives; and Candel and Biesbroek (2016) treat integration as a process whose dimensions may move in opposite directions. In the CAP, layering made reform durable, as greening legitimised decoupled payments while income support persisted (Daugbjerg & Swinbank, 2016). Agricultural applications confirm the relevance of coherence, from incoherent policies that obstruct peatland mitigation (Regina et al., 2016) to the scoring of production and conservation aims in EU, Brazilian and Indonesian policy documents (von Lüpke et al., 2026). These studies, however, measure declared priorities or diagnose conflict qualitatively; none estimates the realised emissions cancelled by expansion.
+
+### 1.3.5 Evidence for Ireland
+
+Ireland is a consequential setting because a grass-based, export-oriented ruminant system dominates its agricultural emissions. Agriculture accounted for 37.9% of national emissions in 2024 under the EPA's policy-sector definition, which includes agricultural fuel combustion and is broader than the CRF3 outcome used here (EPA, 2026b). Grass-based milk has a comparatively low footprint, averaging 1.11 kg CO₂e per kg of fat- and protein-corrected milk across 124 farms (O'Brien et al., 2014), and national strategy has accordingly emphasised intensity. Growth targets were nonetheless explicit: Food Harvest 2020 sought a 50% rise in milk production (DAFF, 2010) and Food Wise 2025 a 65% rise in the value of primary output (DAFM, 2015), while Food Vision 2030 pairs commercial ambitions with cuts of at least 10% in biogenic methane and of more than half in fertiliser-related emissions (DAFM, 2021a, 2021b). The 2021 Act established statutory carbon budgets, and the 2022 sectoral agreement requires agriculture to reduce emissions by 25% from 2018 levels by 2030 (Department of the Taoiseach, 2022). Teagasc's abatement analysis stresses the scale of that challenge (Lanigan et al., 2023), and agriculture is projected to exceed its ceiling under existing measures (CCAC, 2025). Irish research documents the tension without measuring its balance. Donnellan et al. (2013) anticipated the conflict through scenario modelling, and Balaine et al. (2022) conclude that efficiency-led development under successive strategies did not contain the pressures of expansion. At farm level, higher productivity is associated with lower emissions intensity, yet over 2000–2017 mean farm emissions rose by about 86% while emissions per kilogram of milk fell by 13% (Läpple et al., 2022), and milk recording raised yields and margins without improving measured GHG efficiency (Balaine et al., 2020). Institutional studies explain weak delivery. Ireland has been characterised as a climate-policy laggard with limited convergence on EU ambitions (Torney & O'Gorman, 2019), and stakeholders report capacity constraints, incoherence, financial limits, competing political priorities and planning delays (Augustenborg et al., 2026). Taken together ({{tab:evidence}} in Appendix F summarises the evidence reviewed), the literature establishes the direction of the relevant mechanisms more securely than their combined magnitude. It documents scale–intensity tensions, conditional abatement potential and incoherent incentives, but no study jointly measures Ireland's annual expansion and mitigation portfolios on a common scale and relates their balance to observed emissions, so an undetectable mitigation effect cannot yet be distinguished from demonstrated cancellation.
 
 ## 1.4 Research gap, research questions and contributions
 
-The *direction* of each mechanism is therefore established, but the *size* of the offset between expansion and mitigation policy has not been measured. Cross-country evaluations treat non-climate sectoral policy as background, and the policy-coherence literature remains largely qualitative. To our knowledge, no study has placed expansion and mitigation policy on a common scale and quantified how much one offsets the other. Doing so requires (i) a common scale for both policy sets, (ii) an attribution strategy that works with a single national series of about 30 annual observations, and (iii) a link between the accounting decomposition and the policy variables.
+The *direction* of each mechanism is therefore established, but the *size* of the offset between expansion and mitigation policy has not been measured. Cross-country evaluations treat non-climate sectoral policy as background (Eskander & Fankhauser, 2020; Stechemesser et al., 2024), sector models provide conditional projections rather than realised effects (Donnellan et al., 2013; Fellmann et al., 2018), and the policy-coherence literature measures declared priorities or diagnoses conflict qualitatively (Nilsson et al., 2012; von Lüpke et al., 2026). To our knowledge, no study has placed expansion and mitigation policy on a common scale and quantified how much one offsets the other. Doing so requires (i) a common scale for both policy sets, (ii) an attribution strategy that works with a single national series of about 30 annual observations, and (iii) a link between the accounting decomposition and the policy variables.
 
 The study addresses four research questions, formalised as pre-specified hypotheses in Section 3.2:
 
@@ -187,9 +179,9 @@ $$
 The EPA "Agriculture" row follows the Climate Action Plan definition, which also includes agricultural and forestry fuel combustion (1.A.4.c.ii) and fishing (1.A.4.c.iii); these are subtracted. On every run the result is checked against both the sum of the five reported categories (enteric fermentation 3.A, manure management 3.B, agricultural soils 3.D, liming 3.G and urea application 3.H) and the sum of the three gases, with a discrepancy below 0.0001%. The remaining sector-3 categories are not occurring or not applicable in Ireland. {{fig:emissions}} shows the outcome and its composition by category.
 
 FIG emissions | Irish agricultural (CRF sector 3) greenhouse-gas emissions by category, 1990–2024, and the linear path to the 2030 sectoral ceiling | fig_emissions.png | 6.3
-FIGNOTE: Stacked areas show the five inventory categories in Mt CO₂e (AR5 GWP100); the black line is the CRF3 total. The dashed red line joins 2024 emissions to the 2030 target of 15.5 Mt CO₂e (75% of the 2018 level). Dotted vertical lines mark the five policy events. Data: EPA (2026).
+FIGNOTE: Stacked areas show the five inventory categories in Mt CO₂e (AR5 GWP100); the black line is the CRF3 total. The dashed red line joins 2024 emissions to the 2030 target of 15.5 Mt CO₂e (75% of the 2018 level). Dotted vertical lines mark the five policy events. Data: EPA (2026a).
 
-Three inventory vintages are combined. The EPA provisional inventory (2026) provides CRF3, as it is the only source that includes 2024; Eurostat `env_air_gge` provides species-level detail; and the CRT 2025 submission provides the dairy/non-dairy split and fertiliser data for the 1990s. The vintages agree to within 0.01% for 1990–2020 and 0.21% for 2021–2023. The LMDI "other" term absorbs any difference between vintages, so the decomposition remains exact.
+Three inventory vintages are combined. The EPA provisional inventory (EPA, 2026a) provides CRF3, as it is the only source that includes 2024; Eurostat `env_air_gge` provides species-level detail; and the CRT 2025 submission provides the dairy/non-dairy split and fertiliser data for the 1990s. The vintages agree to within 0.01% for 1990–2020 and 0.21% for 2021–2023. The LMDI "other" term absorbs any difference between vintages, so the decomposition remains exact.
 
 ## 2.5 Activity variables
 
@@ -212,7 +204,7 @@ $$
 where *O* denotes non-dairy cattle and the N-excretion rates (kg N per head per year) are taken from CRT Table 3.B(b). The dairy rate rises from 97.9 (1991) to 108.4 (2023), the non-dairy cattle rate falls from 54.8 to 48.1, and the sheep rate is approximately 7.5. {{fig:drivers}} plots the outcome alongside its main activity drivers.
 
 FIG drivers | CRF3 emissions and their main activity drivers, 1990–2024 | fig_drivers.png | 6.3
-FIGNOTE: Each panel has its own vertical scale. The dashed red line in the dairy-cow panel marks the 2004–2005 CSO classification break. Dotted vertical lines mark Food Harvest 2020 (2010) and quota abolition (2015). Data: EPA (2026), CSO, CRT 2025 and Eurostat.
+FIGNOTE: Each panel has its own vertical scale. The dashed red line in the dairy-cow panel marks the 2004–2005 CSO classification break. Dotted vertical lines mark Food Harvest 2020 (2010) and quota abolition (2015). Data: EPA (2026a), CSO, CRT 2025 and Eurostat.
 
 ## 2.6 Prices and macroeconomic controls
 
@@ -246,7 +238,7 @@ FIGNOTE: (a) Dairy share of all cows in 2010–2014 for the five constant-bounda
 
 ## 2.8 Policy codebooks
 
-Nineteen instruments are coded: five production-pressure instruments (P01–P05) and three national growth strategies (G01–G03; {{tab:codebookP}}), and eleven mitigation instruments (M01–M11; {{tab:codebookM}}). The strategies set non-binding sectoral targets and are reported as a separate strategy signal G rather than summed into P; a robustness variant adds them to P. Three overlapping suckler programmes (BDGP, BEEP-S and SCEP) are coded as one lineage (M08). Eligibility *e* may vary over time (P03, M05 and M08) and is coded with the same year-range syntax as implementation. Plausible ranges for *e* and *B* and a confidence grade for each component are recorded with the codebook. Two framework laws (E01 and E02) are recorded as event markers but are not entered in any index, to avoid double counting. {{fig:scores}} shows the resulting annual score of each instrument.
+Nineteen instruments are coded: five production-pressure instruments (P01–P05) and three national growth strategies (G01–G03; {{tab:codebookP}}), and eleven mitigation instruments (M01–M11; {{tab:codebookM}}). The parameter values in these tables are the revised codebook of 29 October 2026, which supersedes an earlier coding; every result in this paper is computed from them, and the robustness grid (Section 3.11) re-estimates the main model under the principal alternative codings (equal bindingness, the alternative bindingness values recorded for quota abolition and the dairy assurance scheme, dropping or down-weighting the Nitrates Action Programme, adding the strategies to P, and scoring the two framework laws in M). The strategies set non-binding sectoral targets and are reported as a separate strategy signal G rather than summed into P; a robustness variant adds them to P. Three overlapping suckler programmes (BDGP, BEEP-S and SCEP) are coded as one lineage (M08). Eligibility *e* may vary over time (P03, M05 and M08) and is coded with the same year-range syntax as implementation. Plausible ranges for *e* and *B* and a confidence grade for each component are recorded with the codebook. Two framework laws (E01 and E02) are recorded as event markers but are not entered in any index, to avoid double counting. {{fig:scores}} shows the resulting annual score of each instrument.
 
 TAB codebookP | Production-pressure (P) and strategy-signal (G) codebook
 
@@ -544,7 +536,7 @@ $$
 y_t=\beta_0+\beta_1t+\sum_{e\in\{2010,2015,2022\}}\Big[\lambda_e\mathbf{1}(t\ge e)+\delta_e\,(t-e+1)\,\mathbf{1}(t\ge e)\Big]+\lambda'X_t+u_t \qquad (23)
 $$
 
-estimates a level change λ~e~ and a slope change δ~e~ at each event *e* (Bernal et al., 2017). The outcomes are ln CRF3 and ln dairy cows, the latter with a post-2005 indicator. The sample is 1995–2024 with HAC standard errors. The 2022 event has only three post-event years and is treated as descriptive.
+estimates a level change λ~e~ and a slope change δ~e~ at each event *e* (Lopez Bernal et al., 2017). The outcomes are ln CRF3 and ln dairy cows, the latter with a post-2005 indicator. The sample is 1995–2024 with HAC standard errors. The 2022 event has only three post-event years and is treated as descriptive.
 
 ## 3.12 Regional difference-in-differences (RQ4b)
 
@@ -602,7 +594,7 @@ The outcome throughout the main analysis remains GWP100.
 
 ## 3.16 Reproducibility and verification
 
-A single notebook (`ireland_agri_ghg_analysis.ipynb`) runs the complete analysis, from the raw files to every table and figure, with a fixed random seed (20261019); a full run takes about five minutes. An independent script re-derives every stage. All 30 verification checks pass ({{tab:verification}}). They include re-hashing the 53 loaded files, exact CRF3 identities, the chain-link fit, an exact LMDI residual, an independent ordinary least squares (OLS) reproduction of θ~M~ and θ~P~, and the 2030 target arithmetic.
+A single notebook (`ireland_agri_ghg_analysis.ipynb`) runs the complete analysis, from the raw files to every table and figure, with a fixed random seed (20261019); a full run takes about five minutes. An independent script re-derives every stage. All 30 verification checks pass ({{tab:verification}}), and a verification report comparing the earlier draft with the present run accompanies the manuscript. They include re-hashing the 53 loaded files, exact CRF3 identities, the chain-link fit, an exact LMDI residual, an independent ordinary least squares (OLS) reproduction of θ~M~ and θ~P~, and the 2030 target arithmetic.
 
 # 4. Results
 
@@ -914,36 +906,36 @@ FIGNOTE: GWP\* converts methane into CO₂-warming-equivalents (CO₂-we) as E\*
 
 ## 5.1 Expansion with little to offset
 
-Three lines of evidence point in the same direction. First, growth in scale and yield after 2014 outpaced intensity gains by more than three to one (IO = 0.32). Second, production pressure is associated with higher long-run emissions (+4.7% per 0.1), a result that holds in sign in every pre-specified robustness variant and in significance in most of them, and changes in P line up with the activity component of the decomposition, the channel the framework predicts. Third, no emission-reducing effect of mitigation can be detected. The evidence therefore favours a refined version of Explanation B. Production-oriented policy moved emissions through scale, but the mitigation portfolio did not produce a detectable reduction that expansion then cancelled; expansion had little mitigation to offset. Read in this way, Explanation A, that mitigation was weak, also holds as a statement about the *portfolio's* effect on total emissions.
+Three lines of evidence point in the same direction. First, growth in scale and yield after 2014 outpaced intensity gains by more than three to one (IO = 0.32). Second, production pressure is associated with higher long-run emissions (+4.7% per 0.1), a result that holds in sign in every pre-specified robustness variant and in significance in most of them, and changes in P line up with the activity component of the decomposition, the channel the framework predicts. Third, no emission-reducing effect of mitigation can be detected. The evidence therefore favours a refined version of Explanation B. Production-oriented policy moved emissions through scale, but the mitigation portfolio did not produce a detectable reduction that expansion then cancelled; expansion had little mitigation to offset. Read in this way, Explanation A, that mitigation was weak, also holds as a statement about the *portfolio's* effect on total emissions. The result is consistent with the farm-level finding that productivity growth lowered emissions intensity while total farm emissions rose (Läpple et al., 2022), with the EU-wide verdict that climate-labelled CAP spending did not reduce agricultural emissions (European Court of Auditors, 2021; Pe'er et al., 2020), and with the ranking of output-linked support as the most environmentally harmful form of farm support (DeBoe et al., 2020; Henderson & Lankoski, 2021). It adds to this literature a measured balance between the two policy sets on a common scale.
 
 The size of the pressure footprint depends on the comparison chosen. Relative to 2000, when coupled premia were still in force, the 2024 level of pressure is almost unchanged and its net effect on 2024 emissions is small (+2.2%). Relative to the post-decoupling low of 2005, the rebuilding of pressure through the derogation, the quota increases, abolition and TAMS II corresponds to a long-run effect of about 12%. Decoupling removed one expansion instrument; the policies that followed replaced it with others that acted more directly on the dairy herd.
 
 ## 5.2 Timing: 2010, not 2015
 
-Three results agree that the trend changed in 2010–2012: the Bai–Perron break in 2012 (90% interval 2010–2012), the interrupted time-series slope change in 2010 rather than 2015, and the regional pre-trends from 2005 onwards. Expansion began under the quota increases and Food Harvest 2020, and abolition continued it rather than starting it. Analyses that treat 2015 as the single turning point therefore understate the importance of the "soft-landing" years, in which the sector positioned itself for a quota-free regime. This qualification complements the farm-level evidence of Läpple et al. (2022) rather than contradicting it.
+Three results agree that the trend changed in 2010–2012: the Bai–Perron break in 2012 (90% interval 2010–2012), the interrupted time-series slope change in 2010 rather than 2015, and the regional pre-trends from 2005 onwards. Expansion began under the quota increases and Food Harvest 2020, and abolition continued it rather than starting it. Analyses that treat 2015 as the single turning point therefore understate the importance of the "soft-landing" years, in which the sector positioned itself for a quota-free regime. This qualification complements the farm-level evidence of Läpple et al. (2022) rather than contradicting it, and it helps to reconcile the Irish experience with the EU-wide finding that post-quota milk supply was price-inelastic and few member states expanded their herds (Jongeneel & Gonzalez-Martinez, 2022): Ireland's expansion was prepared under the quota increases and a national growth strategy, not triggered by abolition alone.
 
 ## 5.3 Why mitigation did not register
 
-Most mitigation instruments were voluntary or incentive-based schemes that acted on intensity, and the main binding instrument, the Nitrates Action Programme, was designed for water quality. A portfolio that acts only on intensity can lower emissions per litre while total emissions rise, and this is precisely what the decomposition shows for 2014–2021. The positive association between M and emissions is best interpreted as reverse timing: schemes such as GLAS grew in the same years as the herd. The power analysis bounds what the data can reveal. Long-run mitigation effects with |θ| above about 0.43 (roughly 4% per 0.1 index units) would very likely have been detected, but smaller beneficial effects cannot be excluded. The mechanism regression adds a further caution: changes in M are not associated with lower intensity, which is the channel through which an intensity-oriented portfolio would have to work. Two robustness results qualify the mitigation null. When the Nitrates Action Programme, designed for water quality and the largest component of M, is removed, the remaining mitigation index is significantly associated with lower emissions; and the voluntary assurance and advisory schemes show a negative association. Both estimates are fragile, but they suggest that the portfolio average may mask instruments with modest beneficial effects.
+Most mitigation instruments were voluntary or incentive-based schemes that acted on intensity, and the main binding instrument, the Nitrates Action Programme, was designed for water quality. This is consistent with the wider evidence that voluntary agri-environment schemes show limited and poorly documented outcome effects (Hasler et al., 2022), that successive Irish schemes did not target the pressures of intensive farms (Cullen et al., 2021; Finn & Ó hUallacháin, 2012), and that the climate co-benefit of nitrates regulation is modest (Velthof et al., 2014). A portfolio that acts only on intensity can lower emissions per litre while total emissions rise (Ellerman & Wing, 2003; Leahy et al., 2020), and this is precisely what the decomposition shows for 2014–2021. The positive association between M and emissions is best interpreted as reverse timing: schemes such as GLAS grew in the same years as the herd. The power analysis bounds what the data can reveal. Long-run mitigation effects with |θ| above about 0.43 (roughly 4% per 0.1 index units) would very likely have been detected, but smaller beneficial effects cannot be excluded. The mechanism regression adds a further caution: changes in M are not associated with lower intensity, which is the channel through which an intensity-oriented portfolio would have to work. Two robustness results qualify the mitigation null. When the Nitrates Action Programme, designed for water quality and the largest component of M, is removed, the remaining mitigation index is significantly associated with lower emissions; and the voluntary assurance and advisory schemes show a negative association. Both estimates are fragile, but they suggest that the portfolio average may mask instruments with modest beneficial effects.
 
 ## 5.4 Relation to stakeholder-identified barriers
 
-Of the five barriers identified by Augustenborg et al. (2026), **policy incoherence** receives quantitative support. P and M rose together over 2005–2020, the net signal fell between 2009 and 2016 even as mitigation effort grew, and P has a detectable association with emissions. **Competing political priorities** are consistent with the regime change around Food Harvest 2020, a growth strategy adopted alongside mitigation commitments (strategy signal G). **Capacity, financial and planning constraints** cannot be separated with these data. In the terms of Marsh and McConnell (2010), the mitigation portfolio shows some *process* success, in that instruments were implemented and their coverage grew, but no detectable *programme* success on total emissions. Its *political* success was limited by the parallel growth agenda.
+Of the five barriers identified by Augustenborg et al. (2026), **policy incoherence** receives quantitative support. The pattern matches the layering described by Howlett and Rayner (2013) and documented for the CAP by Daugbjerg and Swinbank (2016): new mitigation goals were added on top of inherited production incentives rather than replacing them. P and M rose together over 2005–2020, the net signal fell between 2009 and 2016 even as mitigation effort grew, and P has a detectable association with emissions. **Competing political priorities** are consistent with the regime change around Food Harvest 2020, a growth strategy adopted alongside mitigation commitments (strategy signal G). **Capacity, financial and planning constraints** cannot be separated with these data. In the terms of Marsh and McConnell (2010), the mitigation portfolio shows some *process* success, in that instruments were implemented and their coverage grew, but no detectable *programme* success on total emissions. Its *political* success was limited by the parallel growth agenda.
 
 ## 5.5 Policy implications
 
 The findings carry four implications. They are offered as interpretations of the evidence, not as estimated policy effects.
 
-1. **Coherence before additionality.** Because pressure has a detectable association with emissions, acting through scale, and the mitigation portfolio does not, adding further intensity-oriented instruments is unlikely, on its own, to close the gap while expansion incentives remain. Assessing growth instruments (derogations, capital grants for capacity and volume targets) for their emission consequences would address the measured source of the problem.
+1. **Coherence before additionality.** Because pressure has a detectable association with emissions, acting through scale, and the mitigation portfolio does not, adding further intensity-oriented instruments is unlikely, on its own, to close the gap while expansion incentives remain. Assessing growth instruments (derogations, capital grants for capacity and volume targets) for their emission consequences would address the measured source of the problem, in line with the OECD's call to evaluate the wider agricultural incentive structure rather than climate-labelled measures alone (OECD, 2022).
 2. **Targets on totals, not only on intensity.** An intensity offset of 0.32 means that efficiency gains cancelled only about a third of scale growth. Policy framed around emissions per litre can succeed on its own terms while total emissions rise.
 3. **The arithmetic of the 2030 ceiling.** On recent trends, compliance implies roughly 16–23% fewer livestock units by 2030 unless intensity falls far faster than has ever been observed. This implication should be stated explicitly in sectoral planning.
 4. **Measuring the net signal.** The common I × *s* × *e* × B scale allows governments to track whether new instruments raise mitigation intensity faster than concurrent sectoral policy raises pressure. The index is transferable to other land-based sectors that face growth and decarbonisation mandates at the same time.
 
 ## 5.6 Limitations
 
-- **Policy coding.** The mitigation index M uses the authors' coding under the INPACT scoring rule and is to be replaced by the INPACT export. Eligibility shares are anchored on participation statistics but several are graded low or low-to-medium confidence, and three coverage shares (P01, P02 and M11) are transferred from the nearest inventory year. The second coding of P and G is a placeholder that predates the revised codebook, so the reported kappa values do not yet measure reliability. The results are sensitive to the coding of the policy indices: moving from the earlier to the revised codebook reduced θ~P~ from 0.69 to 0.46 and changed the selected lag structure. [AUTHOR INPUT REQUIRED: INPACT export for M; independent second coding of P and G against the revised codebook.]
+- **Policy coding.** The mitigation index M uses the authors' coding under the INPACT scoring rule and is to be replaced by the INPACT export. Eligibility shares are anchored on participation statistics but several are graded low or low-to-medium confidence, and three coverage shares (P01, P02 and M11) are transferred from the nearest inventory year. The second coding of P and G is a placeholder that predates the revised codebook, so the reported kappa values do not yet measure reliability. The results are sensitive to the coding of the policy indices: under equal bindingness θ~P~ falls to 0.20, and dropping the Nitrates Action Programme from M turns θ~M~ significantly negative ({{tab:robustgrid}}), so the codebook is a substantive part of the evidence and is published in full. [AUTHOR INPUT REQUIRED: INPACT export for M; independent second coding of P and G against the revised codebook.]
 - **Short national series.** With *n* = 28 in the ARDL, inference rests on the bootstrap and power is limited (MDE ≈ 0.43 for M and 0.35 for P). The bounds test does not confirm a level relationship, so the long-run multipliers are indicative. The results are conditional associations, not causal estimates. The positive M coefficient illustrates the limits of a time-series design when instruments are adopted alongside output growth.
-- **No untreated comparator.** Quota abolition and CAP reform applied across the EU. The regional design therefore relies on within-Ireland exposure, and its parallel-trends assumption fails.
+- **No untreated comparator.** Quota abolition and CAP reform applied across the EU, so neither a synthetic control (Abadie, 2021) nor a cross-country DiD is available. The regional design therefore relies on within-Ireland exposure, and its parallel-trends assumption fails.
 - **Five clusters.** Regional inference uses randomisation inference and the wild cluster bootstrap. These methods are appropriate but cannot create information that five units do not contain, and the event-study bands are indicative only.
 - **Inventory data.** The LMDI decomposition and the regional emissions end in 2023, because the 2024 CRT split is not yet available. Changes in inventory methodology appear as changes in intensity, and regional emissions are imputed from national implied emission factors.
 - **Omitted drivers.** The model includes no weather control, and macroeconomic shocks enter only in one robustness variant, in which GNI\* is collinear with quota abolition.
@@ -974,6 +966,12 @@ All numbers in this paper come from a full re-run of `ireland_agri_ghg_analysis.
 # References {.unnumbered}
 
 ::: {custom-style="Bibliography"}
+Abadie, A. (2021). Using synthetic controls: Feasibility, data requirements, and methodological aspects. *Journal of Economic Literature*, *59*(2), 391–425. https://doi.org/10.1257/jel.20191450
+
+Abadie, A., Diamond, A., & Hainmueller, J. (2010). Synthetic control methods for comparative case studies: Estimating the effect of California's tobacco control program. *Journal of the American Statistical Association*, *105*(490) [AUTHOR INPUT REQUIRED: confirm issue], 493–505. [AUTHOR INPUT REQUIRED: add DOI]
+
+Andersson, J. J. (2019). Carbon taxes and CO₂ emissions: Sweden as a case study. *American Economic Journal: Economic Policy*, *11*(4), 1–30. https://doi.org/10.1257/pol.20170144
+
 Ang, B. W. (2015). LMDI decomposition approach: A guide for implementation. *Energy Policy*, *86*, 233–238.
 
 Ang, B. W., & Liu, F. L. (2001). A new energy decomposition method: Perfect in decomposition and consistent in aggregation. *Energy*, *26*(6), 537–548.
@@ -982,9 +980,11 @@ Augustenborg, C. A., Lentz, P., & Pender, A. (2026). Barriers to environmental p
 
 Bai, J., & Perron, P. (2003). Computation and analysis of multiple structural change models. *Journal of Applied Econometrics*, *18*(1), 1–22.
 
+Balaine, L., Dillon, E. J., Läpple, D., & Lynch, J. (2020). Can technology help achieve sustainable intensification? Evidence from milk recording on Irish dairy farms. *Land Use Policy*, *92*, Article 104437. https://doi.org/10.1016/j.landusepol.2019.104437
+
 Balaine, L., Läpple, D., Buckley, C., & Dillon, E. (2022). Reconciling socio-economic and environmental sustainability in agri-food development. *EuroChoices*, *21*(2), 52–57.
 
-Bernal, J. L., Cummins, S., & Gasparrini, A. (2017). Interrupted time series regression for the evaluation of public health interventions: A tutorial. *International Journal of Epidemiology*, *46*(1), 348–355.
+Batáry, P., Dicks, L. V., Kleijn, D., & Sutherland, W. J. (2015). The role of agri-environment schemes in conservation and environmental management. *Conservation Biology*, *29*(4), 1006–1016. https://doi.org/10.1111/cobi.12536
 
 Bloom, H. S. (1995). Minimum detectable effects: A simple way to report the statistical power of experimental designs. *Evaluation Review*, *19*(5), 547–556.
 
@@ -992,25 +992,69 @@ Callaway, B., Goodman-Bacon, A., & Sant'Anna, P. H. C. (2024). *Difference-in-di
 
 Cameron, A. C., Gelbach, J. B., & Miller, D. L. (2008). Bootstrap-based improvements for inference with clustered errors. *Review of Economics and Statistics*, *90*(3), 414–427.
 
+Candel, J. J. L., & Biesbroek, R. (2016). Toward a processual understanding of policy integration. *Policy Sciences* [AUTHOR INPUT REQUIRED: volume, issue and pages]. https://doi.org/10.1007/s11077-016-9248-y
+
 Card, D. (1992). Using regional variation in wages to measure the effects of the federal minimum wage. *ILR Review*, *46*(1), 22–37.
+
+Climate Action and Low Carbon Development (Amendment) Act 2021, No. 32 of 2021 (Ireland). https://www.irishstatutebook.ie/eli/2021/act/32/
+
+Climate Change Advisory Council. (2025). *Annual review 2025: Summary for all*. https://www.climatecouncil.ie/councilpublications/annualreviewandreport/CCAC-AR-2025-SfA-final.pdf
 
 Cohen, J. (1968). Weighted kappa: Nominal scale agreement with provision for scaled disagreement or partial credit. *Psychological Bulletin*, *70*(4), 213–220.
 
+Crippa, M., Solazzo, E., Guizzardi, D., Monforti-Ferrario, F., Tubiello, F. N., & Leip, A. (2021). Food systems are responsible for a third of global anthropogenic GHG emissions. *Nature Food*, *2*(3), 198–209. https://doi.org/10.1038/s43016-021-00225-9
+
+Cullen, P., Hynes, S., Ryan, M., & O'Donoghue, C. (2021). More than two decades of agri-environment schemes: Has the profile of participating farms changed? *Journal of Environmental Management*, *292*, Article 112826. https://doi.org/10.1016/j.jenvman.2021.112826
+
+Dai, X.-W., Sun, Z., & Müller, D. (2021). Driving factors of direct greenhouse gas emissions from China's pig industry from 1976 to 2016. *Journal of Integrative Agriculture* [AUTHOR INPUT REQUIRED: volume, issue and pages]. https://doi.org/10.1016/S2095-3119(20)63425-6
+
+Daugbjerg, C., & Swinbank, A. (2016). Three decades of policy layering and politically sustainable reform in the European Union's agricultural policy. *Governance* [AUTHOR INPUT REQUIRED: volume, issue and pages]. https://doi.org/10.1111/gove.12171
+
 Davidson, R., & MacKinnon, J. G. (2000). Bootstrap tests: How many bootstraps? *Econometric Reviews*, *19*(1), 55–68.
+
+DeBoe, G., Deconinck, K., Henderson, B., & Lankoski, J. (2020). Reforming agricultural policies will help to improve environmental performance. *EuroChoices*, *19*(1), 30–35. https://doi.org/10.1111/1746-692X.12247
+
+Department of Agriculture, Fisheries and Food. (2010). *Food Harvest 2020: A vision for Irish agri-food and fisheries*.
+
+Department of Agriculture, Food and the Marine. (2015). *Food Wise 2025*. https://www.gov.ie/en/department-of-agriculture-food-and-the-marine/publications/food-wise-2025/
+
+Department of Agriculture, Food and the Marine. (2021a). *Food Vision 2030: A world leader in sustainable food systems*.
+
+Department of Agriculture, Food and the Marine. (2021b, August 3). *Launch of "Food Vision 2030—A world leader in sustainable food systems"*. https://www.gov.ie/en/department-of-agriculture-food-and-the-marine/press-releases/launch-of-food-vision-2030-a-world-leader-in-sustainable-food-systems/
+
+Department of the Taoiseach. (2022, July 28). *Government announces sectoral emissions ceilings, setting Ireland on a pathway to turn the tide on climate change*. https://www.gov.ie/en/department-of-the-taoiseach/press-releases/government-announces-sectoral-emissions-ceilings-setting-ireland-on-a-pathway-to-turn-the-tide-on-climate-change/
 
 Diebold, F. X., & Chen, C. (1996). Testing structural stability with endogenous breakpoint: A size comparison of analytic and bootstrap procedures. *Journal of Econometrics*, *70*(1), 221–241.
 
 Donnellan, T., Hanrahan, K., Breen, J. P., & Gillespie, P. (2013). *Climate change and agricultural policy coherence: Agricultural growth and GHG emissions in Ireland* [Conference paper]. Agricultural Economics Society Annual Conference, Warwick, United Kingdom.
 
-Environmental Protection Agency. (2026). *Ireland's provisional greenhouse gas emissions 1990–2025*. Environmental Protection Agency.
+Ellerman, A. D., & Wing, I. S. (2003). Absolute versus intensity-based emission caps. *Climate Policy*, *3*(Suppl. 2), S7–S20. https://doi.org/10.1016/j.clipol.2003.09.013
+
+Environmental Protection Agency. (2026a). *Ireland's provisional greenhouse gas emissions 1990–2025* [Data workbook]. Environmental Protection Agency.
+
+Environmental Protection Agency. (2026b). *Ireland's final greenhouse gas emissions 1990–2024*. https://www.epa.ie/publications/monitoring--assessment/climate-change/air-emissions/EPA-Final-GHG-Emissions-Report-1990-2024.pdf
 
 Eskander, S. M. S. U., & Fankhauser, S. (2020). Reduction in greenhouse gas emissions from national climate legislation. *Nature Climate Change*, *10*, 750–756.
 
+European Commission. (2022). Commission Implementing Decision (EU) 2022/696 of 29 April 2022 granting a derogation requested by Ireland pursuant to Council Directive 91/676/EEC concerning the protection of waters against pollution caused by nitrates from agricultural sources (notified under document C(2022) 2596). *Official Journal of the European Union, L 129*, 37–45. https://eur-lex.europa.eu/eli/dec_impl/2022/696/oj/eng
+
+European Court of Auditors. (2021). *Common Agricultural Policy and climate: Half of EU climate spending but farm emissions are not decreasing* (Special Report No. 16/2021). Publications Office of the European Union. https://op.europa.eu/webpub/eca/special-reports/cap-and-climate-16-2021/en/
+
+European Environment Agency. (2025, November 6). *Greenhouse gas emissions from agriculture in Europe* [Indicator]. https://www.eea.europa.eu/en/analysis/indicators/greenhouse-gas-emissions-from-agriculture
+
+European Environment Agency. (2026). *Greenhouse gas emissions—Trends and drivers in the EU agricultural sector* (EEA Report No. 09/2026). Publications Office of the European Union. https://doi.org/10.2800/9890535
+
 Eurostat. (2016). *Handbook on prices and volume measures in national accounts*. Publications Office of the European Union.
+
+Fellmann, T., Witzke, P., Weiss, F., Van Doorslaer, B., Drabik, D., Huck, I., Salputra, G., Jansson, T., & Leip, A. (2018). Major challenges of integrating agriculture into climate change mitigation policy frameworks. *Mitigation and Adaptation Strategies for Global Change*, *23*(3), 451–468. https://doi.org/10.1007/s11027-017-9743-2
+
+Finn, J. A., & Ó hUallacháin, D. (2012). A review of evidence on the environmental impact of Ireland's Rural Environment Protection Scheme (REPS). *Biology and Environment: Proceedings of the Royal Irish Academy*, *112B*, 1–24. https://doi.org/10.3318/BIOE.2011.19
 
 Fisher, R. A. (1935). *The design of experiments*. Oliver & Boyd.
 
 Gelman, A., & Carlin, J. (2014). Beyond power calculations: Assessing Type S (sign) and Type M (magnitude) errors. *Perspectives on Psychological Science*, *9*(6), 641–651.
+
+Gerber, P., Vellinga, T., Opio, C., & Steinfeld, H. (2011). Productivity gains and greenhouse gas emissions intensity in dairy systems. *Livestock Science*, *139*(1–2) [AUTHOR INPUT REQUIRED: confirm issue], 100–108. [AUTHOR INPUT REQUIRED: add DOI]
 
 Goldsmith-Pinkham, P., Sorkin, I., & Swift, H. (2020). Bartik instruments: What, when, why, and how. *American Economic Review*, *110*(8), 2586–2624.
 
@@ -1020,17 +1064,45 @@ Hall, P., Horowitz, J. L., & Jing, B.-Y. (1995). On blocking rules for the boots
 
 Hamed, K. H., & Rao, A. R. (1998). A modified Mann–Kendall trend test for autocorrelated data. *Journal of Hydrology*, *204*(1–4), 182–196.
 
-Henn, D., et al. (2023). [AUTHOR INPUT REQUIRED: complete reference for this study of herd composition and implied emission factors, including all authors, title, journal, volume, pages and DOI.]
+Hasler, B., Termansen, M., Nielsen, H. Ø., Daugbjerg, C., Wunder, S., & Latacz-Lohmann, U. (2022). European agri-environmental policy: Evolution, effectiveness, and challenges. *Review of Environmental Economics and Policy*, *16*(1), 105–125. https://doi.org/10.1086/718212
+
+Henderson, B., & Lankoski, J. (2021). Assessing the environmental impacts of agricultural policies. *Applied Economic Perspectives and Policy*, *43*(4), 1487–1502. https://doi.org/10.1002/aepp.13081
+
+Herrero, M., Henderson, B., Havlík, P., Thornton, P. K., Conant, R. T., Smith, P., Wirsenius, S., Hristov, A. N., Gerber, P., Gill, M., Butterbach-Bahl, K., Valin, H., Garnett, T., & Stehfest, E. (2016). Greenhouse gas mitigation potentials in the livestock sector. *Nature Climate Change*, *6*(5), 452–461. https://doi.org/10.1038/nclimate2925
+
+Hertel, T. W., Ramankutty, N., & Baldos, U. L. C. (2014). Global market integration increases likelihood that a future African Green Revolution could increase crop land use and CO₂ emissions. *Proceedings of the National Academy of Sciences of the United States of America* [AUTHOR INPUT REQUIRED: volume, issue and pages]. https://doi.org/10.1073/pnas.1403543111
+
+Himics, M., Fellmann, T., Barreiro-Hurlé, J., Witzke, H.-P., Pérez Domínguez, I., Jansson, T., & Weiss, F. (2018). Does the current trade liberalization agenda contribute to greenhouse gas emission mitigation in agriculture? *Food Policy*, *76*, 120–129. https://doi.org/10.1016/j.foodpol.2018.01.011
+
+Howlett, M., & del Río, P. (2015). The parameters of policy portfolios: Verticality and horizontality in design spaces and their consequences for policy mix formulation. *Environment and Planning C: Government and Policy*, *33*(5), 1233–1245. https://doi.org/10.1177/0263774X15610059
 
 Howlett, M., & Rayner, J. (2013). Patching vs packaging in policy formulation: Assessing policy portfolio design. *Politics and Governance*, *1*(2), 170–182.
 
+Huitema, D., Jordan, A., Massey, E., Rayner, T., van Asselt, H., Haug, C., Hildingsson, R., Monni, S., & Stripple, J. (2011). The evaluation of climate policy: Theory and emerging practice in Europe. *Policy Sciences*, *44*(2), 179–198. https://doi.org/10.1007/s11077-011-9125-7
+
+Intergovernmental Panel on Climate Change. (2022). *Climate change 2022: Mitigation of climate change. Contribution of Working Group III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change* (P. R. Shukla, J. Skea, R. Slade, A. Al Khourdajie, R. van Diemen, D. McCollum, M. Pathak, S. Some, P. Vyas, R. Fradera, M. Belkacemi, A. Hasija, G. Lisboa, S. Luz, & J. Malley, Eds.). Cambridge University Press. https://doi.org/10.1017/9781009157926
+
+Jansson, T., Nordin, I., Wilhelmsson, F., Witzke, P., Manevska-Tasevska, G., Weiss, F., & Gocht, A. (2021). Coupled agricultural subsidies in the EU undermine climate efforts. *Applied Economic Perspectives and Policy*, *43*(4), 1503–1519. https://doi.org/10.1002/aepp.13092
+
+Jongeneel, R., & Gonzalez-Martinez, A. R. (2022). The role of market drivers in explaining the EU milk supply after the milk quota abolition. *Economic Analysis and Policy*, *73*, 194–209. https://doi.org/10.1016/j.eap.2021.11.020
+
 Kiefer, N. M., & Vogelsang, T. J. (2005). A new asymptotic theory for heteroskedasticity-autocorrelation robust tests. *Econometric Theory*, *21*(6), 1130–1164.
+
+Koch, N., Naumann, L., Pretis, F., Ritter, N., & Schwarz, M. (2022). Attributing agnostically detected large reductions in road CO₂ emissions to policy mixes. *Nature Energy*, *7*, 844–853. https://doi.org/10.1038/s41560-022-01095-6
+
+Lanigan, G., Black, K., Donnellan, T., Crosson, P., Beausang, C., Hanrahan, K., Buckley, C., Lahart, B., Herron, J., Redmond, J., Shalloo, L., Krol, D., Forrestal, P., Farrelly, N., O'Brien, D., Lenehan, J. J., Hennessy, M., O'Donovan, M., Wall, D., … Richards, K. (2023). *MACC 2023: An updated analysis of the greenhouse gas abatement potential of the Irish agriculture and land-use sectors between 2021 and 2030*. Teagasc. https://teagasc.ie/wp-content/uploads/media/website/environment/climate-action/climate-centre/MACC-2023.pdf
 
 Läpple, D., Carter, C. A., & Buckley, C. (2022). EU milk quota abolition, dairy expansion, and greenhouse gas emissions. *Agricultural Economics*, *53*(1), 125–142.
 
 Lawlor, D. A., Tilling, K., & Davey Smith, G. (2016). Triangulation in aetiological epidemiology. *International Journal of Epidemiology*, *45*(6), 1866–1886.
 
+Leahy, S., Clark, H., & Reisinger, A. (2020). Challenges and prospects for agricultural greenhouse gas mitigation pathways consistent with the Paris Agreement. *Frontiers in Sustainable Food Systems*, *4*, Article 69. https://doi.org/10.3389/fsufs.2020.00069
+
 Li, H., & Maddala, G. S. (1996). Bootstrapping time series models. *Econometric Reviews*, *15*(2), 115–158.
+
+Lopez Bernal, J., Cummins, S., & Gasparrini, A. (2017). Interrupted time series regression for the evaluation of public health interventions: A tutorial. *International Journal of Epidemiology*, *46*(1), 348–355. https://doi.org/10.1093/ije/dyw098
+
+von Lüpke, H., Azevedo-Ramos, C., Laraswati, D., Maryudi, A., Ayu, C., Wijaya, N., Sopaheluwakan, R., Kübler, D., & Fischer, R. (2026). Coherence between climate and land use policies of the European Union, Brazil, and Indonesia: A primer to analyze potential GHG leakage. *Environmental Policy and Governance*, *36*(4), 871–886. https://doi.org/10.1002/eet.70084
 
 Marsh, D., & McConnell, A. (2010). Towards a framework for establishing policy success. *Public Administration*, *88*(2), 564–583.
 
@@ -1038,25 +1110,47 @@ Munafò, M. R., & Davey Smith, G. (2018). Robust research needs many lines of ev
 
 Myhre, G., Shindell, D., Bréon, F.-M., Collins, W., Fuglestvedt, J., Huang, J., Koch, D., Lamarque, J.-F., Lee, D., Mendoza, B., Nakajima, T., Robock, A., Stephens, G., Takemura, T., & Zhang, H. (2013). Anthropogenic and natural radiative forcing. In T. F. Stocker, D. Qin, G.-K. Plattner, M. Tignor, S. K. Allen, J. Boschung, A. Nauels, Y. Xia, V. Bex, & P. M. Midgley (Eds.), *Climate change 2013: The physical science basis. Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change* (pp. 659–740). Cambridge University Press.
 
+Nabuurs, G.-J., Mrabet, R., Abu Hatab, A., Bustamante, M., Clark, H., Havlík, P., House, J., Mbow, C., Ninan, K. N., Popp, A., Roe, S., Sohngen, B., & Towprayoon, S. (2022). Agriculture, forestry and other land uses (AFOLU). In P. R. Shukla, J. Skea, R. Slade, A. Al Khourdajie, R. van Diemen, D. McCollum, M. Pathak, S. Some, P. Vyas, R. Fradera, M. Belkacemi, A. Hasija, G. Lisboa, S. Luz, & J. Malley (Eds.), *Climate change 2022: Mitigation of climate change. Contribution of Working Group III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change* [AUTHOR INPUT REQUIRED: page range]. Cambridge University Press. https://doi.org/10.1017/9781009157926.009
+
 Newey, W. K., & West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. *Econometrica*, *55*(3), 703–708.
 
 Nilsson, M., Zamparutti, T., Petersen, J. E., Nykvist, B., Rudberg, P., & McGuinn, J. (2012). Understanding policy coherence: Analytical framework and examples of sector–environment policy interactions in the EU. *Environmental Policy and Governance*, *22*(6), 395–423.
 
+O'Brien, D., Brennan, P., Humphreys, J., Ruane, E., & Shalloo, L. (2014). An appraisal of carbon footprint of milk from commercial grass-based dairy farms in Ireland according to a certified life cycle assessment methodology. *The International Journal of Life Cycle Assessment*, *19*(7), 1469–1481. https://doi.org/10.1007/s11367-014-0755-9
+
 OECD, European Commission, & Joint Research Centre. (2008). *Handbook on constructing composite indicators: Methodology and user guide*. OECD Publishing.
+
+Organisation for Economic Co-operation and Development. (2019). *Enhancing climate change mitigation through agriculture*. OECD Publishing. https://doi.org/10.1787/e9a79226-en
+
+Organisation for Economic Co-operation and Development. (2022). *Agricultural policy monitoring and evaluation 2022: Reforming agricultural policies for climate change mitigation*. OECD Publishing. https://doi.org/10.1787/7f4542bf-en
+
+Pe'er, G., Bonn, A., Bruelheide, H., Dieker, P., Eisenhauer, N., Feindt, P. H., Hagedorn, G., Hansjürgens, B., Herzon, I., Lomba, Â., Marquard, E., Moreira, F., Nitsch, H., Oppermann, R., Perino, A., Röder, N., Schleyer, C., Schindler, S., Wolf, C., … Lakner, S. (2020). Action needed for the EU Common Agricultural Policy to address sustainability challenges. *People and Nature*, *2*(2), 305–316. https://doi.org/10.1002/pan3.10080
 
 Pesaran, M. H., Shin, Y., & Smith, R. J. (2001). Bounds testing approaches to the analysis of level relationships. *Journal of Applied Econometrics*, *16*(3), 289–326.
 
+Pfeiffer, L., & Lin, C.-Y. C. (2014). Does efficient irrigation technology lead to reduced groundwater extraction? Empirical evidence. *Journal of Environmental Economics and Management*, *67*(2), 189–208. https://doi.org/10.1016/j.jeem.2013.12.002
+
+Pretis, F. (2022). Does a carbon tax reduce CO₂ emissions? Evidence from British Columbia. *Environmental and Resource Economics*, *83*(1), 115–144. https://doi.org/10.1007/s10640-022-00679-w
+
 Rambachan, A., & Roth, J. (2023). A more credible approach to parallel trends. *Review of Economic Studies*, *90*(5), 2555–2591.
+
+Regina, K., Budiman, A., Greve, M. H., Grønlund, A., Kasimir, Å., Lehtonen, H., Petersen, S. O., Smith, P., & Wösten, H. (2016). GHG mitigation of agricultural peatlands requires coherent policies. *Climate Policy*, *16*(4), 522–541. https://doi.org/10.1080/14693062.2015.1022854
 
 Rogge, K. S., & Reichardt, K. (2016). Policy mixes for sustainability transitions: An extended concept and framework for analysis. *Research Policy*, *45*(8), 1620–1635.
 
+Schoenefeld, J., & Jordan, A. (2017). Governing policy evaluation? Towards a new typology. *Evaluation*, *23*(3), 274–293. https://doi.org/10.1177/1356389017715366
+
 Smith, M. A., Cain, M., & Allen, M. R. (2021). Further improvement of warming-equivalent emissions calculation. *npj Climate and Atmospheric Science*, *4*, Article 19.
+
+Sorrell, S. (2009). Jevons' paradox revisited: The evidence for backfire from improved energy efficiency. *Energy Policy*, *37*(4), 1456–1469. [AUTHOR INPUT REQUIRED: add DOI]
 
 Stechemesser, A., Koch, N., Mark, E., Dilger, E., Klösel, P., Menicacci, L., Nachtigall, D., Pretis, F., Ritter, N., Schwarz, M., Vossen, H., & Wenzel, A. (2024). Climate policies that achieved major emission reductions: Global evidence from two decades. *Science*, *385*(6711), 884–892.
 
 Stock, J. H., & Watson, M. W. (2020). *Introduction to econometrics* (4th ed.). Pearson.
 
 Torney, D., & O'Gorman, R. (2019). A laggard in good times and bad? The limited impact of EU membership on Ireland's climate change and environmental policy. *Irish Political Studies*, *34*(4), 575–594.
+
+Velthof, G. L., Lesschen, J. P., Webb, J., Pietrzak, S., Miatkowski, Z., Pinto, M., Kros, J., & Oenema, O. (2014). The impact of the Nitrates Directive on nitrogen emissions from agriculture in the EU-27 during 2000–2008. *Science of the Total Environment, 468–469*, 1225–1233. https://doi.org/10.1016/j.scitotenv.2013.04.058
 
 Webb, M. D. (2023). Reworking wild bootstrap-based inference for clustered errors. *Canadian Journal of Economics*, *56*(3), 839–858.
 
@@ -1066,7 +1160,7 @@ Yue, S., Pilon, P., Phinney, B., & Cavadias, G. (2002). The influence of autocor
 :::
 
 ::: {custom-style="Paper Meta"}
-[AUTHOR INPUT REQUIRED: add DOIs to the references above, as required by APA 7th edition; DOIs have not been inserted to avoid introducing unverified identifiers.]
+[AUTHOR INPUT REQUIRED: DOIs are given only where verified in the literature review; add the remaining DOIs and confirm the fields marked above before submission.]
 :::
 
 PAGEBREAK
@@ -1244,3 +1338,85 @@ TAB unitroots=E1 | Unit-root tests
 | ln real milk price | First difference | −6.62 | < 0.001 | 0.346 | > 0.10 |
 | ln real fertiliser price | Level | −2.96 | 0.143 | 0.064 | > 0.10 |
 | ln real fertiliser price | First difference | −5.89 | < 0.001 | 0.500 | 0.042 |
+
+# Appendix F. Evidence Reviewed {.unnumbered}
+
+TAB evidence=F1 | Evidence reviewed and its relevance to the research questions and contributions
+
+| Author(s) and year | Study design, data and period | Method | Key findings | Relevance to the present study |
+|:---|:---|:---|:---|:---|
+| Abadie et al. (2010) | US states, 1970–2000; single-state tobacco-control case. | Synthetic control. | A weighted donor pool reproduces the treated unit's counterfactual path; credibility rests on pre-period fit. | RQ4; C2: why EU-wide events leave no foreign comparator. |
+| Abadie (2021) | Methodological review of synthetic-control designs; no single study period. | Weighted donor counterfactual; assessment of fit and donor suitability. | Explains when synthetic controls are credible and when poor fit, unsuitable donors or interference undermine them. | RQ4; C2: comparator feasibility and limits to causal attribution. |
+| Andersson (2019) | Sweden versus OECD donor pool; transport CO₂. | Synthetic control. | Transport CO₂ fell almost 11% after the carbon tax and fuel VAT, mostly due to the tax; single-sector, CO₂-only. | RQ3; C2: exemplar single-country ex post evaluation. |
+| Ang (2015) | Implementation review of LMDI formulations; energy and emissions applications. | Comparison of decomposition formulae and implementation choices. | Guidance on choosing and implementing LMDI; factorisation determines interpretation. | RQ2; C3: consistent accounting of component effects. |
+| Ang and Liu (2001)00022-6) | Methodological development with energy-related CO₂ applications. | Additive and multiplicative log-mean Divisia decomposition. | Residual-free decomposition with aggregation consistency; accounting contributions are not policy effects. | RQ2; C3: exact scale–intensity decomposition. |
+| Augustenborg et al. (2026) | Qualitative Irish environmental-policy study; 34 stakeholder interviews. | Interview-based analysis of perceived implementation barriers. | Identifies capacity, incoherence, finance, political priorities and planning delays; not an agricultural impact estimate. | RQ3–RQ4; C1: implementation mechanisms and alternative explanations for weak mitigation. |
+| Bai and Perron (2003) | Methodological study with simulations and illustrative series. | Multiple-break estimation, break-date intervals, tests of break number. | Practical procedures for detecting structural change under general error structures. | RQ1; C2: regime detection and timing uncertainty. |
+| Balaine et al. (2020) | National Farm Survey cross-section; 296 Irish dairy farms, 2015. | Propensity-score matching of milk-recording adopters and non-adopters. | Higher yield, margins and animal-health indicators without improved measured GHG efficiency; unobserved selection remains. | RQ2, RQ4; C3: separates productivity benefits from assumed mitigation. |
+| Balaine et al. (2022) | Critical appraisal of successive Irish agri-food strategies. | Policy and sustainability synthesis; no causal estimator. | Efficiency-led expansion did not reconcile growth with environmental pressures; policy largely reactive. | RQ3; C1: production–mitigation tension and mixed strategic goals. |
+| Batáry et al. (2015) | Review and synthesis of three meta-analyses; EU. | Review; meta-analytic synthesis. | Schemes raise farmland biodiversity on average; effects depend on design and landscape; post-2007 schemes no more effective. | RQ4; C1: evidence base for voluntary agri-environment schemes. |
+| Callaway et al. (2024) | Econometric methods paper (NBER Working Paper No. 32117). | DiD with continuous treatment. | Identification conditions and estimands for continuous-dose DiD. | RQ4; C2: continuous-exposure regional design. |
+| Candel and Biesbroek (2016) | Conceptual paper. | Policy-integration framework. | Integration is a process; frames, subsystems, goals and instruments can move at different speeds or in opposite directions. | RQ3; C1: incoherence as time-varying. |
+| CCAC (2025) | Annual review, Ireland, to 2024. | Official progress assessment. | Agriculture not on track; projected to exceed its 2030 ceiling with existing measures. | RQ3; C1: accountability context and 2030 ceiling. |
+| Climate Action and Low Carbon Development (Amendment) Act 2021 | Irish statute, No. 32 of 2021; legal rather than empirical evidence. | Statutory provisions on carbon budgets and sectoral ceilings. | Creates a framework for national climate accountability; does not estimate abatement or cap individual farms. | RQ3; C1: legal strength and targets versus instruments. |
+| Crippa et al. (2021) | Global inventory (EDGAR-FOOD), 2015. | Emission accounting along the food chain. | Food systems produced about a third of global GHG emissions. | RQ2: global context for agriculture's role. |
+| Cullen et al. (2021) | Irish National Farm Survey panel over 23 years; REPS, AEOS and GLAS. | Random-effects logit models of scheme participation. | Participant profiles vary; intensive-farm pressures insufficiently targeted; no national GHG estimate. | RQ4; C1: eligibility, selection and effective coverage. |
+| DAFF (2010) | National strategy, Ireland (Food Harvest 2020). | Policy document. | Target of 50% growth in milk production by 2020. | RQ1, RQ3; C1: strategy signal G01. |
+| DAFM (2015) | National strategy, Ireland (Food Wise 2025). | Policy document. | Targets of 65% growth in primary output value and 85% in exports. | RQ3; C1: strategy signal G02. |
+| DAFM (2021a) | National strategy, Ireland (Food Vision 2030). | Policy document. | Growth goals with at least 10% biogenic-methane and over 50% fertiliser-emission reduction aims. | RQ3; C1: mixed-goal strategy G03 (content weight 0.5). |
+| DAFM (2021b) | Official launch statement, 3 August 2021. | Primary documentation of strategic objectives. | Combines sustainability with commercial and export ambitions; goals alone do not establish effects. | RQ3; C1: cautious classification of mixed strategies. |
+| Dai et al. (2021)63425-6) | China pig sector, 1976–2016. | Kaya identity with LMDI. | Technological progress cut emissions; affluence and population growth raised them. | RQ2; C3: livestock application of LMDI. |
+| Daugbjerg and Swinbank (2016) | CAP case study, 1984–2013. | Historical-institutional analysis. | Layered reforms were durable; greening legitimised decoupled payments while income support persisted. | RQ3; C1: empirical layering in agricultural policy. |
+| DeBoe et al. (2020) | Synthesis of OECD evidence. | Policy review and modelling synthesis. | Output- and input-linked payments most harmful; decoupled payments least harmful. | RQ3; C1: scoring expansion instruments. |
+| Department of the Taoiseach (2022) | Sectoral-ceilings agreement announced 28 July 2022. | Primary documentation of sectoral commitments. | Sets agriculture's 2030 reduction at 25% relative to 2018, an absolute-sector ambition. | RQ3; C1: absolute benchmark and event marker E02. |
+| Donnellan et al. (2013) | Irish agricultural-sector scenarios for Food Harvest 2020; conference paper. | Partial-equilibrium modelling of activity and GHG emissions. | Tensions between growth and emissions commitments; conditional on scenario assumptions. | RQ3; C3: prospective evidence and the historical attribution gap. |
+| European Commission (2022) | Implementing Decision (EU) 2022/696, 29 April 2022. | Legal documentation of Ireland's nitrates derogation and conditions. | Permits higher manure-nitrogen applications on qualifying grassland farms; no GHG estimate. | RQ3–RQ4; C1: conditional relaxation of a limit (P03). |
+| European Court of Auditors (2021) | EU performance audit of climate-related CAP spending, 2014–2020. | Audit of spending, design and mitigation potential. | Over €100 billion attributed to climate; emissions not falling since 2010; funded practices often low-potential; not a scheme-level causal estimate. | RQ3–RQ4; C1: targeting and limits of expenditure measures. |
+| EEA (2025) | EU indicator, 2005–2023. | Inventory statistics by source. | Enteric fermentation about 49%, soils 30%, manure 17%; non-CO₂ emissions down 6–7% since 2005. | RQ2: EU source structure for CH₄ and N₂O. |
+| EEA (2026) | EU and Member State inventory synthesis, 1990–2024; Report 09/2026. | Source- and gas-specific analysis of drivers. | Slower reductions recently; milk growth partly offsets methane-intensity gains. | RQ1–RQ2; C3: scale–intensity mechanism. |
+| Ellerman and Wing (2003) | Conceptual and analytical paper. | Comparison of absolute and intensity caps under uncertainty. | The two coincide only when future output is known. | RQ2; C3: intensity versus absolute targets. |
+| EPA (2026b) | Final national inventory, 1990–2024. | Official inventory compilation. | Agriculture 37.9% of national emissions in 2024 under a definition that includes agricultural fuel. | RQ1–RQ3: context and boundary consistency. |
+| Eskander and Fankhauser (2020) | 133 countries, 1999–2016. | Panel estimation of short- and longer-run legislative effects. | Climate laws associated with lower CO₂ intensity; weaker for other gases. | RQ3; C1–C2: transfer limits for agricultural CH₄/N₂O. |
+| Fellmann et al. (2018) | EU scenarios to 2030. | CAPRI partial-equilibrium model. | Livestock emissions fall mainly via lower output; leakage up to 91%. | RQ3: hard-to-abate argument; ex ante modelling. |
+| Finn and Ó hUallacháin (2012) | Review of REPS, Ireland. | Evidence review. | Insufficient evidence to judge national environmental effectiveness. | RQ4; C1: mitigation instrument M01 and evidence gap. |
+| Gerber et al. (2011) | Global dairy systems. | Life-cycle assessment. | Emissions per cow rise with yield; emissions per kg milk fall. | RQ2; C3: productivity–intensity mechanism. |
+| Greening et al. (2000)00021-5) | Survey of energy-efficiency rebound evidence. | Literature synthesis. | Lower effective costs can induce demand; size depends on scope and context. | RQ2–RQ3: analogy for the intensity offset. |
+| Hasler et al. (2022) | Review of EU agri-environmental policy. | Policy review. | Voluntary schemes show limited impact, low uptake and scant outcome evidence. | RQ4; C1: voluntary versus binding instruments. |
+| Henderson and Lankoski (2021) | Several OECD country settings. | Farm- and sector-level economic models. | Market price support and unconstrained input payments most harmful; decoupled least. | RQ3; C1: scoring expansion instruments. |
+| Herrero et al. (2016) | Global livestock sector review. | Review of mitigation potentials. | Economic potential under 10% of technical potential. | RQ3: limits to assumed abatement. |
+| Hertel et al. (2014) | Global scenarios, 2025–2050. | Global economic scenario model. | Yield gains with integrated markets could raise cropland and CO₂. | RQ2: rebound analogue in agriculture. |
+| Himics et al. (2018) | EU and global, to 2030. | CAPRI model. | Carbon pricing cuts EU emissions; leakage offsets part; trade liberalisation adds leakage. | RQ3: limits of sector models. |
+| Howlett and del Río (2015) | Conceptual paper. | Policy-portfolio taxonomy. | Mixes classified by number of goals, instruments and governance levels. | RQ3; C1: policy-mix framing of M and P. |
+| Howlett and Rayner (2013) | Conceptual analysis of policy-portfolio design. | Patching–packaging framework. | Inherited instruments and incremental additions can create inconsistent portfolios. | RQ3; C1: layering as a mechanism for conflicting incentives. |
+| Huitema et al. (2011) | Meta-analysis of 259 EU climate-policy evaluations. | Systematic review. | Practice meets only some theoretical standards. | Rationale for ex post evaluation. |
+| IPCC (2022) | Working Group III assessment; 2010–2019. | Assessment of inventories and mitigation literature. | Agricultural CH₄ and N₂O about 6 Gt CO₂e a year; adoption conditions constrain abatement. | RQ2–RQ3: emissions mechanisms. |
+| Jansson et al. (2021) | EU coupled ruminant support. | CAPRI scenario model. | Removal cuts EU emissions; about three quarters offset by leakage. | RQ3; C1: expansion instrument effects (P01). |
+| Jongeneel and Gonzalez-Martinez (2022) | EU member states, 2007–2017. | Mixed estimation of supply elasticities. | Post-quota supply inelastic; few member states expanded herds; short post-quota window. | RQ1, RQ4: mixed evidence on abolition. |
+| Koch et al. (2022) | EU road transport. | Agnostic break detection with policy attribution. | Ten successful interventions; best mixes combine fuel taxes with vehicle incentives. | RQ1; C2: policy-as-break logic. |
+| Lanigan et al. (2023) | Irish agriculture and land use, 2021–2030. | Marginal abatement cost curve. | Identifies measures towards the ceiling; stresses the scale of the challenge. | RQ3: 2030 ceiling context. |
+| Läpple et al. (2022) | Irish dairy-farm panel, 2000–2017. | Control-function productivity; FE and dynamic-panel models. | Productivity negatively associated with GHG intensity; total farm emissions rose; not a national abolition effect. | RQ2, RQ4; C3: farm-scale mechanism. |
+| Lawlor et al. (2016) | Methodological account of triangulation. | Comparison of designs with different biases. | Convergence is more informative when biases differ. | RQ1–RQ4; C2: triangulation rationale. |
+| Leahy et al. (2020) | Global perspective. | Review. | No mandatory agricultural carbon price anywhere; intensity gains may not cut absolute emissions. | RQ2–RQ3: hard-to-abate; intensity versus absolute. |
+| Lopez Bernal et al. (2017) | ITS tutorial with a public-health application. | Segmented regression. | Threats from concurrent interventions and misspecified trends. | RQ1; C2: temporal identification. |
+| Munafò and Davey Smith (2018) | Commentary. | Triangulation. | Robust conclusions need several lines of evidence. | C2: triangulation rationale. |
+| Nabuurs et al. (2022) | IPCC AR6 WGIII Chapter 7; 2010–2019. | Assessment report. | AFOLU 13–21% of global emissions; enteric CH₄ main source. | RQ2: global CH₄ and N₂O context. |
+| Nilsson et al. (2012) | Conceptual framework with EU illustrations. | Interaction screening and assessment. | Coherent goals can coexist with conflicting instruments; no offset estimate. | RQ3; C1: objectives versus operational interactions. |
+| O'Brien et al. (2014) | 124 Irish grass-based dairy farms. | Certified life-cycle assessment. | Mean footprint 1.11 kg CO₂e per kg FPCM. | RQ2: low-intensity system context. |
+| OECD (2019) | Global prospective mitigation scenarios. | MAGNET CGE modelling. | Market, food-security and leakage trade-offs under specified assumptions. | RQ3: scenarios versus realised effects. |
+| OECD (2022) | Policy monitoring across 54 countries. | Comparative monitoring of support and targets. | Commodity-linked support encourages production; many mitigation targets non-binding. | RQ3–RQ4; C1: coverage and bindingness. |
+| OECD et al. (2008) | Composite-indicator handbook. | Normalisation, weighting, aggregation, sensitivity. | Comparable scores do not establish comparable causal effects. | C1; RQ3: transparent policy scoring. |
+| Pe'er et al. (2020) | EU CAP assessment. | Expert evidence review. | CAP failing on climate, biodiversity and soils; low-ambition options remain. | RQ3: weak EU mitigation. |
+| Pesaran et al. (2001) | Econometric methods study. | Bounds testing in a conditional error-correction framework. | Allows I(0)/I(1) regressors; excludes I(2); does not prove exogeneity. | RQ3; C2: dynamic specification. |
+| Pfeiffer and Lin (2014) | Western Kansas irrigators. | Econometric analysis. | Efficient irrigation increased groundwater extraction. | RQ2: empirical rebound in agriculture. |
+| Pretis (2022) | British Columbia versus other provinces. | DiD, synthetic control, break detection. | Transport emissions fell; no large aggregate fall. | RQ1, RQ3: outcome-dependence of results. |
+| Rambachan and Roth (2023) | DiD and event-study methods. | Partial identification under restricted trend violations. | Plausible violations can change causal conclusions. | RQ4; C2: credibility of regional comparisons. |
+| Regina et al. (2016) | Four agricultural peatland cases. | Case-based assessment of options and barriers. | Incoherent climate, agricultural and land-use policies obstruct mitigation; boundary extends beyond CRF3. | RQ3; C1: agricultural coherence application. |
+| Rogge and Reichardt (2016) | Conceptual synthesis; German renewable-energy illustration. | Policy-mix framework. | Consistency, credibility and processes shape mix performance; no offset estimate. | RQ3; C1: interacting instruments. |
+| Schoenefeld and Jordan (2017) | Conceptual paper applied to EU climate policy. | Typology of evaluation governance. | Typology useful; empirical gaps on governing evaluation. | Rationale for ex post evaluation. |
+| Sorrell (2009) | Review of backfire evidence. | Literature review. | Backfire evidence inconclusive; economy-wide rebound may be larger than assumed. | RQ2: rebound analogy. |
+| Stechemesser et al. (2024) | About 1,500 policies, 41 countries, 1998–2022; agriculture excluded. | Machine-learning extension of DiD. | 63 interventions with large CO₂ reductions; pricing central in effective mixes. | RQ1, RQ3; C2: sectoral transfer limits. |
+| Torney and O'Gorman (2019) | Irish policy under EU membership. | Political and institutional assessment. | Limited convergence with EU ambitions; does not isolate agricultural effects. | RQ3; C1: governance context. |
+| Velthof et al. (2014) | EU-27 nitrogen scenarios, 2000–2008. | MITERRA-Europe with/without the Nitrates Directive. | N₂O about 6% lower by 2008; modelled co-benefit, not an Irish causal estimate. | RQ4; C1: binding non-climate regulation (M02). |
+| von Lüpke et al. (2026) | 44 policy documents (EU, Brazil, Indonesia), 2019–2024. | Content coding and coherence metrics. | Quantifies declared priorities and leakage risk; not realised offsets. | RQ3; C1: closest quantitative coherence precedent. |
+
+NOTE: RQ1 concerns structural timing; RQ2, scale and intensity; RQ3, production–mitigation offsets; and RQ4, instrument types and regional exposure. C1 = measurement on a common policy scale; C2 = attribution with a short series; C3 = linking decomposition to policy. Instrument identifiers refer to the revised codebook ({{tab:codebookP}} and {{tab:codebookM}}); the growth strategies form the strategy signal G and are not part of P. Conceptual, legal and prospective sources are distinguished from ex post impact estimates.
